@@ -2,6 +2,10 @@
 
 # Integrantes:
 # Lopez Franco 
+# Argentino Bs As, Lanus.
+# Edad 24 años. 
+# Estudios secundarios completos: Tecnico Electronico
+# Estudios terciario: En curso, Lic en Ciencias de la Computacion.
 # Estaban
 # Aixa
 

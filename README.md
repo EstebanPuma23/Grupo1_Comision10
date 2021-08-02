@@ -1,17 +1,17 @@
 # Grupo1_Comision10
 
 # Integrantes:
-### Lopez Franco 
+## Lopez Franco 
 ### Argentino Bs As, Lanus.
 ### Edad 24 años. 
 ### Estudios secundarios completos: Tecnico Electronico
 ### Estudios terciario: En curso, Lic en Ciencias de la Computacion.
 #
-# Estaban Puma
+## Estaban Puma
 ### Buenos Aires, San Miguel.
 ### Edad 18 años.
 ### Estudiante de programación web Fullstack. Secundario a terminar (Bachillerato).
-# Aixa
+## Aixa
 #
 # Lista de referencias:
 # Encabezado y cuerpo de la pagina, forma de presentar los articulos

@@ -22,6 +22,15 @@
 ### https://einsteinlibreria.com.ar/
 ## Imagenes de los articulos
 ### https://papeleriadelnorte.com.ar/almanaques/almanaques.php
+## Paleta de colores:
+### Verde Oscuro- Header : #1E9C5F
+### Verde Claro- Header : #39A872
+### Verde claro – Detalle de producto : #3EFF80 
+### Negro- footer : #121111
+### Blanco - background-color : #ffffff
+## Tipografías:
+### Montserrat
+### "open-sans" sans-serif
 #
-# Libreria *****, es una empresa lider en el mercado.
+# Libreria Innovarte, es una empresa lider en el mercado.
 # Se caracteriza por ofrecer el mejor precio, calidad y servicio a los clientes. Con gran variedad de insumos para       escuelas, oficina y artistica.  

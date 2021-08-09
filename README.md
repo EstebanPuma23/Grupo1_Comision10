@@ -12,7 +12,10 @@
 ### Edad 18 años.
 ### Estudiante de programación web Fullstack. Secundario a terminar (Bachillerato).
 ## Aixa
-#
+## Argentina, Buenos Aires, San MIguel.
+## Edad 19 años.
+## Estudios secundsrios comletos: Economia y Administracion 
+## Estudiante de programacion web FullStack. 
 # Lista de referencias:
 # Encabezado y cuerpo de la pagina, forma de presentar los articulos
 ### https://libreriaslevalle.com/
@@ -33,4 +36,4 @@
 ### "open-sans" sans-serif
 #
 # Libreria Innovarte, es una empresa lider en el mercado.
-# Se caracteriza por ofrecer el mejor precio, calidad y servicio a los clientes. Con gran variedad de insumos para       escuelas, oficina y artistica.  
+# Se caracteriza por ofrecer el mejor precio, calidad y servicio a los clientes. Con gran variedad de insumos para escuelas, oficina y artistica.  

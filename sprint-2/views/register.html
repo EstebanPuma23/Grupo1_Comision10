@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
-<body>
-    
+<body class="register">
+    <main>
+        <h1>registro</h1>
+        <form action="/register">
+            <div class="usuario">
+                <label for="user">Nombre</label>
+                <input type="text" name="user" id="user">
+            </div>
+            <div class="mail">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="contraseña">
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="repetircontra">
+                <label for="repeatpass">Repetir contraseña</label>
+                <input type="password" name="repeatpass" id="repeatpass">
+            </div>
+            <div class="condicion-registro">
+                <input type="checkbox" name="terminos">
+                <label for="terminos">Acepta los terminos y condiciones</label>
+            </div>
+            <div class="boton-registro">
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>

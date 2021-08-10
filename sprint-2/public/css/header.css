@@ -1,0 +1,10 @@
+header .logo-nav{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .logo-nav .img-logo{
+    display: block;
+    width: 10%;
+} 

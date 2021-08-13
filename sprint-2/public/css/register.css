@@ -1,15 +1,45 @@
 .register main{
+    margin: 20px;
+    width: 90%;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 15px;
     border: 2px solid green;
     border-radius: 5px;
-    /*
-    display: flex;
-    background-color:aqua;
-    flex-direction: column;
-    width: 90%;
-    border-radius: 5px;
-*/
 }
+.register div.formulario-register h1{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+}
+.register div.formulario-register div.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form input {
+    width: 90%;
+    border-radius: 10px;
+    height: 30px;
+    margin: 0.5rem;
+  }
+  .form div.condicion-registro{
+    
+    white-space: nowrap;
+  }
+.form div.condicion-registro input{
+    margin: 0;
+    display: flex;
+    justify-content:flex-start;
+}
+.form div.boton-registro{
+    padding: 10px 0;
+}
+.form div.boton-registro button {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+  }

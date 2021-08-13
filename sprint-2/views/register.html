@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,74 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
+
 <body class="register">
     <main>
-        <div>
+        <div class="formulario-register">
             <h1>registro</h1>
-            <form action="/register">
-                <div class="usuario">
-                    <label for="user">Nombre</label>
-                    <input type="text" name="user" id="user">
-                </div>
-                <div class="mail">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="contraseña">
-                    <label for="pass">Contraseña</label>
-                    <input type="password" name="pass" id="pass">
-                </div>
-                <div class="repetircontra">
-                    <label for="repeatpass">Repetir contraseña</label>
-                    <input type="password" name="repeatpass" id="repeatpass">
-                </div>
-                <div class="condicion-registro">
-                    <input type="checkbox" name="terminos">
-                    <label for="terminos">Acepta los terminos y condiciones</label>
-                </div>
-                <div class="boton-registro">
-                    <button type="submit">Registrarse</button>
-                </div>
-            </form>
+            <div class="form">
+                <form action="/register">
+                    <div class="usuario">
+                        <label for="user">Nombre</label>
+                        <input type="text" name="user" id="user">
+                    </div>
+                    <div class="mail">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="contraseña">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass">
+                    </div>
+                    <div class="repetircontra">
+                        <label for="repeatpass">Repetir contraseña</label>
+                        <input type="password" name="repeatpass" id="repeatpass">
+                    </div>
+                    <div class="condicion-registro">
+                        <input type="checkbox" name="terminos">
+                        <label for="terminos">Acepta los terminos y condiciones</label>
+                    </div>
+                    <div class="boton-registro">
+                        <button type="submit">Registrarse</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container-footer-top">
+            <section class="medios-pagos">
+                <div class="tarjetas">
+                    <h3>Metodos de pagos</h3>
+                    <img src="/img/store.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="container-footer-main">
+            <section class="contactos">
+                <h3>Contactos</h3>
+                <p>phone <span>123-456-7890</span></p>
+                <p>email <span>contac@gmail.com</span></p>
+            </section>
+            <section class="section-3">
+                <nav>
+                    <ul>
+                        <li><a class="boton-arrepentimiento" href="">arrepentimiento</a></li>
+                        <li><a href="">Ayuda</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Terminos y condiciones</a></li>
+                        <li><a href="">Atencion al cliente</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+        <div class="container-footer-down">
+            <section class="footer-copy">
+                <p class="copyright">Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
+            </section>
+        </div>
+    </footer>
 </body>
+
 </html>

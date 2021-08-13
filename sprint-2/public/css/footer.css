@@ -1,0 +1,56 @@
+footer{
+    background-color: #121111;
+    color: #ffffff;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+footer div.container-footer-top{
+    display: flex;
+    justify-content: center;
+}
+footer div.container-footer-top section.medios-pagos{
+    padding-top: 10px;
+   }
+footer div.container-footer-top section.medios-pagos div.tarjetas img{
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
+footer div.container-footer-main{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+footer div.container-footer-main section.contactos{
+    order: 1;
+    padding: 25px 0 10px 20px;
+   }
+footer div.container-footer-main section.contactos p span{
+    font-size: 10px;
+}
+footer div.container-footer-main section.section-3{
+    order: 2;
+    padding: 25px 20px 10px 0;
+}
+footer div.container-footer-main section.section-3 nav ul li a.boton-arrepentimiento{
+    font-size: 12px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+footer div.container-footer-main section.section-3 nav ul li a{
+    font-size: 10px;
+}
+footer div.container-footer-down{
+    text-align: center;
+    background-color: black;
+}
+footer div.container-footer-down section.footer-copy p{
+    font-size: 10px;
+}

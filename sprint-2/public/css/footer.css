@@ -54,3 +54,7 @@ footer div.container-footer-down{
 footer div.container-footer-down section.footer-copy p{
     font-size: 10px;
 }
+
+footer p{
+    margin-bottom: 0;
+}

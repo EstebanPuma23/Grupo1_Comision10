@@ -19,32 +19,46 @@ footer div.container-footer-top section.medios-pagos{
 footer div.container-footer-top section.medios-pagos div.tarjetas img{
     padding-top: 10px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
    }
-footer div.container-footer-main{
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-}
+   footer .container{
+       display: flex;
+       flex-wrap: wrap;
+       margin-bottom: 10px;
+   }
+   footer .container-footer-top{
+    width: 100%;
+   }
+   footer .contactos{
+    width: 50%;
+    padding: 10px 0 0 15px;
+   }
+   footer .section-3{
+    width: 50%;
+    padding: 10px 0 0 30px;
+    
+   }
 
+/*
 footer div.container-footer-main section.contactos{
     order: 1;
     padding: 25px 0 10px 20px;
-   }
-footer div.container-footer-main section.contactos p span{
+   }*/
+footer .container .contactos section span{
     font-size: 10px;
 }
+
+/*
 footer div.container-footer-main section.section-3{
     order: 2;
     padding: 25px 20px 10px 0;
-}
-footer div.container-footer-main section.section-3 nav ul li a.boton-arrepentimiento{
+}*/
+footer .container .section-3 section nav ul li a.boton-arrepentimiento{
     font-size: 12px;
     font-weight: 100;
     text-transform: uppercase;
 }
-footer div.container-footer-main section.section-3 nav ul li a{
+footer .container .section-3 nav ul li a{
     font-size: 10px;
 }
 footer div.container-footer-down{
@@ -54,7 +68,16 @@ footer div.container-footer-down{
 footer div.container-footer-down section.footer-copy p{
     font-size: 10px;
 }
-
-footer p{
-    margin-bottom: 0;
+@media (min-width:361px){
+    footer .container-footer-top{
+        width: 33%;
+       }
+    footer .contactos{
+        width: 33%;
+        text-align: center;
+       }
+    footer .section-3{
+        width: 33%;
+        padding-left: 80px;
+       }
 }

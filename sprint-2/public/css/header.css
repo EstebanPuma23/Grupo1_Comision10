@@ -1,10 +1,264 @@
-header .logo-nav{
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
+header {
+
+    box-sizing: border-box;
+
+    font-family:var(--Montserrat) ;
+    text-align: center;
 }
 
-header .logo-nav .img-logo{
+ /* bloque inicio sesion - registro  */
+header .bloque-sesion{
+    padding: 3px 0;
+    background-color: #000000CC;
+    /* border: solid 3px #39A872 */
+}
+
+header .bloque-sesion ul {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin: 0 ;
+    
+}
+
+header .bloque-sesion ul li{
+    margin-right: 10px;
+}
+header .bloque-sesion ul li a{
+    
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 12px;
+    font-family: var(--Montserrat);
+}
+
+
+/* Bloque buscador */
+
+
+header .bloque-nav .buscador{
+    display: none;
+    align-items: center;
+    width:40%
+}
+
+header .bloque-nav .buscador h4{
+    color: var(--grisOscuro);
+    margin:0;
+    font-size: 18px;
+}
+
+
+header .bloque-nav .buscador .btn-buscar{
     display: block;
-    width: 10%;
-} 
+    background-color: var(--blanco);
+    width: 90%;
+    padding: 3px;
+    border-radius: 10px;
+    margin-right: 5px;
+    align-items: center;
+}
+
+header .bloque-nav .buscador a{
+    color: var(--negro);
+}
+
+
+/* Bloque logo */
+
+
+header .bloque-nav{
+    display: flex;
+    align-items: center;
+    width: auto;
+    border: solid 1px #666;
+    justify-content: space-between;
+    background-color: var(--verde-oscuro) ;
+    padding: 0;
+    
+}
+
+header .bloque-nav .img-logo{
+    display: flex;
+    width: 40%;
+    margin-left: 15px;
+    
+}
+
+header .bloque-nav a img{
+    width: 90%;
+}
+
+
+/* Bloque botones movil */
+
+
+header ul{
+    margin-bottom: 0;
+}
+
+header .nav-bar-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+    width: 40%;
+}
+
+header .nav-bar-tablet{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+    width: 20%;
+    margin-right: 20px
+}
+
+header .nav-bar-escritorio{
+    display: none;
+    width: 25%;
+    justify-content: center;
+}
+
+header .nav-bar-escritorio li a{
+    color: var(--negro);
+}
+
+
+header .nav-bar-header li a, .nav-bar-tablet li a{
+    color: var(--negro);
+    font-size: 24px;
+    text-decoration: none;
+    width: 20%;
+    justify-content: space-around;
+}
+
+header .user-account{
+    display: none;
+}
+
+header .nav-social{
+    display: none;
+    justify-content: space-between;
+    background-color: #000000CC;
+}
+
+
+header .nav-social ul{
+    display: flex;
+    padding: 0;
+    width: 30%;
+}
+
+header .nav-social .prod-of{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .nav-social .prod-of li{
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+header .nav-social, ul li a{
+   padding: 4px ; 
+   color: var(--blanco);
+   font-size: 20px;
+}
+
+header .nav-social .cesta{
+    display: none;
+    align-items: center;
+}
+header .nav-social .cesta a{
+    color: var(--blanco);
+    font-size: 16px;
+}
+
+header .nav-social .cesta a i{
+    font-size: 18px;
+    margin-left: 10px;
+}
+header .redes{
+    display: flex;
+    justify-content: center;
+}
+
+header .redes li a{
+    font-size: 23px;
+}
+
+header .whatsapp{
+    color: var(--verde-oscuro);
+}
+
+header .ig{
+    color:var(--rojo);
+}
+
+header .facebook{
+    color:var(--azul) ;
+}
+
+/* 
+busc
+user-account
+cesta
+nav-social
+ */
+
+@media(min-width: 568px){
+    header .bloque-sesion{
+        display: none;
+    }
+
+    header .bloque-nav .img-logo{
+        width: 30%;
+    }
+    
+
+    header .nav-bar-header{
+        display: none;
+    }
+
+    header .nav-bar-tablet{
+        display: flex;
+    }
+
+    header .btn-categorias{
+        display: none;
+    }
+
+    header .nav-social{
+        display: flex;
+    }
+
+
+}
+
+
+@media(min-width:1024px){
+    header .bloque-nav .buscador{
+        display: flex;
+    }
+    header .nav-bar-tablet{
+        display: none;
+    }
+    header .nav-bar-escritorio{
+        display: flex;
+    }
+    
+    header .bloque-nav .img-logo{
+        width: 20%;
+    }
+
+
+    header .whatsapp, .ig, .facebook {
+        display:none;
+    }
+    
+    header .nav-social .cesta{
+        display: flex;
+    }
+    
+}

@@ -1,45 +1,69 @@
-.register main{
-    margin: 20px;
+.register .formulario-register {
+    margin: 10px auto;
+    padding: 38px 27px 45px;
     width: 90%;
+    max-width: 300px;
+    /*
     display: flex;
     align-items: center;
-    flex-direction: column;
-    padding: 15px;
+    flex-direction: column;*/
     border: 2px solid green;
     border-radius: 5px;
 }
-.register div.formulario-register h1{
+
+.register div.formulario-register h1 {
     text-transform: uppercase;
     text-align: center;
     padding: 10px 0;
 }
-.register div.formulario-register div.form form{
+
+.form div label {
+    padding-left: 15px;
+}
+.form .condicion-registro{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+}
+.form .condicion-registro input{
+ width: 10px;
+ margin: 0;
+ padding: 0;
+}
+.form .condicion-registro label{
+    font-size: 13px;
+    display: flex;
+    align-items: center;  
+    padding-left: 3px;
 }
 .form input {
+    
     width: 90%;
     border-radius: 10px;
     height: 30px;
     margin: 0.5rem;
-  }
-  .form div.condicion-registro{
-    
+
+}
+
+.form div.condicion-registro {
+
     white-space: nowrap;
-  }
-.form div.condicion-registro input{
-    margin: 0;
+}
+
+.form div.condicion-registro input {
+}
+
+.form .boton-registro {
     display: flex;
-    justify-content:flex-start;
+    justify-content: center;
 }
-.form div.boton-registro{
-    padding: 10px 0;
-}
+
 .form div.boton-registro button {
     padding: 0.5em 1em;
     border: none;
     background: rgb(100, 200, 255);
     cursor: pointer;
-  }
+}
+
+@media (min-width:361px) {
+    
+}

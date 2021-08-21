@@ -10,6 +10,6 @@ app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views', 'login.h
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views', 'register.html')));
 app.get('/store',(req,res) => res.sendFile(path.join(__dirname,'views', 'store.html')));
 app.get('/product-view',(req,res) => res.sendFile(path.join(__dirname,'views', 'product-view.html')));
-
+app.get('/arrepentimiento',(req,res) => res.sendFile(path.join(__dirname,'views', 'arrepentimiento.html')));
 
 app.listen(port, ()=>console.log("Servidor corriendo en el puerto:" + port));

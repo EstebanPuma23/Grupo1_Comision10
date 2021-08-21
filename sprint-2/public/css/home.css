@@ -1,6 +1,8 @@
 main{
     box-sizing: border-box;
+    /*
     background-color: var(--gris-claro);
+*/
 }
 main .banner{
     display: block;

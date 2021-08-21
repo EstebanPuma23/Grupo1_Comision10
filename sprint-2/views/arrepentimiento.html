@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ebd60ab031.js" crossorigin="anonymous"></script>
+    <link href="/css/styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -83,35 +86,40 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Boton de arrepentimiento</h1>
-        <h3>Devoluciones de compras en internet</h3>
-        
-        <p>Te recordamos que el producto a devolver debe estar tal cual lo recibiste. Tenés hasta 10 dias de corridos desde que lo compraste y/o recibiste para realizar la devolución.</p>
-        <div>
-            <h2>Por favor complete los siguientes datos:</h2>
-            <form action="/arrepentimiento">
-                <div class="usuario">
-                    <label for="user">Nombre</label>
-                    <input type="text" name="user" id="user">
-                </div>
-                <div class="mail">
-                    <label for="email">Mail</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="repetirmail">
-                    <label for="repeatmail">Repetir mail</label>
-                    <input type="email" name="repeatmail" id="repeatmail">
-                </div>
-                <div class="Nro-de-compra">
-                    <label for="nro-compra">Repetir mail</label>
-                    <input type="text" name="nro-compra" id="nro-compra">
-                </div>
-                <div class="boton-finalizar">
-                    <button type="submit">enviar</button>
-                </div>
-            </form>
+    <main class="arrepentimiento">
+        <div class="container-arrepentimiento">
+            <h2>Boton de arrepentimiento</h2>
+            <h3>Devoluciones de compras en internet</h3>
+            <div class="condicion-reclamo">
+                <p>Te recordamos que el producto a devolver debe estar tal cual lo recibiste. Tenés hasta 10 dias de corridos desde que lo compraste y/o recibiste para realizar la devolución.</p>
+         
+            </div>
+            <div>
+                <h2>Por favor complete los siguientes datos:</h2>
+                <form action="/arrepentimiento">
+                    <div class="usuario">
+                        <label for="user">Nombre</label>
+                        <input type="text" name="user" id="user">
+                    </div>
+                    <div class="mail">
+                        <label for="email">Mail</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="repetirmail">
+                        <label for="repeatmail">Repetir mail</label>
+                        <input type="email" name="repeatmail" id="repeatmail">
+                    </div>
+                    <div class="Nro-de-compra">
+                        <label for="nro-compra">Repetir mail</label>
+                        <input type="text" name="nro-compra" id="nro-compra">
+                    </div>
+                    <div class="boton-finalizar">
+                        <button type="submit">enviar</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        
     </main>
     <footer>
         <div class="container">

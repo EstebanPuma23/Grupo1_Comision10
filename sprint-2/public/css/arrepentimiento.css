@@ -1,0 +1,10 @@
+.container-arrepentimiento{
+    display: flex;
+    justify-content: center;
+    background-color: tomato;
+}
+.arrepentimiento{
+    background-color: tomato;
+    color: tomato;
+
+}

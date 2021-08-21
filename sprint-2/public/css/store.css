@@ -1,9 +1,21 @@
+.main-store{
+    margin: 20px auto;
+}
+.main-store h3{
+    padding-left: 20px;
+}
+.main-store a{
+    color: black;
+}
+.filas span{
+    color:#006afd;k;
+}
 main .container-store{
     width: 90%;
     margin: 10px auto;
     border: 1px solid rgb(168, 165, 165);
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 750px;
 }
 main .titulos{
     background-color: gray;
@@ -11,19 +23,58 @@ main .titulos{
 main div.titulos ol{
     display: flex;
     justify-content: space-between;
+    padding: 15px 50px;
 }
 
-main .filas{
+main .filas .articulos{
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0 10px 0;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.filas p{
+    font-size: 10px;
+    text-align: center;
+}
+.filas .articulo-comprar{
+    width: 25%;
+}
+.filas .articulo-comprar img{
+    width: 65%;
+}
+.filas .nombre-articulo{
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .cantidad-articulo{
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .precio-articulo{
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .eliminar-articulo{
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-right: 3px;
+}
+.filas .eliminar-articulo .eliminar{
+    display: none;
 }
 main .container-total{
     width: 90%;
     margin: 5px auto;
     border: 1px solid rgb(168, 165, 165);
     border-radius: 5px;
-    background-color: teal;
+    background-color: #f5f5f7;
     max-width: 400px;
 }
 main .container-button section{
@@ -34,12 +85,53 @@ main .container-button section{
 main .boton-costo{
     display: flex;
     justify-content:center;
+    margin: 5px 0;
 }
 main .envio-total{
-    background-color: white;
+    background-color: #f5f5f7;
     display: flex;
     flex-direction: column;
+    padding-top: 15px;
 }
 main .container-button .boton-continuar, .boton-pagar{
     padding: 0 10px ;
+}
+.container-button .boton-continuar button{
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+.container-button .boton-pagar button{
+    border-radius: 10px;
+    padding: 3px 10px;
+    background-color: blue;
+    color: white;
+}
+@media (min-width:767px) {
+    .filas p{
+        font-size: 17px;
+    }
+}
+@media (min-width:1024px) {
+    .container-main{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    main .container-store{
+        width: 60%;
+    }
+    main .container-total{
+        padding: 20px;
+    }
+    .filas .eliminar-articulo .eliminar-boton{
+        display:none;
+    }
+    .filas .eliminar-articulo .eliminar{
+        display:inline;
+    }
+    .total-button{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

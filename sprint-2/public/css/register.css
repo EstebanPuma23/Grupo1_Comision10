@@ -1,6 +1,6 @@
 .register .formulario-register {
     margin: 10px auto;
-    padding: 38px 27px 45px;
+    padding: 10px 27px 30px;
     width: 90%;
     max-width: 300px;
     /*
@@ -14,7 +14,7 @@
 .register div.formulario-register h1 {
     text-transform: uppercase;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .form div label {

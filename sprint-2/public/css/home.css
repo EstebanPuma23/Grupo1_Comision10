@@ -1,6 +1,8 @@
 main{
     box-sizing: border-box;
+    /* comentado porque afecta en todas las paginas
     background-color: var(--gris-claro);
+    */
 }
 main .banner{
     display: block;

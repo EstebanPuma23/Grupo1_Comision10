@@ -1,17 +1,29 @@
-.formulario-register{
+.main-store{
+    margin-bottom: 20px auto;
     font-family: var(--Montserrat);
 }
-.formulario-register h2{
-    color: #6fc66d;
+.main-store h3{
+    padding-bottom: 20px;
     text-align: center;
-    padding-bottom: 10px;
+    font-size: 32px;
+    color: var(--verde-oscuro);
+    background-color: rgba(111, 190, 109, 0.1);
+}
+.main-store .titulos ol li{
+    font-weight: 900;
+}
+.main-store a{
+    color: black;
+}
+.filas span{
+    color:#006afd;
 }
 main .container-store{
     width: 90%;
     margin: 10px auto;
     border: 1px solid rgb(168, 165, 165);
     border-radius: 5px;
-    max-width: 400px;
+    max-width: 750px;
 }
 main .titulos{
     background-color: gray;
@@ -19,19 +31,58 @@ main .titulos{
 main div.titulos ol{
     display: flex;
     justify-content: space-between;
+    padding: 15px 50px;
 }
 
-main .filas{
+main .filas .articulos{
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0 10px 0;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.filas p{
+    font-size: 10px;
+    text-align: center;
+}
+.filas .articulo-comprar{
+    width: 25%;
+}
+.filas .articulo-comprar img{
+    width: 65%;
+}
+.filas .nombre-articulo{
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .cantidad-articulo{
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .precio-articulo{
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.filas .eliminar-articulo{
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-right: 3px;
+}
+.filas .eliminar-articulo .eliminar{
+    display: none;
 }
 main .container-total{
-    width: 90%;
+    width: 100%;
     margin: 5px auto;
-    border: 1px solid rgb(168, 165, 165);
+  
     border-radius: 5px;
-    background-color: teal;
+    
     max-width: 400px;
 }
 main .container-button section{
@@ -42,12 +93,73 @@ main .container-button section{
 main .boton-costo{
     display: flex;
     justify-content:center;
+    margin: 5px 0;
 }
 main .envio-total{
-    background-color: white;
+ border: 1px solid var(--grisOscuro);
+ border-radius: 25px;
+    padding:15px;
+}
+.envio-total .envio{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.envio-total .total{
+    display: flex;
+    justify-content: space-between;
+}
+.envio-total  p{
+    font-size: 17px;
+    font-weight: 900;
 }
 main .container-button .boton-continuar, .boton-pagar{
     padding: 0 10px ;
+}
+.container-button .boton-continuar button{
+    border-radius: 10px;
+    padding: 3px 10px;
+}
+.container-button .boton-pagar button{
+    border-radius: 10px;
+    padding: 3px 10px;
+    background-color: blue;
+    color: white;
+}
+@media (min-width:767px) {
+    .filas p{
+        font-size: 17px;
+    }
+}
+@media (min-width:1024px) {
+    .container-main{
+        display: flex;
+        flex-wrap:wrap;
+    }
+    main .container-store{
+        width: 60%;
+    }
+    main .container-total{
+        padding-right: 10px;
+    }
+    .filas .eliminar-articulo .eliminar-boton{
+        display:none;
+    }
+    .filas .eliminar-articulo .eliminar{
+        display:inline;
+    }
+    .total-button{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    main .boton-costo button{
+        padding: 5px 10px;
+        font-size: 18px;
+        border-radius: 12px;
+    }
+    .container-button section div button{
+        font-size: 15px;
+    }
 }

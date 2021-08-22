@@ -38,21 +38,12 @@ footer div.container-footer-top section.medios-pagos div.tarjetas img{
     padding: 10px 0 0 30px;
     
    }
-
-/*
-footer div.container-footer-main section.contactos{
-    order: 1;
-    padding: 25px 0 10px 20px;
-   }*/
+   footer .container .contactos .telefono, .mail{
+       padding: 5px 0;
+   }
 footer .container .contactos section span{
     font-size: 10px;
 }
-
-/*
-footer div.container-footer-main section.section-3{
-    order: 2;
-    padding: 25px 20px 10px 0;
-}*/
 footer .container .section-3 section nav ul li a.boton-arrepentimiento{
     font-size: 12px;
     font-weight: 100;
@@ -80,4 +71,15 @@ footer div.container-footer-down section.footer-copy p{
         width: 33%;
         padding-left: 80px;
        }
+}
+@media (min-width:1024px){
+    footer .container .contactos section span{
+        font-size: 15px;
+    }
+    footer .container .section-3 nav ul li{
+        padding: 5px 0;
+    }
+    footer .container .section-3 nav ul li a{
+        font-size: 20px;
+    }
 }

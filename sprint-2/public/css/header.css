@@ -9,7 +9,7 @@ header {
  /* bloque inicio sesion - registro  */
 header .bloque-sesion{
     padding: 3px 0;
-    background-color: #000000CC;
+    background-color: var(--negro-header);
     /* border: solid 3px #39A872 */
 }
 
@@ -39,24 +39,27 @@ header .bloque-sesion ul li a{
 header .bloque-nav .buscador{
     display: none;
     align-items: center;
-    width:40%
+    width:40%;
+    justify-content: center;
 }
 
-header .bloque-nav .buscador h4{
-    color: var(--grisOscuro);
+header .bloque-nav .buscador .h4{
+    color: var(--negro);
     margin:0;
     font-size: 18px;
 }
 
-
 header .bloque-nav .buscador .btn-buscar{
+    width: 100%;
+}
+header .bloque-nav .buscador .btn-buscar input{
     display: block;
     background-color: var(--blanco);
-    width: 90%;
+    width: 95%;
     padding: 3px;
+    border: none;
     border-radius: 10px;
-    margin-right: 5px;
-    align-items: center;
+    text-align: center;
 }
 
 header .bloque-nav .buscador a{

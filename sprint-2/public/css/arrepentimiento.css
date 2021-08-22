@@ -1,10 +1,47 @@
 .container-arrepentimiento{
+    width: 90%;
+    margin: 20px auto;
+}
+.container-arrepentimiento h2{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.container-arrepentimiento h3{
+    text-align: center;
+    font-size: 15px;
+}
+.container-arrepentimiento .condicion-reclamo{
+    font-size: 12px;
+    padding: 10px 0;
+}
+.container-arrepentimiento .main-arrepentimiento{
+    background-color: var(--gris-claro);
+    padding: 20px;
+    border-radius: 10px;
+}
+.container-arrepentimiento .main-arrepentimiento .form-arrepentimiento{
     display: flex;
     justify-content: center;
-    background-color: tomato;
 }
-.arrepentimiento{
-    background-color: tomato;
-    color: tomato;
-
+.container-arrepentimiento .main-arrepentimiento .form-arrepentimiento div{
+   display: flex;
+   flex-direction: column;
+   padding: 10px 0;
+}
+.container-arrepentimiento .main-arrepentimiento .form-arrepentimiento label{
+    font-size: 12px;
+ }
+.container-arrepentimiento .main-arrepentimiento button{
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+@media (min-width:768px) {
+    .container-arrepentimiento .condicion-reclamo p{
+       font-size: 12px;
+       text-align: center;
+     }
+    .container-arrepentimiento .main-arrepentimiento{
+        margin: 0 250px;
+    }
 }

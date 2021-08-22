@@ -1,20 +1,19 @@
+.register main{
+   font-family: var(--Montserrat);
+}
 .register .formulario-register {
     margin: 10px auto;
     padding: 10px 27px 30px;
     width: 90%;
     max-width: 300px;
-    /*
-    display: flex;
-    align-items: center;
-    flex-direction: column;*/
     border: 2px solid green;
     border-radius: 5px;
 }
 
 .register div.formulario-register h1 {
-    text-transform: uppercase;
     text-align: center;
     padding: 20px 0;
+    color: #6fc66d;
 }
 
 .form div label {

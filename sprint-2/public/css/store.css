@@ -1,8 +1,16 @@
 .main-store{
-    margin: 20px auto;
+    margin-bottom: 20px auto;
+    font-family: var(--Montserrat);
 }
 .main-store h3{
-    padding-left: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 32px;
+    color: var(--verde-oscuro);
+    background-color: rgba(111, 190, 109, 0.1);
+}
+.main-store .titulos ol li{
+    font-weight: 900;
 }
 .main-store a{
     color: black;
@@ -88,10 +96,6 @@ main .boton-costo{
     margin: 5px 0;
 }
 main .envio-total{
-    /*
-    background-color: #f5f5f7;
-       display: flex;
-    */
  border: 1px solid var(--grisOscuro);
  border-radius: 25px;
     padding:15px;
@@ -107,6 +111,7 @@ main .envio-total{
 }
 .envio-total  p{
     font-size: 17px;
+    font-weight: 900;
 }
 main .container-button .boton-continuar, .boton-pagar{
     padding: 0 10px ;

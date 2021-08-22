@@ -19,10 +19,10 @@
         <div class="bloque-sesion">
             <ul type="none">
                 <li>
-                    <a href=""><i class="far fa-user"></i> Iniciar sesión</a>
+                    <a href="/login"><i class="far fa-user"></i> Iniciar sesión</a>
                 </li>
                 <li>
-                    <a href=""><i class="fas fa-user-plus"></i> Registrarse</a>
+                    <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
                 </li>
             </ul>
         </div>
@@ -30,7 +30,7 @@
             <a class="img-logo" href="/"><img src="/images/Logo1.png" alt="" /></a>
             <div class="buscador">
                 <div class="btn-buscar">
-                    <h4>Buscador</h4>
+                    <input class="h4" type="search" placeholder="Buscar">
                 </div>
                 <a  href=""><i class="fas fa-search"></i></a>
             </div>
@@ -43,7 +43,7 @@
                     <a class="busc" href=""><i class="fas fa-search"></i></a>
                 </li>
                 <li>
-                    <a class="cesta" href=""><i class="fas fa-shopping-bag"></i></a>
+                    <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
                 </li>
             </ul>
 
@@ -62,7 +62,7 @@
 
             <ul class="nav-bar-escritorio">
                 <li>
-                    <a class="user" href="">Mi cuenta</a>
+                    <a class="user" href="/login">Mi cuenta</a>
                 </li>
                 <li>
                     <a class="user-log" href=""><i class="fas fa-user-circle"></i></a>
@@ -244,37 +244,41 @@
     </section>
     </main>
     <footer>
-        <div class="container-footer-top">
-            <section class="medios-pagos">
-                <div class="tarjetas">
-                    <h3>Metodos de pagos</h3>
-                    <img src="/img/store.png" alt="" />
-                </div>
-            </section>
-        </div>
-        <div class="container-footer-main">
-            <section class="contactos">
-                <h3>Contactos</h3>
-                <p>phone <span>123-456-7890</span></p>
-                <p>email <span>contac@gmail.com</span></p>
-            </section>
-            <section class="section-3">
-                <nav>
-                    <ul>
-                        <li>
-                            <a class="boton-arrepentimiento" href="">arrepentimiento</a>
-                        </li>
-                        <li><a href="">Ayuda</a></li>
-                        <li><a href="">Preguntas frecuentes</a></li>
-                        <li><a href="">Terminos y condiciones</a></li>
-                        <li><a href="">Atencion al cliente</a></li>
-                    </ul>
-                </nav>
-            </section>
+        <div class="container">
+            <div class="container-footer-top">
+                <section class="medios-pagos">
+                    <div class="tarjetas">
+                        <h3>Metodos de pagos</h3>
+                        <img src="/img/store.png" alt="">
+                    </div>
+                </section>
+            </div>
+
+            <div class="contactos">
+                <section>
+                    <h3>Contactos</h3>
+                    <p>phone <span>123-456-7890</span></p>
+                    <p>email <span>contac@gmail.com</span></p>
+                </section>
+            </div>
+
+            <div class="section-3">
+                <section>
+                    <nav>
+                        <ul>
+                            <li><a class="boton-arrepentimiento" href="">arrepentimiento</a></li>
+                            <li><a href="">Ayuda</a></li>
+                            <li><a href="">Preguntas frecuentes</a></li>
+                            <li><a href="">Terminos y condiciones</a></li>
+                            <li><a href="">Atencion al cliente</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
         </div>
         <div class="container-footer-down">
             <section class="footer-copy">
-                <p class="copyright">Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
+                <p class="copyright">Copyright © 1999-2021 LibreriaInnovArte S.R.L.</p>
             </section>
         </div>
     </footer>

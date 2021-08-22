@@ -10,7 +10,7 @@
 
 
 body{
-    color: #ddd;
+    background-color: #ddd;
     
 }
 
@@ -25,6 +25,7 @@ body{
     --gris-claro: #ddd;
     --rojo:rgb(151, 48, 23);
     --azul:steelblue;
+    --negro-header: #000000CC
 }
 
 

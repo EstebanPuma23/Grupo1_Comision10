@@ -163,6 +163,10 @@ header .nav-social .prod-of li{
   font-size: 16px;
 }
 
+header .btn-inicio{
+    font-size: 16px;
+}
+
 header .nav-social, ul li a{
    padding: 4px ; 
    color: var(--blanco);

@@ -40,7 +40,7 @@
     border: 1px;
 }
 .product-view .contenedor-detalle .descripcion{
-    border: 1px solid var(--grisOscuro);
+    border: 1px solid var(--verde-claro);
     padding: 10px;
 }
 
@@ -65,8 +65,15 @@
    padding: 0 10px;
 }
 .product-view .contenedor-detalle .buton-producto button{
-   border-radius: 10px;
-   padding: 5px 15px;
+    padding: 6px 20px;
+    border: solid 1px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.product-view .contenedor-detalle .buton-producto .boton-agregar button{
+    background: var(--verde-oscuro);
+    color: var(--blanco);
 }
 @media (min-width:768px) {
     .product-view .contenedor-detalle .descripcion{
@@ -89,5 +96,8 @@
     }
     .product-view .contenedor-detalle .descripcion .caracteristicas ol li{
         font-size: 15px;
+    }
+    .product-view .contenedor-detalle .buton-producto button{
+        font-size: 16px;
     }
 }

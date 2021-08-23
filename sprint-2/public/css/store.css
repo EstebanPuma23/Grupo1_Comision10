@@ -13,7 +13,7 @@
     font-weight: 900;
 }
 .main-store a{
-    color: black;
+    color: var(--negro);
 }
 .filas span{
     color:#006afd;
@@ -26,7 +26,7 @@ main .container-store{
     max-width: 750px;
 }
 main .titulos{
-    background-color: gray;
+    background-color: var(--grisOscuro);
 }
 main div.titulos ol{
     display: flex;
@@ -113,18 +113,27 @@ main .envio-total{
     font-size: 17px;
     font-weight: 900;
 }
+main .container-button{
+    padding-bottom: 10px;
+}
 main .container-button .boton-continuar, .boton-pagar{
     padding: 0 10px ;
 }
 .container-button .boton-continuar button{
-    border-radius: 10px;
-    padding: 3px 10px;
+    padding: 6px 20px;
+    border: solid 1px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 .container-button .boton-pagar button{
-    border-radius: 10px;
-    padding: 3px 10px;
-    background-color: blue;
-    color: white;
+    padding: 6px 20px;
+    border: solid 1px;
+    background: var(--verde-oscuro);
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: 16px;
+    border-radius: 5px;
 }
 @media (min-width:767px) {
     .filas p{
@@ -155,9 +164,11 @@ main .container-button .boton-continuar, .boton-pagar{
         justify-content: center;
     }
     main .boton-costo button{
-        padding: 5px 10px;
-        font-size: 18px;
-        border-radius: 12px;
+        padding: 6px 20px;
+    border: solid 1px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
     }
     .container-button section div button{
         font-size: 15px;

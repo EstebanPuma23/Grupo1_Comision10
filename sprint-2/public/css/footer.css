@@ -1,13 +1,13 @@
 footer{
-    background-color: #121111;
-    color: #ffffff;
+    background-color: var(--negro);
+    color: var(--blanco);
 }
 li{
     list-style: none;
 }
 a{
     text-decoration: none;
-    color: white;
+    color: var(--blanco);
 }
 footer div.container-footer-top{
     display: flex;
@@ -52,9 +52,12 @@ footer .container .section-3 section nav ul li a.boton-arrepentimiento{
 footer .container .section-3 nav ul li a{
     font-size: 10px;
 }
+footer .container .section-3 nav ul li a:hover{
+    color: gold;
+}
 footer div.container-footer-down{
     text-align: center;
-    background-color: black;
+    background-color: var(--negro);
 }
 footer div.container-footer-down section.footer-copy p{
     font-size: 10px;
@@ -62,10 +65,12 @@ footer div.container-footer-down section.footer-copy p{
 @media (min-width:361px){
     footer .container-footer-top{
         width: 33%;
+        margin: auto;
        }
     footer .contactos{
         width: 33%;
         text-align: center;
+        margin: auto;
        }
     footer .section-3{
         width: 33%;
@@ -79,7 +84,10 @@ footer div.container-footer-down section.footer-copy p{
     footer .container .section-3 nav ul li{
         padding: 5px 0;
     }
-    footer .container .section-3 nav ul li a{
+    footer .container .section-3 section nav ul li a.boton-arrepentimiento{
         font-size: 20px;
+    }
+    footer .container .section-3 nav ul li a{
+        font-size: 17px;
     }
 }

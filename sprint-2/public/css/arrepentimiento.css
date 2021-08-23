@@ -35,8 +35,8 @@
     font-size: 12px;
  }
 .container-arrepentimiento .main-arrepentimiento button{
-    background-color: blue;
-    color: white;
+    background-color: var(--azul);
+    color: var(--blanco);
     border-radius: 10px;
 }
 @media (min-width:768px) {

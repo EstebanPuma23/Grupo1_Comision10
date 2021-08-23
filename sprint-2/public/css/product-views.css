@@ -1,6 +1,6 @@
 .product-view{
-    background-color: white;
-    color: black;
+    background-color: var(--blanco);
+    color: var(--negro);
     margin: 0 auto;
 }
 .contenedor-detalle{
@@ -22,7 +22,7 @@
 }
 .product-view .contenedor-detalle .product-preci{
  padding: 10px 0;
- border-bottom: 2px solid gray;
+ border-bottom: 2px solid var(--grisOscuro);
  text-align: center;
 }
 
@@ -40,7 +40,7 @@
     border: 1px;
 }
 .product-view .contenedor-detalle .descripcion{
-    border: 1px solid gray;
+    border: 1px solid var(--grisOscuro);
     padding: 10px;
 }
 

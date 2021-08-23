@@ -26,7 +26,6 @@ header .bloque-sesion ul li{
 }
 header .bloque-sesion ul li a{
     
-    text-decoration: none;
     color: var(--blanco);
     font-size: 12px;
     font-family: var(--Montserrat);
@@ -131,7 +130,6 @@ header .nav-bar-escritorio li a{
 header .nav-bar-header li a, .nav-bar-tablet li a{
     color: var(--negro);
     font-size: 24px;
-    text-decoration: none;
     width: 20%;
     justify-content: space-around;
 }
@@ -250,7 +248,26 @@ nav-social
     header .nav-bar-escritorio{
         display: flex;
     }
-    
+    header .nav-bar-escritorio li{
+        display: inline-block;
+        position: relative;
+    }
+    header .nav-bar-escritorio .submenu-user{
+        display: none;
+    background: var(--verde-claro);
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+    }
+    header .nav-bar-escritorio li:hover .submenu-user{
+        display: block;
+        position: absolute;
+    }
+    header .nav-bar-escritorio li:hover .submenu-user i{
+       font-size: 10px;
+    }
+    header .nav-bar-escritorio li:hover .submenu-user li a{
+        font-size: 11px;
+    }
     header .bloque-nav .img-logo{
         width: 20%;
     }

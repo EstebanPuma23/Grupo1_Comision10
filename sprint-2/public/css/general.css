@@ -10,6 +10,12 @@ header, footer{
 main{
     font-family: var(--Montserrat);
 }
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 :root{
     --Montserrat : 'Montserrat';
     --openSans : 'Open-Sans', sans-serif;

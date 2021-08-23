@@ -122,6 +122,9 @@ header .nav-bar-escritorio{
     justify-content: center;
 }
 
+header .nav-bar-escritorio .fa-user-circle{
+    font-size: 20px;
+}
 header .nav-bar-escritorio li a{
     color: var(--negro);
 }

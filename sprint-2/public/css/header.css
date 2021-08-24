@@ -145,6 +145,7 @@ header .nav-social{
     display: none;
     justify-content: space-between;
     background-color: #000000CC;
+    flex-wrap: wrap;
 }
 
 
@@ -156,6 +157,7 @@ header .nav-social ul{
 
 header .nav-social .prod-of{
     display: flex;
+    width: 60%;
     align-items: center;
     justify-content: space-around;
 }

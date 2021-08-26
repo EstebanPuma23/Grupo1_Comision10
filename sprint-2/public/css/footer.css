@@ -58,7 +58,7 @@ footer div.container-footer-down{
 footer div.container-footer-down section.footer-copy p{
     font-size: 10px;
 }
-@media (min-width:361px){
+@media (min-width:768px){
     footer .container-footer-top{
         width: 33%;
         margin: auto;

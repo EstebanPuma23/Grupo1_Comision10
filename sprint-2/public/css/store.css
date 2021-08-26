@@ -26,57 +26,56 @@ main .container-store{
     max-width: 750px;
 }
 main .titulos{
-    background-color: var(--grisOscuro);
+    display: none;
 }
 main div.titulos ol{
     display: flex;
     justify-content: space-between;
     padding: 15px 50px;
+    background-color: var(--verde-claro);
+    color: var(--blanco);
 }
 
 main .filas .articulos{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+    flex-direction: column;
 }
 .filas p{
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
+    padding: 5px;
 }
 .filas .articulo-comprar{
-    width: 25%;
+    width: 150px;
+    margin: 0 auto;
 }
 .filas .articulo-comprar img{
-    width: 65%;
+    max-width: 150px;
 }
 .filas .nombre-articulo{
-    width: 25%;
-    align-items: center;
     justify-content: center;
     display: flex;
 }
 .filas .cantidad-articulo{
-    width: 20%;
-    align-items: center;
     justify-content: center;
     display: flex;
 }
 .filas .precio-articulo{
-    width: 15%;
-    align-items: center;
     justify-content: center;
     display: flex;
 }
+.filas .fa-times-circle:before {
+    display: none;
+}
 .filas .eliminar-articulo{
-    width: 15%;
     align-items: center;
     justify-content: center;
     display: flex;
     padding-right: 3px;
 }
-.filas .eliminar-articulo .eliminar{
-    display: none;
-}
+
 main .container-total{
     width: 100%;
     margin: 5px auto;
@@ -99,6 +98,7 @@ main .envio-total{
  border: 1px solid var(--grisOscuro);
  border-radius: 25px;
     padding:15px;
+    margin: 0 8px;
 }
 .envio-total .envio{
     display: flex;
@@ -135,12 +135,44 @@ main .container-button .boton-continuar, .boton-pagar{
     font-size: 16px;
     border-radius: 5px;
 }
-@media (min-width:767px) {
+@media (min-width:768px) {
+    .filas .fa-times-circle:before {
+        display: inline;
+    }
+    main .titulos{
+        display: inline ;
+    }
     .filas p{
-        font-size: 17px;
+        font-size: 15px;
+    }
+    .filas span {
+        display: none;
+    }
+    main .filas .articulos {
+        flex-direction:row;
+    }
+    .filas .articulo-comprar {
+        width: 25%;
+    }
+    .filas .nombre-articulo{
+        width: 20%;
+        align-items: center;
+    }
+    .filas .cantidad-articulo{
+        width: 25%;
+        align-items: center;
+
+    }
+    .filas .precio-articulo{
+        width: 20%;
+        align-items: center;
+
     }
 }
 @media (min-width:1024px) {
+    .filas span {
+        display: inline;
+    }
     .container-main{
         display: flex;
         flex-wrap:wrap;
@@ -150,6 +182,19 @@ main .container-button .boton-continuar, .boton-pagar{
     }
     main .container-total{
         padding-right: 10px;
+    }
+    .filas .articulo-comprar {
+        width: 25%;
+    }
+    .filas .nombre-articulo{
+        width: 15%;
+    }
+    .filas .cantidad-articulo{
+        width: 25%;
+    }
+    .filas .precio-articulo{
+        width: 20%;
+
     }
     .filas .eliminar-articulo .eliminar-boton{
         display:none;

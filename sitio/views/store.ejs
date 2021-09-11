@@ -21,61 +21,28 @@
                     </ol>
                 </div>
                 <section class="filas">
-                    <article class="articulos">
-                        <div class="articulo-comprar">
-                            <img src="/images/producto-trabi.jpg" alt="" />
-                        </div>
-                        <div class="nombre-articulo">
-                            <p>Marcadores Trabí</p>
-                        </div>
-                        <div class="cantidad-articulo">
-                            <p>cantidad</p>
-                        </div>
-                        <div class="precio-articulo">
-                            <p>$ 140</p>
-                        </div>
-                        <div class="eliminar-articulo">
-                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
-                            <a class="eliminar" href=""><span>eliminar</span></a>
-                        </div>
-                    </article>
-                    <article class="articulos">
-                        <div class="articulo-comprar">
-                            <img src="/images/cuaderno-avon-universitario.jpg" alt="" />
-                        </div>
-                        <div class="nombre-articulo">
-                            <p>Cuaderno AVON universitario</p>
-                        </div>
-                        <div class="cantidad-articulo">
-                            <p>cantidad</p>
-                        </div>
-                        <div class="precio-articulo">
-                            <p>$ 240</p>
-                        </div>
-                        <div class="eliminar-articulo">
-                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
-                            <a class="eliminar" href=""><span>eliminar</span></a>
-                        </div>
-                    </article>
-
-                    <article class="articulos">
-                        <div class="articulo-comprar">
-                            <img src="/images/lapices-de-color.jpeg" alt="" />
-                        </div>
-                        <div class="nombre-articulo">
-                            <p>Lápices de Grafito Cuerpo Pastel</p>
-                        </div>
-                        <div class="cantidad-articulo">
-                            <p>cantidad</p>
-                        </div>
-                        <div class="precio-articulo">
-                            <p>$ 150</p>
-                        </div>
-                        <div class="eliminar-articulo">
-                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
-                            <a class="eliminar" href=""><span>eliminar</span></a>
-                        </div>
-                    </article>
+                    <% products.forEach(product => { %>
+                        <article class="articulos">
+                            <div class="articulo-comprar">
+                                <img src="/images/<%= product.image%>" alt="" />
+                            </div>
+                            <div class="nombre-articulo">
+                                <p><%= product.name %> </p>
+                            </div>
+                            <div class="cantidad-articulo">
+                                <p>cantidad</p>
+                            </div>
+                            <div class="precio-articulo">
+                                <p>$ <%=product.price %> </p>
+                            </div>
+                            <div class="eliminar-articulo">
+                                <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
+                                <a class="eliminar" href=""><span>eliminar</span></a>
+                            </div>
+                        </article>
+                    <% }) %>
+                    
+                    
 
 
                 </section>

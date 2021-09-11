@@ -9,9 +9,11 @@
 
     <main class="product-view">
         <div class="contenedor-detalle">
+            <a href="/detail/<%= product.id %> "></a>
+
             <div class="img-articulo">
-                <img src="/images/producto-trabi.jpg" alt="">
-                <p class="product-preci"> $150 </p>
+                <img src="/images/<%= product.image%>" alt="" />
+                <p class="product-preci"> $<%= product.price %> </p>
             </div>
             <div class="color-boton">
                 <div class="img-colores">
@@ -33,7 +35,7 @@
             <div class="descripcion">
                 <section>
                     <h3>Descripcion</h3>
-                    <p>Big Brush Trabí</p>
+                    <p> <%= product.name %></p>
                     <p>¿Ya tenés tus BIG BRUSH PASTEL en todos los colores?</p>
                     <div class="caracteristicas">
                         <ol>

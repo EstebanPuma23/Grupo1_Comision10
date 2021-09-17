@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- Head -->
+ <%- include('partials/head') %> 
+    
+ <!-- Header -->
+ <%- include('partials/header') %> 
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 mt-5 mx-auto">
+                <div class="card">
+                    <div class="card-header text-light bg-dark">
+                        <h4>Editar producto</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
+                                        <label for="name">Nombre del producto</label>
+                                      </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <textarea name="description" style="resize: none; height: 100px;" class="form-control" placeholder="Descripción del producto" id="floatingTextarea"><%= product.descriptiones %></textarea>
+                                        <label for="floatingTextarea">Descripción</label>
+                                      </div>
+                                </div>
+                               <div class="col-12 col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input name="price" type="number" class="form-control" id="price" value=<%= product.price %>>
+                                    <label for="price">Precio</label>
+                                  </div>
+                               </div> 
+                               <div class="col-12 col-md-6">
+                                <div class="mb-3">
+                                    <label for="image" class="btn btn-outline-secondary w-100 mt-2">Subir imagen</label>
+                                    <input name="image" hidden class="form-control" type="file" id="image">
+                                  </div>
+                               </div>
+                                <div class="col-12 mt-5">
+                                    <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
+
+                                </div>
+                           
+                          </form>
+                    </div>
+                   
+                </div>
+            </div>
+           
+        </div>
+    </main>
+</body>
+ <!-- Footer -->
+ <%- include('partials/footer') %> 
+</html>

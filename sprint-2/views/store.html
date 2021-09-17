@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ebd60ab031.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="bloque-sesion">
+            <ul type="none">
+                <li>
+                    <a href="/login"><i class="far fa-user"></i> Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+                </li>
+            </ul>
+        </div>
+        <nav class="bloque-nav">
+            <a class="img-logo" href="/"><img src="/images/Logo1.png" alt="" /></a>
+            <div class="buscador">
+                <div class="btn-buscar">
+                    <input class="h4" type="search" placeholder="Buscar">
+                </div>
+                <a  href=""><i class="fas fa-search"></i></a>
+            </div>
+            <ul class="nav-bar-header">
+                <li>
+                    <a class="btn-categorias" href=""><i class="fas fa-list-ul"></i></a>
+
+                </li>
+                <li>
+                    <a class="busc" href=""><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
+                </li>
+            </ul>
+
+            <ul class="nav-bar-tablet">
+                <li>
+                    <a class="busc" href=""><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a class="user-log" href=""><i class="fas fa-user-circle"></i></a>
+                    <ul class="submenu-user">
+                        <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
+                </li>
+
+            </ul>
+
+            <ul class="nav-bar-escritorio">
+                <li>
+                    <a class="user" href="/login">Mi cuenta</a><i class="fas fa-user-circle"></i>
+                    <ul class="submenu-user">
+                        <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+        <nav class="nav-social">
+            <ul class="prod-of">
+               <a href="/"><li>Inicio</li></a>
+                <li>Categorías</li>
+                <li>Ofertas</li>
+            </ul>
+            <ul class="redes">
+                <li>
+                    <a class="whatsapp" href=""><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li>
+                    <a class="ig" href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a class="facebook" href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="cesta">
+                    <a href="/store">Cesta de compras <i class="fas fa-shopping-bag"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main-store">
+        <h3>Mi carrito</h3>
+        <div class="container-main">
+            <div class="container-store">
+                <div class="titulos">
+                    <ol>
+                        <li>Imagen</li>
+                        <li>Nombre</li>
+                        <li>Cantidad</li>
+                        <li>Precio</li>
+                    </ol>
+                </div>
+                <section class="filas">
+                    <article class="articulos">
+                        <div class="articulo-comprar">
+                            <img src="/images/producto-trabi.jpg" alt="" />
+                        </div>
+                        <div class="nombre-articulo">
+                            <p>Marcadores Trabí</p>
+                        </div>
+                        <div class="cantidad-articulo">
+                            <p>cantidad</p>
+                        </div>
+                        <div class="precio-articulo">
+                            <p>$ 140</p>
+                        </div>
+                        <div class="eliminar-articulo">
+                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
+                            <a class="eliminar" href=""><span>eliminar</span></a>
+                        </div>
+                    </article>
+                    <article class="articulos">
+                        <div class="articulo-comprar">
+                            <img src="/images/cuaderno-avon-universitario.jpg" alt="" />
+                        </div>
+                        <div class="nombre-articulo">
+                            <p>Cuaderno AVON universitario</p>
+                        </div>
+                        <div class="cantidad-articulo">
+                            <p>cantidad</p>
+                        </div>
+                        <div class="precio-articulo">
+                            <p>$ 240</p>
+                        </div>
+                        <div class="eliminar-articulo">
+                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
+                            <a class="eliminar" href=""><span>eliminar</span></a>
+                        </div>
+                    </article>
+
+                    <article class="articulos">
+                        <div class="articulo-comprar">
+                            <img src="/images/lapices-de-color.jpeg" alt="" />
+                        </div>
+                        <div class="nombre-articulo">
+                            <p>Lápices de Grafito Cuerpo Pastel</p>
+                        </div>
+                        <div class="cantidad-articulo">
+                            <p>cantidad</p>
+                        </div>
+                        <div class="precio-articulo">
+                            <p>$ 150</p>
+                        </div>
+                        <div class="eliminar-articulo">
+                            <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
+                            <a class="eliminar" href=""><span>eliminar</span></a>
+                        </div>
+                    </article>
+
+
+                </section>
+            </div>
+            <div class="total-button">
+                <div class="container-total">
+                    <section>
+                        <div class="boton-costo">
+                            <button type="submit">Calcular costo de envio</button>
+                        </div>
+                        <div class="envio-total">
+                            <div class="envio">
+                                <p>Envio:</p> <p>$0.00</p>
+                            </div>
+                            
+                            <div class="total">
+                                <p>Total:</p> <p>$0.00</p>
+                            </div>
+ 
+                        </div>
+
+                    </section>
+                </div>
+
+                <div class="container-button">
+                    <section>
+                        <div class="boton-continuar">
+                            <button type="submit">Seguir comprando</button>
+                        </div>
+                        <div class="boton-pagar">
+                            <button type="submit">Finalizar compra</button>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="container-footer-top">
+                <section class="medios-pagos">
+                    <div class="tarjetas">
+                        <h3>Metodos de pagos</h3>
+                        <img src="/img/store.png" alt="">
+                    </div>
+                </section>
+            </div>
+
+            <div class="contactos">
+                <section>
+                    <h3>Contactos</h3>
+                    <div class="telefono">
+                        <i class="fas fa-phone-alt"></i><span>123-456-7890</span>
+                    </div>
+                    <div class="mail">
+                        <i class="far fa-envelope"></i> <span>contac@gmail.com</span>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="section-3">
+                <section>
+                    <nav>
+                        <ul>
+                            <li><a class="boton-arrepentimiento" href="arrepentimiento">arrepentimiento</a></li>
+                            <li><a href="">Ayuda</a></li>
+                            <li><a href="">Preguntas frecuentes</a></li>
+                            <li><a href="">Terminos y condiciones</a></li>
+                            <li><a href="">Atencion al cliente</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </div>
+        <div class="container-footer-down">
+            <section class="footer-copy">
+                <p class="copyright">Copyright © 1999-2021 LibreriaInnovArte S.R.L.</p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

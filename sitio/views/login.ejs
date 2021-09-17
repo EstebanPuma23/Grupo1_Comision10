@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head') %> 
+
+<body class="login">
+    <%- include('partials/header') %> 
+
+    <main>
+      <div class="form-login">
+          <div class="titulo-logo">
+            <h2>Inicio de Sesión</h2>
+            <img src="/images/Logo1.png" alt="">
+          </div>
+          <div class="formulario">
+              <form action="/login">
+                <div class="email">
+                    <label for="">Usuario</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div class="password">
+                    <label for="">Contraseña</label>
+                    <input type="password" name="" id="">
+                </div>
+                <div class="boton-login">
+                    <button type="submit">Entrar</button>
+                </div>
+              </form>
+              <div class="link-registro">
+                  <p>¿No tienes cuenta? </p><a class="btn-registro" href="/register">Registrate aquí</a>
+              </div>
+              
+          </div>
+      </div>
+    </main>
+    <%- include('partials/footer') %> 
+
+</body>
+</html>

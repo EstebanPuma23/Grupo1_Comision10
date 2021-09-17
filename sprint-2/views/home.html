@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/ebd60ab031.js" crossorigin="anonymous"></script>
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="bloque-sesion">
+            <ul type="none">
+                <li>
+                    <a href="/login"><i class="far fa-user"></i> Iniciar sesión</a>
+                </li>
+                <li>
+                    <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+                </li>
+            </ul>
+        </div>
+        <nav class="bloque-nav">
+            <a class="img-logo" href="/"><img src="/images/Logo1.png" alt="" /></a>
+            <div class="buscador">
+                <div class="btn-buscar">
+                    <input class="h4" type="search" placeholder="Buscar">
+                </div>
+                <a  href=""><i class="fas fa-search"></i></a>
+            </div>
+            <ul class="nav-bar-header">
+                <li>
+                    <a class="btn-categorias" href=""><i class="fas fa-list-ul"></i></a>
+
+                </li>
+                <li>
+                    <a class="busc" href=""><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
+                </li>
+            </ul>
+
+            <ul class="nav-bar-tablet">
+                <li>
+                    <a class="busc" href=""><i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a class="user-log" href=""><i class="fas fa-user-circle"></i></a>
+                    <ul class="submenu-user">
+                        <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
+                </li>
+
+            </ul>
+
+            <ul class="nav-bar-escritorio">
+                <li>
+                    <a class="user" href="/login">Mi cuenta</a><i class="fas fa-user-circle"></i>
+                    <ul class="submenu-user">
+                        <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
+                        <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </nav>
+        <nav class="nav-social">
+            <ul class="prod-of">
+               <a href="/"><li>Inicio</li></a>
+                <li>Categorías</li>
+                <li>Ofertas</li>
+            </ul>
+            <ul class="redes">
+                <li>
+                    <a class="whatsapp" href=""><i class="fab fa-whatsapp"></i></a>
+                </li>
+                <li>
+                    <a class="ig" href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a class="facebook" href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="cesta">
+                    <a href="/store">Cesta de compras <i class="fas fa-shopping-bag"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/images/banner-1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/images/banner-2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/images/banner-3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+        
+        <section class="main-section">
+            <h3 class="destacado">Productos destacados</h3>
+            <section class="productos">
+                <section class="destacados">   
+            <section class="art">
+            <article class="prod-1">
+                <a href="/product-view"><img src="/images/producto-trabi.jpg" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>Marcadores Trabí</p>
+                    <p>$ 140</p>
+                </div>
+            </article>
+        </section>
+        <section class="art">
+            <article class="prod-2">
+                <a href="/product-view"><img src="/images/cuaderno-avon-universitario.jpg" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>Cuaderno AVON universitario</p>
+                    <p>$ 240</p>
+                </div>
+            </article>
+        </section>
+        <section class="art">    
+        <article class="prod-3">
+                <a href="/product-view"><img src="/images/lapices-de-color.jpeg" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>12 Lápices de Grafito Cuerpo Pastel</p>
+                    <p>$ 150</p>
+                </div>
+            </article>
+        </section>
+        <section class="art">
+            <article class="prod-4">
+                <a href="/product-view"><img src="/images/crayones.jpg" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>Crayones Jumbo Simball</p>
+                    <p>$ 220</p>
+                </div>
+            </article>
+            </section>
+        </section>
+        <h3>Ofertas</h3>
+        <section class="ofertas">
+            <section class="art">
+                <article class="prod-5">
+                    <a href="/product-view"><img src="/images/pincel.jpg" alt="" /></a>
+                    <div class="botones">
+                        <a href=""><i class="fas fa-plus-circle"></i></a>
+                        <p>1</p>
+                        <a class="agregar" href="/store">Agregar</a>
+                    </div>
+                    <div class="detalles-producto">
+                        <p>Pincel escolar chato N°1</p>
+                        <p>$ 25</p>
+                    </div>
+                </article>
+                </section>
+                <section class="art">
+                    <article class="prod-6">
+                        <a href="/product-view"><img src="/images/corrector-liquid-paper.jpg" alt="" /></a>
+                        <div class="botones">
+                            <a href=""><i class="fas fa-plus-circle"></i></a>
+                            <p>1</p>
+                            <a class="agregar" href="/store">Agregar</a>
+                        </div>
+                        <div class="detalles-producto">
+                            <p>Corrector Liquid Paper</p>
+                            <p>$ 180</p>
+                        </div>
+                    </article>
+                    </section>
+                    <section class="art">
+            <article class="prod-7">
+                <a href="/product-view"><img src="/images/SIMBALL_Power Gel_Classic_Fluo.jpg" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>Bolígrafo Simball Power Gel Classic Fluo</p>
+                    <p>$ 660</p>
+                </div>
+            </article>
+        </section>
+        <section class="art">
+            <article class="prod-8">
+                <a href="/product-view"><img src="/images/notas-adhesivas.png" alt="" /></a>
+                <div class="botones">
+                    <a href=""><i class="fas fa-plus-circle"></i></a>
+                    <p>1</p>
+                    <a class="agregar" href="/store">Agregar</a>
+                </div>
+                <div class="detalles-producto">
+                    <p>Notas Autoadhesivas Amarillas</p>
+                    <p>$ 150</p>
+                </div>
+            </article>
+        </section>
+    </section>
+        </section>
+        <div class="carg-productos">
+            <button  type="button"> <i class="fas fa-sync-alt"></i> Cargar más productos</button>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="container-footer-top">
+                <section class="medios-pagos">
+                    <div class="tarjetas">
+                        <h3>Metodos de pagos</h3>
+                        <img src="/img/store.png" alt="">
+                    </div>
+                </section>
+            </div>
+
+            <div class="contactos">
+                <section>
+                    <h3>Contactos</h3>
+                    <div class="telefono">
+                        <i class="fas fa-phone-alt"></i><span>123-456-7890</span>
+                    </div>
+                    <div class="mail">
+                        <i class="far fa-envelope"></i> <span>contac@gmail.com</span>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="section-3">
+                <section>
+                    <nav>
+                        <ul>
+                            <li><a class="boton-arrepentimiento" href="arrepentimiento">arrepentimiento</a></li>
+                            <li><a href="">Ayuda</a></li>
+                            <li><a href="">Preguntas frecuentes</a></li>
+                            <li><a href="">Terminos y condiciones</a></li>
+                            <li><a href="">Atencion al cliente</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </div>
+        <div class="container-footer-down">
+            <section class="footer-copy">
+                <p class="copyright">Copyright © 1999-2021 LibreriaInnovArte S.R.L.</p>
+            </section>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
+
+<!--  -->
+
+<!-- <a href="">Iniciar sesión</a>   
+            <a href="">Registrarse</a> -->

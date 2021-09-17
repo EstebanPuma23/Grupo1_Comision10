@@ -11,11 +11,19 @@
 ### Buenos Aires, San Miguel.
 ### Edad 18 años.
 ### Estudiante de programación web Fullstack. Secundario a terminar (Bachillerato).
+#
 ## Aixa
-## Argentina, Buenos Aires, San MIguel.
-## Edad 19 años.
-## Estudios secundsrios comletos: Economia y Administracion 
-## Estudiante de programacion web FullStack. 
+### Argentina, Buenos Aires, San MIguel.
+### Edad 19 años.
+### Estudios secundarios completos: Economia y Administracion 
+### Estudiante de programacion web FullStack.
+#
+## Ernesto Sanchez
+### Buenos Aires, Lanus, Monte Chingolo.
+### Edad 24 años.
+### Estudios secundarios completos: Bachiller en ciencias sociales.
+### Estudios terciarios: Prof. de Educacion Fisica, en curso
+### Web Developer (En curso)
 # Lista de referencias:
 # Encabezado y cuerpo de la pagina, forma de presentar los articulos
 ### https://libreriaslevalle.com/

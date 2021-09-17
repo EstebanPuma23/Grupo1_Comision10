@@ -32,26 +32,38 @@ main .main-section h3{
    font-family: 'Montserrat';
 }
 
+
+main .glider-contain .glider {
+    padding-top: 30px;
+}
+
 main .productos, .destacados, .ofertas{
     display: flex;
     color: var(--negro);
     margin-top: 15px;
-    
+    width: 100%;
     flex-direction: column;
+}
+
+
+main .ofertas .art .prod{
+    width: 60%;
 }
 
 main .art{
     margin-bottom: 20px;
 }
 
-main .productos .prod-1,
-    main .productos .prod-2,
-    main .productos .prod-3,
-    main .productos .prod-4,
-    main .productos .prod-5,
-    main .productos .prod-6,
-    main .productos .prod-7,
-    main .productos .prod-8{
+main .art .prod{
+    transition: all .5s ease;
+}
+
+main .ofertas .art:last-child{
+    display: none;
+}
+
+
+main .productos .prod{
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -67,14 +79,7 @@ main .ofertas-dskp{
     display: none;
 }
 
-main .productos .prod-1 img,
-    main .productos .prod-2 img,
-    main .productos .prod-3 img,
-    main .productos .prod-4 img,
-    main .productos .prod-5 img,
-    main .productos .prod-6 img,
-    main .productos .prod-7 img,
-    main .productos .prod-8 img{
+main .productos .prod img{
     width: 100%;
      border: solid 1px var(--grisOscuro); 
     margin-bottom:0 ;
@@ -115,7 +120,8 @@ main  .botones p{
     display: block;
     border: solid 1px;
     border-radius: 3px;
-    width: 20%;
+    width: 15%;
+    padding:3px 0;
     
 }
 
@@ -144,13 +150,6 @@ main .carg-productos button{
 
 
 
-@media(min-width:320px){
-    
-    main .productos .prod-4,
-    main .productos .prod-8{
-        display: none;
-    }
-}
 
 @media(min-width:568px){
     
@@ -167,31 +166,15 @@ main .carg-productos button{
         
     }
 
-    main .art{
-        width: 30%;
-    }
+  
 
-    main .productos .prod-4{
-        display: none
-    }
-
-
-
-    main .productos .prod-5,
-    main .productos .prod-6,
-    main .productos .prod-7{
-        display: flex;
-    }
-
-    main .productos .prod-1,
-    main .productos .prod-2,
-    main .productos .prod-3,
-    main .productos .prod-4,
-    main .productos .prod-5,
-    main .productos .prod-6,
-    main .productos .prod-7,
-    main .productos .prod-8{
+    main .glider-contain .art{
         width: 70%;
+        margin: 0 auto;
+    }
+
+    main .ofertas .art {
+        width: 33%;
     }
 
     
@@ -220,30 +203,30 @@ main .carg-productos button{
         main .carg-productos button{
             width: 30%;
         }
-        main .art{
-            width: 23%;
+        main .glider-contain{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-
-        main .ofertas-dskp{
-            display: block;
-        }
-
-        main .ofertas-movil-tab{
-            display: none;
-        }
-
-        main .productos .prod-1,
-    main .productos .prod-2,
-    main .productos .prod-3,
-    main .productos .prod-4,
-    main .productos .prod-5,
-    main .productos .prod-6,
-    main .productos .prod-7,
-    main .productos .prod-8{
-        display: flex;
-        flex-wrap: wrap;
-        width: 80%;
-    }
 
     
+        main .art .prod:hover{
+            box-shadow: 0px /* eje x */ 0px /* eje y */ 20px /* desenfoque de sombra */ rgb(160, 159, 159) ;
+            transform: scale(1.05);
+        }
+
+        main .ofertas .art {
+            width: 25%;
+        }
+        main .ofertas .art:last-child{
+            display: block;
+        }
+        main .glider .art{
+            margin: 0 auto;
+            width: 70%;
+        }
+        main .ofertas{
+            display: flex;
+            flex-direction: row;
+        }
     }

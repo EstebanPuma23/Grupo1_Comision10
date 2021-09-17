@@ -22,7 +22,7 @@ header .bloque-sesion ul {
 }
 
 header .bloque-sesion ul li{
-    margin-right: 10px;
+    margin-right: 5px;
 }
 header .bloque-sesion ul li a{
     
@@ -105,7 +105,24 @@ header .nav-bar-header{
     justify-content: space-between;
     padding: 0%;
     width: 40%;
+    position: relative;
 }
+
+header .nav-bar-header .subMenuMovil{
+    display: none;
+    z-index: 1000;
+    background-color: #444444cc;
+}
+
+header .nav-bar-header .subMenuMovil li {
+    justify-content: center;
+}
+
+header .nav-bar-header:hover .subMenuMovil{
+    position: absolute;
+    display: block;
+}
+
 
 header .nav-bar-tablet{
     display: none;
@@ -119,7 +136,8 @@ header .nav-bar-tablet{
 header .nav-bar-escritorio{
     display: none;
     width: 25%;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 0;
 }
 
 header .nav-bar-escritorio .fa-user-circle{
@@ -155,6 +173,10 @@ header .nav-social ul{
     width: 30%;
 }
 
+header .nav-social ul a:hover {
+    color: var(--blanco);
+}
+
 header .nav-social .prod-of{
     display: flex;
     width: 60%;
@@ -165,6 +187,10 @@ header .nav-social .prod-of li{
   margin-left: 10px;
   font-size: 16px;
 }
+header .nav-social .prod-of li a{
+    font-size: 16px;
+}
+
 
 header .btn-inicio{
     font-size: 16px;
@@ -276,6 +302,7 @@ nav-social
     }
     header .nav-bar-escritorio{
         display: flex;
+        flex-wrap: wrap;
     }
     
     header .nav-bar-escritorio li{

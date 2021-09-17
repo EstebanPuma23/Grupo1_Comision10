@@ -2,10 +2,13 @@
     <div class="bloque-sesion">
         <ul type="none">
             <li>
-                <a href="/login"><i class="far fa-user"></i> Iniciar sesión</a>
+                <a href="/users/login"><i class="far fa-user"></i> Iniciar sesión</a>
             </li>
             <li>
-                <a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+                <a href="/users/register"><i class="fas fa-user-plus"></i> Registrarse</a>
+            </li>
+            <li>
+                <a href=""><i class="fas fa-cog"></i> Administrador</a>
             </li>
         </ul>
     </div>
@@ -19,8 +22,7 @@
         </div>
         <ul class="nav-bar-header">
             <li>
-                <a class="btn-categorias" href=""><i class="fas fa-list-ul"></i></a>
-
+                <a class="btn-categorias"><i class="fas fa-list-ul"></i></a>
             </li>
             <li>
                 <a class="busc" href=""><i class="fas fa-search"></i></a>
@@ -35,27 +37,26 @@
                 <a class="busc" href=""><i class="fas fa-search"></i></a>
             </li>
             <li>
-                <a class="user-log" href=""><i class="fas fa-user-circle"></i></a>
+                <a class="user-log"><i class="fas fa-user-circle"></i></a>
                 <ul class="submenu-user">
-                    <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
-                    <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    <li><i class="fas fa-user"></i><a href="/users/login">Iniciar sesion</a></li>
+                    <li><i class="fas fa-user-plus"></i><a href="/users/register">Crear cuenta</a></li>
                 </ul>
             </li>
             <li>
                 <a class="cesta" href="/store"><i class="fas fa-shopping-bag"></i></a>
             </li>
-
+            
         </ul>
 
         <ul class="nav-bar-escritorio">
             <li>
-                <a class="user" href="/login">Mi cuenta</a><i class="fas fa-user-circle"></i>
+                <a class="user" href="/users/login">Mi cuenta</a><i class="fas fa-user-circle"></i>
                 <ul class="submenu-user">
-                    <li><i class="fas fa-user"></i><a href="login">Iniciar sesion</a></li>
-                    <li><i class="fas fa-user-plus"></i><a href="register">Crear cuenta</a></li>
+                    <li><i class="fas fa-user"></i><a href="/users/login">Iniciar sesion</a></li>
+                    <li><i class="fas fa-user-plus"></i><a href="/users/register">Crear cuenta</a></li>
                 </ul>
             </li>
-            
         </ul>
     </nav>
     <nav class="nav-social">
@@ -63,6 +64,9 @@
            <a href="/"><li>Inicio</li></a>
             <li>Categorías</li>
             <li>Ofertas</li>
+            <li>
+                <a href="">Administrador <i class="fas fa-cog"></i></a>
+            </li>
         </ul>
         <ul class="redes">
             <li>
@@ -77,6 +81,7 @@
             <li class="cesta">
                 <a href="/store">Cesta de compras <i class="fas fa-shopping-bag"></i></a>
             </li>
+            
         </ul>
     </nav>
 </header>

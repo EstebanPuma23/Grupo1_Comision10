@@ -7,6 +7,10 @@
 header, footer{
     font-family: var(--openSans);
 }
+footer{
+    margin-bottom: 0;
+    padding-bottom:0 ;
+}
 main{
     font-family: var(--Montserrat);
 }

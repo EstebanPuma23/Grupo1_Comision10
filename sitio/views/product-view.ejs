@@ -16,10 +16,12 @@
                 <p class="product-preci"> $<%= product.price %> </p>
             </div>
             <div class="color-boton">
+                <!--
                 <div class="img-colores">
                     <h3 class="color">Color</h3>
                     <img src="/images/colores.png">
                 </div>
+            -->
                 <div class="buton-producto">
                     <div class="boton-agregar">
                         <button type="submit">Agregar al carrito</button>
@@ -36,13 +38,15 @@
                 <section>
                     <h3>Descripcion</h3>
                     <p> <%= product.name %></p>
-                    <p>¿Ya tenés tus BIG BRUSH PASTEL en todos los colores?</p>
                     <div class="caracteristicas">
                         <ol>
-                            <li>20 colores intensos, incluye gama completa de pasteles</li>
-                            <li>Punta pincel de 4 mm de diámetro</li>
-                            <li>Extra suave y ultra flexible</li>
-                            <li>Ideales para lettering</li>
+                            
+                            <% product.descriptiones.forEach(descripcion => { %>
+
+                                <li><%= descripcion %> </li>
+
+                            <% }) %>
+                            
                         </ol>
                     </div>
                 </section>

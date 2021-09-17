@@ -12,12 +12,12 @@ module.exports = {
         return res.render('productAdd')
     },
     store : (req,res) => {
-        const {name,description,price,image} = req.body;
+        const {name,descriptiones,price,image} = req.body;
         let product = {
             id : products[products.length - 1].id + 1,
             name : name.trim(),
-            description : description.trim(),
             price : +price,
+            descriptiones : product.descriptiones,
             image
         }
         products.push(product);
@@ -31,13 +31,13 @@ module.exports = {
     },
     update : (req,res) => {
         /* return res.send ('Ruta Correcta') */
-        const {name,description,price,image} = req.body;
+        const {name,descriptiones,price,image} = req.body;
         let product = products.find(product => product.id === +req.params.id);
         let productModified = {
             id : +req.params.id,
             name : name.trim(),
-            description : description.trim(),
-            price : +price,
+            price: +price,
+            descriptiones : product.descriptiones,
             image : product.image
         }
 

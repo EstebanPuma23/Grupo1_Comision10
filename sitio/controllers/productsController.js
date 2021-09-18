@@ -10,7 +10,7 @@ module.exports = {
         })
     },
     add : (req,res) => {
-        return res.render('productAdd')
+        return res.render('productAdd', {title: "Agregar producto"})
     },
     store : (req,res) => {
         const {name,descriptiones,price,image} = req.body;
@@ -28,6 +28,7 @@ module.exports = {
     edit : (req,res) => {
         return res.render('productEdit',{
             product : products.find(product => product.id === +req.params.id),
+            title: "Editar producto"
         })
     },
     update : (req,res) => {

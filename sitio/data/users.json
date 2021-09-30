@@ -1,0 +1,8 @@
+[
+    {"id" : 1,
+    "name" : "erne",
+    "email" : "ernesto@innovarte",
+    "password" : "",
+    "profile_picture" : "foto-defult.jpg",
+    "rol" : "user"}
+ ]

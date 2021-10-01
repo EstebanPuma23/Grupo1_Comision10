@@ -30,7 +30,7 @@ module.exports = {
         })
     },
     update : (req,res) => {
-        /* return res.send ('Ruta Correcta') */
+       
         const {name,description,price,image} = req.body;
         let product = products.find(product => product.id === +req.params.id);
         let productModified = {
@@ -44,5 +44,11 @@ module.exports = {
         let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(productsModified,null,3),'utf-8');
         return res.redirect('/admin')
-    }
+    },
+
+    destroy : (req, res) => {
+            let productsModified = products.filter(product => product.id !== +req.params.id)
+            fs.writeFileSync(path.join(__dirname, '..', 'data', 'products.json'), JSON.stringify(productsModified,null,3), 'utf-8')
+            return res.redirect('/admin')
+        }
 }

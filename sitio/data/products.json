@@ -15,6 +15,7 @@
    {
       "id": 2,
       "name": "Cuaderno AVON universitario",
+      "description": "Cuaderno avon nuevo, a estrenar.\r\nLas mejores del mercado",
       "price": 240,
       "image": "cuaderno-avon-universitario.jpg",
       "descriptiones": [

@@ -1,8 +1,10 @@
 [
-    {"id" : 1,
-    "name" : "erne",
-    "email" : "ernesto@innovarte",
-    "password" : "",
-    "profile_picture" : "foto-defult.jpg",
-    "rol" : "user"}
- ]
+   {
+      "id": 1,
+      "name": "franco",
+      "email": "franco@innovarte.com",
+      "password": "$2a$10$iSs4scyNPcTXv9D16pjLJ.ZtV0kCS5SrmJ87.1vr8fbOkx0PUTWLa",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "user"
+   }
+]

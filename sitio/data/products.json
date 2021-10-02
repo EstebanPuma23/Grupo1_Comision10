@@ -3,13 +3,13 @@
       "id": 1,
       "name": "Marcadores Trabí",
       "price": 240,
-      "descriptiones": [
+      "image": "producto-trabi.jpg",
+      "feactures": [
          "20 colores intensos, incluye gama completa de pasteles",
          "Punta pincel de 4 mm de diámetro",
          "Extra suave y ultra flexible",
          "Ideales para lettering"
       ],
-      "image": "producto-trabi.jpg",
       "category": "destacado"
    },
    {
@@ -17,7 +17,7 @@
       "name": "Cuaderno AVON universitario",
       "price": 240,
       "image": "cuaderno-avon-universitario.jpg",
-      "descriptiones": [
+      "feactures": [
          "Cuaderno Universitario Tapa Flexible",
          "x 80 Hojas",
          "Rayado y Cuadriculado"
@@ -28,11 +28,11 @@
       "id": 3,
       "name": "Lápices de Grafito Cuerpo Pastel",
       "price": 150,
-      "descriptiones": [
+      "image": "lapices-de-color.jpeg",
+      "feactures": [
          "Contiene 12 lápices negros cuerpo paste",
          "Cuerpo ergonómico"
       ],
-      "image": "lapices-de-color.jpeg",
       "category": "destacado"
    },
    {
@@ -40,7 +40,7 @@
       "name": "Crayones Jumbo Simball",
       "price": 220,
       "image": "crayones.jpg",
-      "descriptiones": [
+      "feactures": [
          "12 crayones compactos de excelente calidad",
          "Mejores crayones del mercado"
       ],
@@ -50,10 +50,10 @@
       "id": 5,
       "name": "Pincel escolar chato N°1",
       "price": 250,
-      "descriptiones": [
+      "image": "pincel.jpg",
+      "feactures": [
          "Pinceles profesionales de origen aleman"
       ],
-      "image": "pincel.jpg",
       "category": "en-oferta"
    },
    {
@@ -61,7 +61,7 @@
       "name": "Corrector Liquid Paper",
       "price": 180,
       "image": "corrector-liquid-paper.jpg",
-      "descriptiones": [
+      "feactures": [
          "Corrector liquido",
          "Contenido 7ml",
          "Punta metalica"
@@ -73,7 +73,7 @@
       "name": "Bolígrafo Simball Power Gel Classic Fluo",
       "price": 660,
       "image": "SIMBALL_Power Gel_Classic_Fluo.jpg",
-      "descriptiones": [
+      "feacture": [
          "Tinta gel",
          "Punta de 1 mm",
          "Capuchón ventilado"

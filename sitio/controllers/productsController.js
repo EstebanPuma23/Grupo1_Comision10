@@ -32,13 +32,8 @@ module.exports = {
         })
     },
     update : (req,res) => {
-<<<<<<< HEAD
         /* return res.send ('Ruta Correcta') */
         const {name,descriptiones,price,image} = req.body;
-=======
-       
-        const {name,description,price,image} = req.body;
->>>>>>> admin/erne
         let product = products.find(product => product.id === +req.params.id);
         let productModified = {
             id : +req.params.id,

@@ -2,6 +2,7 @@
    {
       "id": 1,
       "name": "Marcadores Trabí",
+      "description": "Entrada Carpaccio de salmón con cítricos",
       "price": 240,
       "image": "producto-trabi.jpg",
       "feactures": [
@@ -52,6 +53,7 @@
    {
       "id": 5,
       "name": "Pincel escolar chato N°1",
+      "description": "Entrada Carpaccio de salmón con cítricos",
       "price": 250,
       "image": "pincel.jpg",
       "feactures": [

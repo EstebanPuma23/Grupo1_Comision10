@@ -9,9 +9,6 @@ module.exports = {
     },
     processRegister : (req,res) => {
         const {name,email,password} = req.body;
-        //let prueba = name.trim();
-        //return res.send(prueba)
-
 
         let user = {
             id : users.length != 0 ? users[users.length - 1].id + 1 : 1,

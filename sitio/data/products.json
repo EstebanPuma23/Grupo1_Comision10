@@ -2,16 +2,15 @@
    {
       "id": 1,
       "name": "Marcadores Trabí",
-      "description": "Entrada Carpaccio de salmón con cítricos",
-      "price": 240,
-      "image": "producto-trabi.jpg",
+      "description": "Marcadores de excelente calidad, diseño y adaptabilidad a la vida cotidiana. Son los mejores del mercado",
+      "price": 320,
       "feactures": [
          "20 colores intensos, incluye gama completa de pasteles",
          "Punta pincel de 4 mm de diámetro",
          "Extra suave y ultra flexible",
          "Ideales para lettering"
       ],
-      "category": "destacado"
+      "image": "producto-trabi.jpg"
    },
    {
       "id": 2,
@@ -88,4 +87,3 @@
       "category": "en-oferta"
    }
 ]
-

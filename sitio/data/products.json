@@ -15,15 +15,14 @@
    {
       "id": 2,
       "name": "Cuaderno AVON universitario",
-      "description": "Entrada Carpaccio de salmón con cítricos",
+      "description": "El mejor del mercado a la hora de tomar apuntes y realizar tus actividades y tareas",
       "price": 240,
-      "image": "cuaderno-avon-universitario.jpg",
       "feactures": [
          "Cuaderno Universitario Tapa Flexible",
          "x 80 Hojas",
          "Rayado y Cuadriculado"
       ],
-      "category": "destacado"
+      "image": "cuaderno-avon-universitario.jpg"
    },
    {
       "id": 3,

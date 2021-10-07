@@ -5,6 +5,14 @@
       "email": "franco@innovarte.com",
       "password": "$2a$10$iSs4scyNPcTXv9D16pjLJ.ZtV0kCS5SrmJ87.1vr8fbOkx0PUTWLa",
       "profile_picture": "foto-defult.jpg",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "name": "erne",
+      "email": "erne@innovarte.com",
+      "password": "$2a$10$gBxYwurOsUpgRAkW9vhs0eSScqsHkWv1j09I.P6wDLEGu2yT4SxKu",
+      "profile_picture": "foto-defult.jpg",
       "rol": "user"
    }
 ]

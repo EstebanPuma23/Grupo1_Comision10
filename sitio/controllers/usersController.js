@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const path = require('path');
 const fs = require('fs');
 const users = require(path.join(__dirname,'../data/users.json'));
+const {validationResult} = require('express-validator');
 
 module.exports = {
     register : (req,res) => {
@@ -24,5 +25,24 @@ module.exports = {
     },
     login : (req,res) => {
         return res.render('login', {title: "Inicio de sesión"});
-    }
+    },
+    processLogin : (req,res) =>{
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            let user = users.find(user => user.email === req.body.email);
+            
+            req.session.userLogin = {
+                id : user.id, 
+                name : user.name,
+                profile_picture : user.profile_picture,
+                rol : user.rol
+            }
+            return res.redirect('/')
+        }else {
+            return res.render('login', {
+                errores : errors.mapped()
+            })
+        }
+    } 
 }

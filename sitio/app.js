@@ -10,7 +10,7 @@ var productsRouter = require('./routes/products');
 
 const methodOverride = require('method-override');
 const session = require('express-session');
-
+const localUserCheck = require('./middlewares/localsUserCheck');
 
 var app = express();
 
@@ -29,6 +29,8 @@ app.use(methodOverride('_method'));
 app.use(session({
   secret : "LibreriaInnovarte"
 }))
+
+app.use(localUserCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

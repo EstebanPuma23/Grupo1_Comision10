@@ -25,6 +25,7 @@
                       <th scope="col">Nombre</th>
                       <th scope="col">Precio</th>
                       <th scope="col">Descripción</th>
+                      <th scope="col">Características</th>
                       <th scope="col">Acciones</th>
                     </tr>
                   </thead>
@@ -36,6 +37,7 @@
                         <td><%= product.name %> </td>
                         <td> $ <%= product.price %> </td>
                         <td><%= product.description %> </td>
+                        <td><%= product.feactures %> </td>
                         <td class="d-flex justify-content-around">
                           <a href="/products/edit/<%= product.id %>" class="btn btn-sm btn-success" style="width: 35px;"><i class="fas fa-edit"></i></a>
                           <div>

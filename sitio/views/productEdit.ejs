@@ -27,6 +27,12 @@
                                         <label for="floatingTextarea">Descripción</label>
                                       </div>
                                 </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        <textarea name="feactures" style="resize: none; height: 100px;" class="form-control" placeholder="Caracteristicas del producto" id="floatingTextarea"><%= product.feactures %></textarea>
+                                        <label for="floatingTextarea">Características</label>
+                                      </div>
+                                </div>
                                <div class="col-12 col-md-6">
                                 <div class="form-floating mb-3">
                                     <input name="price" type="number" class="form-control" id="price" value=<%= product.price %>>

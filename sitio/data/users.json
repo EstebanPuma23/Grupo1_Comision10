@@ -14,5 +14,13 @@
       "password": "$2a$10$gBxYwurOsUpgRAkW9vhs0eSScqsHkWv1j09I.P6wDLEGu2yT4SxKu",
       "profile_picture": "foto-defult.jpg",
       "rol": "user"
+   },
+   {
+      "id": 3,
+      "name": "Aixa",
+      "email": "aixafs@innovarte.com",
+      "password": "$2a$10$53lxykqO.AvDAGzJX8Y17uJ3gm1T5gbOrDdd975ZryUL5bZ4WFlHK",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "user"
    }
 ]

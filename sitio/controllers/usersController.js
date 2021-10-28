@@ -38,6 +38,9 @@ module.exports = {
                 profile_picture : user.profile_picture,
                 rol : user.rol
             }
+            if(req.body.remember){
+                res.cookie('InnovArte', req.session.userLogin,{maxAge : 15000 * 60})
+            }
             return res.redirect('/')
         }else {
             return res.render('login', {

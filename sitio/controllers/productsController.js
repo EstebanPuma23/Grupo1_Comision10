@@ -13,14 +13,15 @@ module.exports = {
         return res.render('productAdd', {title: "Agregar producto"})
     },
     store : (req,res) => {
-        const {name,description,price,feactures,image} = req.body;
+        const {name,description,price,feactures} = req.body;
+        
         let product = {
             id : products[products.length - 1].id + 1,
             name : name.trim(),
             description : description.trim(),
             price : +price,
             feactures: feactures,
-            image
+            image: req.file ? req.file.filename : 'default-product.jpg'
         }
         products.push(product);
         fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');

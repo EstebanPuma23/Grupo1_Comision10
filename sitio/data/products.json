@@ -84,5 +84,13 @@
          "Capuchón ventilado"
       ],
       "category": "en-oferta"
+   },
+   {
+      "id": 8,
+      "name": "Marcadores celestes",
+      "description": "Marcadores celeste",
+      "price": 50,
+      "feactures": "Punta celeste para pintar de celeste",
+      "image": "default-product.jpg"
    }
 ]

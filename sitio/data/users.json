@@ -22,5 +22,13 @@
       "password": "$2a$10$53lxykqO.AvDAGzJX8Y17uJ3gm1T5gbOrDdd975ZryUL5bZ4WFlHK",
       "profile_picture": "foto-defult.jpg",
       "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Esteban",
+      "email": "estebanpuma@innovarte.com",
+      "password": "$2a$10$FlWJu2jQ7mk5yAdNKWvxp.nQvgiSS1NX74a0Kvq9Ofi4wyp.C7L2u",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "admin"
    }
 ]

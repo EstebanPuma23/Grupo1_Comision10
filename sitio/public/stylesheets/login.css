@@ -75,6 +75,13 @@
     color: var(--verde-oscuro);
 }
 
+/* MENSAJE DE ERROR */
+.login .box-error{
+    text-align: center;
+}
+ .login span{
+     color: red;
+ }
 
 
  @media(min-width:568px){

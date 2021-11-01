@@ -27,14 +27,13 @@
    {
       "id": 3,
       "name": "Lápices de Grafito Cuerpo Pastel",
-      "description": "Entrada Carpaccio de salmón con cítricos",
+      "description": "Los lapiceros de grafito son el útil más básico y fundamental de tu equipo de dibujo, son un producto económico y muy versátil que puede generar desde dibujos técnicos a dibujos artísticos con grandes escalas tonales, nunca está de más saber un poco más de tal útil y modesta herramienta.",
       "price": 150,
-      "image": "lapices-de-color.jpeg",
       "feactures": [
          "Contiene 12 lápices negros cuerpo paste",
          "Cuerpo ergonómico"
       ],
-      "category": "destacado"
+      "image": "lapices-de-color.jpeg"
    },
    {
       "id": 4,
@@ -91,6 +90,14 @@
       "description": "Marcadores celeste",
       "price": 50,
       "feactures": "Punta celeste para pintar de celeste",
+      "image": "default-product.jpg"
+   },
+   {
+      "id": 9,
+      "name": "Boligoma para pegar",
+      "description": "Excelente pegamento para adherir a toda superficie",
+      "price": 120,
+      "feactures": "Compacto\r\nPractico y rapido\r\nComodo y sencillo",
       "image": "default-product.jpg"
    }
 ]

@@ -14,7 +14,7 @@
                         <h4>Editar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST">
+                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
                                         <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto" value="<%= product.name %>">

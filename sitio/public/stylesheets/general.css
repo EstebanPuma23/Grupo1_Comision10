@@ -20,6 +20,10 @@ li{
 a{
     text-decoration: none;
 }
+span.error{
+    color: red;
+    font-size: 14px;
+}
 :root{
     --Montserrat : 'Montserrat';
     --openSans : 'Open-Sans', sans-serif;

@@ -11,7 +11,9 @@
     padding: 50px 15px;
     border: solid var(--verde-claro);
 }
-
+.login span{
+    color: red;
+}
 
 .login .form-login .titulo-logo{
     text-align: center;

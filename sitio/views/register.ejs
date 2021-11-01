@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <%- include('partials/head') %> 
+    <%- include('partials/head', {title: 'Registro de usuario'}) %> 
 
 
 <body class="register">
@@ -14,24 +14,32 @@
                 <form action="" method="POST">
                     <div class="usuario">
                         <label for="user">Nombre</label>
-                        <input type="text" name="name" id="user">
+                        <input type="text" name="name" id="user" value="<%= locals.old && old.name ? old.name : null %>">
+                        <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
                     </div>
                     <div class="mail">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
+                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
                     </div>
                     <div class="contraseña">
                         <label for="pass">Contraseña</label>
                         <input type="password" name="password" id="pass">
+                        <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+
                     </div>
                     <div class="repetircontra">
                         <label for="repeatpass">Repetir contraseña</label>
                         <input type="password" name="repeatpass" id="repeatpass">
+                        <span class="error"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+
                     </div>
                     <div class="condicion-registro">
                         <input type="checkbox" name="terminos">
                         <label for="terminos">Acepta los terminos y condiciones</label>
                     </div>
+                    <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>
+
                     <div class="boton-registro">
                         <button type="submit">Registrarse</button>
                     </div>
@@ -42,6 +50,12 @@
             </div>
         </div>
     </main>
+
+    <%- include('partials/footer') %> 
+
+</body>
+
+</html>
 
     <%- include('partials/footer') %> 
 

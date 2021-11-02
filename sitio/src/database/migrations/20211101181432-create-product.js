@@ -22,7 +22,8 @@ module.exports = {
       },
       discount: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 0
       },
       categoryId: {
         allowNull: false,
@@ -39,8 +40,13 @@ module.exports = {
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: null
+      },
+      deleteAt: {
+        type: Sequelize.DATE,
+        defaultValue: null
+
       }
     });
   },

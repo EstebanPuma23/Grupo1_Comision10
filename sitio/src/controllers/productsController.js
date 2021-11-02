@@ -35,7 +35,7 @@ module.exports = {
     },
     update : (req,res) => {
         /* return res.send ('Ruta Correcta') */
-        const {name,description,price,feactures,image} = req.body;
+        const {name,description,price} = req.body;
         let product = products.find(product => product.id === +req.params.id);
         let productModified = {
             id : +req.params.id,

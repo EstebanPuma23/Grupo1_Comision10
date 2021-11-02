@@ -1,9 +1,9 @@
-require('dotenv').config();
+require('dotenv').config({path:'/custom/path/to/.env'});
 
 module.exports = {
   "development": {
     "username": "root",
-    "password": "rood",
+    "password": "root",
     "database": "innovarte",
     "host": "127.0.0.1",
     "dialect": "mysql",

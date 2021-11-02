@@ -9,7 +9,7 @@ const {register, processRegister, login, processLogin, logout} = require('../con
 /* GET home page. */
 router
     .get('/register',loginUsercheck, register)
-    .post('/register',processRegister)
+    .post('/register',registerValidator, processRegister)
     .get('/login',loginUsercheck, login)
     .post('/login',loginValidator, processLogin)
     .get('/logout',logout)

@@ -34,7 +34,8 @@ module.exports = {
         })
     },
     update : (req,res) => {
-        /* return res.send ('Ruta Correcta') */
+         /*return res.send(req.file)*/
+         
         const {name,description,price} = req.body;
         let product = products.find(product => product.id === +req.params.id);
         let productModified = {
@@ -43,7 +44,7 @@ module.exports = {
             description : description.trim(),
             price: +price,
             feactures: product.feactures,
-            image : product.image
+            image : req.file ? req.file.filename : product.image
         }
 
         let productsModified = products.map(product => product.id === +req.params.id ? productModified : product);

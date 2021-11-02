@@ -49,7 +49,11 @@ module.exports = {
         }
     },
     logout : (req,res)=> {
-        req.session.destroy(),
-        res.redirect('/')
+
+        if (req.cookies.InnovArte) {
+            res.cookie('InnovArte', '', {maxAge : -1})   
+        }
+        req.session.destroy()
+        return res.redirect('/')
     },
 }

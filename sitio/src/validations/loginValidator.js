@@ -1,5 +1,5 @@
 const {body} = require('express-validator');
-const users = require('../data/users.json');
+const users = require('../../data/users.json');
 const bcrypt = require('bcryptjs');
 
 module.exports =  [

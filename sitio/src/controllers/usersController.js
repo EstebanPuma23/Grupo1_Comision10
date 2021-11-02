@@ -9,6 +9,9 @@ module.exports = {
         return res.render('register', {title: "Registro"});
     },
     processRegister : (req,res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
         const {name,email,password} = req.body;
 
         let user = {
@@ -22,6 +25,12 @@ module.exports = {
         users.push(user);
         fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
         return res.redirect('/')
+        }else{
+            return res.render('register',{
+                errores : errors.mapped(),
+                old : req.body
+            })
+        }
     },
     login : (req,res) => {
         return res.render('login', {title: "Inicio de sesión"});

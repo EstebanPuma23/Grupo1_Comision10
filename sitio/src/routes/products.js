@@ -12,7 +12,7 @@ var storage = multer.diskStorage({
       cb(null, './public/images')
     },
     filename: function (req, file, cb) {
-      cb(null, 'default-product-' + Date.now() + path.extname(file.originalname))
+      cb(null, 'img-product-' + Date.now() + path.extname(file.originalname))
     }
   })
   
@@ -23,7 +23,7 @@ router.get('/detail/:id', detail);
 router.get('/add',adminUserCheck,add);
 router.post('/add',upload.single('image'),store);
 router.get('/edit/:id',adminUserCheck, edit);
-router.put('/update/:id',upload.single('image'), update)
+router.put('/update/:id',upload.single('image'),update)
 router.delete('/destroy/:id', destroy)
 
 module.exports = router;

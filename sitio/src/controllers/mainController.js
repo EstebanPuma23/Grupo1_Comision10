@@ -1,13 +1,14 @@
 const products = require('../data/products.json');
 const fs = require ('fs');
 const path = require ('path')
+const db = require('../database/models')
 
 module.exports = {
     index : (req,res) => {
         return res.render('home', {
             products,
             title : "Inicio"
-        });
+        })
     },
     store : (req,res) => {
         return res.render('store', { 

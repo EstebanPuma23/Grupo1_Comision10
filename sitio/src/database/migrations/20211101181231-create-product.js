@@ -20,6 +20,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DECIMAL(8,2)
       },
+      image: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       discount: {
         allowNull: false,
         type: Sequelize.INTEGER,
@@ -43,7 +47,7 @@ module.exports = {
         type: Sequelize.DATE,
         defaultValue: null
       },
-      deleteAt: {
+      deletedAt: {
         type: Sequelize.DATE,
         defaultValue: null
 

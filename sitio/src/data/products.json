@@ -44,8 +44,7 @@
       "feactures": [
          "12 crayones compactos de excelente calidad",
          "Mejores crayones del mercado"
-      ],
-      "category": "destacado"
+      ]
    },
    {
       "id": 5,
@@ -55,8 +54,7 @@
       "image": "pincel.jpg",
       "feactures": [
          "Pinceles profesionales de origen aleman"
-      ],
-      "category": "en-oferta"
+      ]
    },
    {
       "id": 6,
@@ -68,8 +66,7 @@
          "Corrector liquido",
          "Contenido 7ml",
          "Punta metalica"
-      ],
-      "category": "en-oferta"
+      ]
    },
    {
       "id": 7,
@@ -77,19 +74,18 @@
       "description": "Entrada Carpaccio de salmón con cítricos",
       "price": 660,
       "image": "SIMBALL_Power Gel_Classic_Fluo.jpg",
-      "feacture": [
+      "feactures": [
          "Tinta gel",
          "Punta de 1 mm",
          "Capuchón ventilado"
-      ],
-      "category": "en-oferta"
+      ]
    },
    {
       "id": 8,
       "name": "Marcadores celestes",
       "description": "Marcadores celeste",
       "price": 50,
-      "feactures": "Punta celeste para pintar de celeste",
+      "feactures": ["Punta celeste para pintar de celeste"],
       "image": "default-product.jpg"
    },
    {
@@ -97,7 +93,11 @@
       "name": "Boligoma 2.0",
       "description": "Excelente pegamento para adherir a toda superficie",
       "price": 120,
-      "feactures": "Compacto\r\nPractico y rapido\r\nComodo y sencillo",
+      "feactures": [
+         "Compacto",
+         "Practico y rapido",
+         "Comodo y sencillo"
+      ],
       "image": "img-product-1635860510550.png"
    }
 ]

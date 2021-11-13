@@ -3,14 +3,14 @@ var router = express.Router();
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
 
-const loginUsercheck = require('../middlewares/loginUserCheck')
+const notEntry = require('../middlewares/notEntry')
 const {register, processRegister, login, processLogin, logout} = require('../controllers/usersController');
 
 /* GET home page. */
 router
-    .get('/register',loginUsercheck, register)
+    .get('/register',notEntry, register)
     .post('/register',registerValidator, processRegister)
-    .get('/login',loginUsercheck, login)
+    .get('/login',notEntry, login)
     .post('/login',loginValidator, processLogin)
     .get('/logout',logout)
 

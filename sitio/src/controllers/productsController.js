@@ -14,13 +14,17 @@ module.exports = {
     },
     store : (req,res) => {
         const {name,description,price,feactures} = req.body;
-        
+
+        let splitFeatures = feactures.split('-')
+        let trimFeature = splitFeatures.map(feature => {
+            return feature.trim()
+        })
         let product = {
             id : products[products.length - 1].id + 1,
             name : name.trim(),
             description : description.trim(),
             price : +price,
-            feactures: feactures,
+            feactures : trimFeature,
             image: req.file ? req.file.filename : 'default-product.jpg'
         }
         products.push(product);

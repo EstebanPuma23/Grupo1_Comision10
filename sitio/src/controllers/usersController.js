@@ -24,6 +24,14 @@ module.exports = {
         }
         users.push(user);
         fs.writeFileSync(path.join(__dirname,'../data/users.json'),JSON.stringify(users,null,3),'utf-8');
+        
+        req.session.userLogin = {
+            id : user.id,
+            name : user.name,
+            profile_picture : user.profile_picture,
+            rol : user.rol
+        }
+
         return res.redirect('/')
         }else{
             return res.render('register',{

@@ -1,13 +1,13 @@
-require('dotenv').config({path:'/custom/path/to/.env'});
+require('dotenv').config();
 
 module.exports = {
-  "development": {
-    "username": procces.env.DB_USERNAME,
-    "password": procces.env.DB_PASSWORD,
-    "database": procces.env.DB_DATABASE,
-    "host": process.env.DB_HOST,
-    "dialect": "mysql",
-    "port": process.env.DB_PORT
+  development: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    host: process.env.DB_HOST,
+    dialect: "mysql",
+    port: process.env.DB_PORT
   },
   "test": {
     "username": "root",

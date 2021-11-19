@@ -45,12 +45,11 @@
                 <section class="destacados">
                     <div class="glider-contain">
                         <div class="glider">
-                            <% products.forEach(product => { %> <% if (product.category ===
-                                "destacado") { %>
+                            <% products.forEach(product => { %>
                                     <div>
                                         <section class="art">
                                             <article class="prod">
-                                                <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %> "
+                                                <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>"
                                                         alt="" /></a>
                                                 <div class="botones">
                                                     <a href=""><i class="fas fa-plus-circle"></i></a>
@@ -64,7 +63,7 @@
                                             </article>
                                         </section>
                                     </div>
-                            <% } %> <% }) %>
+                             <% }) %>
                         </div>
                         <button aria-label="Previous" class="glider-prev">«</button>
                         <button aria-label="Next" class="glider-next">»</button>
@@ -73,8 +72,7 @@
                 </section>
                 <h3>Ofertas</h3>
                 <section class="ofertas">
-                            <% ofertas.forEach(product => { %> <% if (product.category ===
-                                "en-oferta") { %>
+                            <% ofertas.forEach(product => { %>
                                         <section class="art">
                                             <article class="prod">
                                                 <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %> "
@@ -90,7 +88,7 @@
                                                 </div>
                                             </article>
                                         </section>
-                            <% } %> <% }) %>
+                         <% }) %>
                 </section>
             </section>
             <div class="carg-productos">

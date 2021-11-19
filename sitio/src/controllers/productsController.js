@@ -9,14 +9,14 @@ const { Op } = require('sequelize');
 module.exports = {
     detail : (req,res) => {
         db.Product.findByPk(req.params.id, {
-            include: ['images', "features"]
+            include: ['image', "features"]
         })
             .then(product =>{
                 db.Category.findByPk(product.categoryId, {
                     include: [
                         {
                             association: 'products',
-                            include: ['images']
+                            include: ['image']
                         }
                     ]
                 })
@@ -46,27 +46,29 @@ module.exports = {
         .catch(error=> console.log(error))
     },
     store : (req,res) => {
-        const {name,description,price,feactures} = req.body;
+        
+        let errors = validationResult(req);
 
-        let splitFeatures = feactures.split('-')
-        let trimFeature = splitFeatures.map(feature => {
-            return feature.trim()
-        })
-        let product = {
-            id : products[products.length - 1].id + 1,
-            name : name.trim(),
-            description : description.trim(),
-            price : +price,
-            feactures : trimFeature,
-            image: req.file ? req.file.filename : 'default-product.jpg'
+        if (errors.isEmpty()) {
+            const {name,description,price,feactures, category} = req.body;
+            
+            db.Product.create({
+                name: name.trim(),
+                description: description.trim(),
+                price: price,
+                categoryId: category,
+                feactures: feactures.trim(),
+                image:  req.file ? req.file.filename : "default-product.jpg"
+            })
+                .then(product => {
+                    res.redirect('/admin')
+                })
+                .catch(errors => console.log(errors))
         }
-        products.push(product);
-        fs.writeFileSync(path.join(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8');
-        return res.redirect('/admin')
     },
     edit : (req,res) => {
         
-        let product = db.Product.findByPk(req.params.id)
+        let product = db.Product.findAll()
         let categories = db.Category.findAll()
         
         Promise.all([product,categories])

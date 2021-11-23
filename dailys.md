@@ -3,9 +3,9 @@ Orden de daily:
 - Aixa
 - Esteban
 - Franco
--Sprint N°6 - Base de datos
--Fecha: 19/11/2021 
--Horario: 12:30hs
+- Sprint N°6 - Base de datos
+- Fecha: 19/11/2021 
+- Horario: 12:30hs
 
 
 1- ¿Que hiciste ayer?
@@ -35,8 +35,8 @@ Orden de daily:
 - [X] * Ernesto * = Organizar los tiempos para establecer horarios fijos para codear
 - [ ] * Equipo * = Establecer horario de reunion grupal para trabajar en equipo
 
--Fecha: 23/11/2021 
--Horario: 12:30hs
+- Fecha: 23/11/2021 
+- Horario: 12:30hs
 
 
 1- ¿Que hiciste ayer?
@@ -63,8 +63,8 @@ Orden de daily:
 - [ ] * Equipo * = Agenda reuniones Martes y Jueves despues de las dailys
 
 
--Fecha: 
--Horario: 12:30hs
+- Fecha: 
+- Horario: 12:30hs
 
 
 1- ¿Que hiciste ayer?

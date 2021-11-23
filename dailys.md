@@ -28,9 +28,36 @@ Horario: 12:30hs
 * Ernesto * = Problemas de horario
 
 4- Action Items
-- [ ] * Aixa * = Pedir ayuda a compañeros y profes. Seguir repasando contenido
+- [X] * Aixa * = Pedir ayuda a compañeros y profes. Seguir repasando contenido
 - [ ] * Esteban * = Repasar contenido. Pedir ayuda a compañeros y profes
 - [ ] * Franco * = 
-- [ ] * Ernesto * = Revisar el CRUD de detalle de producto para poder arrancar
-- [ ] * Ernesto * = Organizar los tiempos para establecer horarios fijos para codear
+- [X] * Ernesto * = Revisar el CRUD de detalle de producto para poder arrancar
+- [X] * Ernesto * = Organizar los tiempos para establecer horarios fijos para codear
 - [ ] * Equipo * = Establecer horario de reunion grupal para trabajar en equipo
+
+Fecha: 23/11/2021 
+Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = Repaso de contenido para avanzar con la tarea de CRUD de usuarios
+* Esteban * = 
+* Franco * = No logre avanzar con la tarea de Login de usuario
+* Ernesto * = Repasar CRUD de detalle de productos
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Terminar CRUD de usuarios
+* Esteban * = 
+* Franco * = No podre avanzar con la tarea vlidacion del registro de usuarios
+* Ernesto * = Terminar CRUD de detalle de productos
+
+3- Bloqueadores
+* Aixa * = Desorganizacion de tiempo para avanzar con el PI
+* Esteban * = 
+* Franco * = Parciales de la universidad hasta el viernes 26/11
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = Reorganizar horarios para dedicar mas tiempo al PI
+- [ ] * Franco * = 
+- [ ] * Equipo * = Agenda reuniones Martes y Jueves despues de las dailys

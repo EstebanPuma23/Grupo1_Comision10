@@ -68,23 +68,20 @@ module.exports = {
     },
     edit : (req,res) => {
         
-        let product = db.Product.findAll()
+        let product = db.Product.findByPk(req.params.id)
         let categories = db.Category.findAll()
-        
+
         Promise.all([product,categories])
 
-        .then(([products,categories]) => {
-            return res.render('productEdit',{
-                product,
+        .then(([product,categories]) => {
+            return res.render('productEdit', {
                 categories,
+                product,
                 title: "Editar producto"
             })
         })
-
         .catch(error => console.log(error))
 
-
-        
     },
     update : (req,res) => {
          /*return res.send(req.file)*/
@@ -96,11 +93,17 @@ module.exports = {
                     name : name.trim(),
                     description : description.trim(),
                     price,
+                },
+                {
+                   where : {
+                       id : req.params.id
+                   } 
                 }
             )
-            .then( ()=> {
-                id : req.params.id
+            .then(()=>{
+                return res.redirect('/admin')
             })
+            
          }else{
             let product = db.Product.findByPk(req.params.id)
             let categories = db.Category.findAll()
@@ -121,8 +124,7 @@ module.exports = {
                 name : {
                     [ Op.substring]: req.query.keyword
                 }
-            },
-            include: ['images', 'category']
+            }
         })
         let categories = db.Category.findAll()
 

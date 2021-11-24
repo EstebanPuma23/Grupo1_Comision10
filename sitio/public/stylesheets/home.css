@@ -16,7 +16,7 @@ main .banner a img{
 .carousel-control-prev,
 .carousel-control-next{
     display: none;
-    margin: 18% 0;
+    /* margin: 18% 0; */
     width: 10%;
     background-color: var(--negro-header);
     border-radius: 20px;
@@ -195,11 +195,11 @@ main .carg-productos button{
 
     @media(min-width:1024px){
 
-        .carousel-control-prev,
+         .carousel-control-prev,
         .carousel-control-next{
-            margin: 20% 30px;
+            background-color: #0000;
             width: 5%;
-        }
+        } 
         main .carg-productos button{
             width: 30%;
         }

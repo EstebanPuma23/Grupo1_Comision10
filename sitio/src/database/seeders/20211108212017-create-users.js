@@ -8,7 +8,7 @@ module.exports = {
         {
         name: 'Admin',
         surname: 'Admin2',
-        email : 'admin@craftsy.com',
+        email : 'admin@innovarte.com',
         password : bcrypt.hashSync('123123', 10),
         rolId : 2,
         createdAt : new Date,

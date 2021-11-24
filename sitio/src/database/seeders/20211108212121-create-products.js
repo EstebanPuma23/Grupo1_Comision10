@@ -9,6 +9,7 @@ productsjson.forEach(product => {
   let item = {
     ...product,
     categoryId : faker.datatype.number({min:1,max:4}),
+    discount : faker.datatype.number({min:0,max:50}),
     createdAt : new Date,
     updatedAt : null,
     deletedAt : null,

@@ -6,10 +6,12 @@ const { validationResult} = require("express-validator")
 /* BASE DE DATOS */
 const db = require('../database/models');
 const { Op } = require('sequelize');
+
 module.exports = {
     detail : (req,res) => {
+        return res.send(req.body.detail)
         db.Product.findByPk(req.params.id, {
-            include: ['images', "features"]
+            include: ['images', 'features']
         })
             .then(product =>{
                 db.Category.findByPk(product.categoryId, {

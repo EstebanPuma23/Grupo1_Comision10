@@ -126,17 +126,23 @@ module.exports = {
                 }
             }
         })
-        let categories = db.Category.findAll()
-
-        Promise.all([products, categories])
-
-            .then(([products,categories])=> {
-                return res.render('admin',{
+            .then(products => {
+                return res.render('product-list',{
                     products,
-                    categories,
                     title:'Resultado de la búsqueda'
                 })
             })
+    },
+
+    list : (req,res)=> {
+        let products = db.Product.findAll()
+        .then(products => {
+            return res.render('product-list', {
+                products,
+                title : "Listado de productos"
+            })
+        })
+        .catch(error => console.log(error))
     },
 
     destroy : (req, res) => {

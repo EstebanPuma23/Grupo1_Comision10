@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <%- include('partials/head') %>
+  <body class="list">
+    <!-- Header -->
+    <%- include('partials/header') %>
+    <main>
+        <div class = "target-container">
+            <% products.forEach(product => { %>
+                <div class="target">
+                    <section class="art">
+                        <article class="prod">
+                            <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>"
+                                    alt="" /></a>
+                            <div class="botones">
+                                <a href=""><i class="fas fa-plus-circle"></i></a>
+                                <p>1</p>
+                                <a class="agregar" href="/store">Agregar</a>
+                             </div>
+                            <div class="detalles-producto">
+                                <p><%= product.name %></p>
+                                <p>$ <%= product.price %></p>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+         <% }) %>
+</div>
+
+    </main>
+
+  </body>
+
+  <!-- Footer -->
+  <%- include('partials/footer') %>
+</html>

@@ -54,15 +54,28 @@ header .bloque-nav .buscador .btn-buscar{
 header .bloque-nav .buscador .btn-buscar input{
     display: block;
     background-color: var(--blanco);
-    width: 95%;
+    width: 100%;
     padding: 3px;
     border: none;
     border-radius: 10px;
     text-align: center;
+    outline: none;
 }
 
 header .bloque-nav .buscador a{
     color: var(--negro);
+}
+
+header form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .buscador button {
+    width: 10%;
+    background: bottom;
+    border-style: hidden;
 }
 
 

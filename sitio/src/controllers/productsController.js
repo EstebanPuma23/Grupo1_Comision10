@@ -8,31 +8,24 @@ const db = require('../database/models');
 const { Op } = require('sequelize');
 module.exports = {
     detail : (req,res) => {
-        db.Product.findByPk(req.params.id, {
-            include: ['image', "features"]
+        let product = db.Product.findByPk(req.params.id)
+        let features = db.Feature.findAll({
+        where : {
+        productId : {
+        [Op.substring] : req.params.id
+        }
+        }
         })
-            .then(product =>{
-                db.Category.findByPk(product.categoryId, {
-                    include: [
-                        {
-                            association: 'products',
-                            include: ['image']
-                        }
-                    ]
-                })
-                    .then(category =>{
-                        return res.render('productDetail', {
-                            product,
-                            products: category.products
-                        })
-                    })
-            } )
-
-            .catch(error => console.log(error))
-        /* return res.render('product-view', {
-            product : products.find(product => product.id === +req.params.id),
-            title : "Detalle de producto"
-        }) */
+        
+            Promise.all([product,features])
+        
+                 .then(([product, features]) =>{
+                     return res.render('product-view', {
+                         product,
+                         features, 
+                         title : 'detalle de producto'
+                     })
+                 } )
     },
     add : (req,res) => {
 

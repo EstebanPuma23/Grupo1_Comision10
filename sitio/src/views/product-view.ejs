@@ -13,7 +13,7 @@
 
             <div class="img-articulo">
                 <img src="/images/<%= product.image%>" alt="" />
-                <p class="product-preci"> $<%= product.price %> </p>
+                <p class="product-precio"> $<%= product.price %> </p>
             </div>
             <div class="color-boton">
                 <!--
@@ -40,10 +40,9 @@
                     <p> <%= product.name %></p>
                     <div class="caracteristicas">
                         <ol>
-                            
-                            <% product.feactures.forEach(descripcion => { %>
+                            <% features.forEach(descripcion => { %>
 
-                                <li><%= descripcion %> </li>
+                                <li><%= descripcion.name %> </li>
 
                             <% }) %>
                             

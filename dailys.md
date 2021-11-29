@@ -89,3 +89,31 @@ Orden de daily:
 - [ ] * Aixa * = 
 - [ ] * Franco * = 
 - [ ] * Equipo * = 
+
+- Fecha: 29/11/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * =
+* Esteban * = No logró avanzar con las tareas
+* Franco * = No logró avanzar con las tareas(Repasando contenido)
+* Ernesto * = No logró avanzar con el detalle de producto 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = 
+* Esteban * = Empezar ocn el front-end de login
+* Franco * = Terminar con la vista de Perfil
+* Ernesto * = Ver js para avanzar con las validaciones
+
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = Falta de conocimientos para poder avanzar
+* Franco * = Falta de conocimientos para poder avanzar
+* Ernesto * = Falta de conocimientos para poder avanzar
+
+4- Action Items
+- [ ] * Aixa * = 
+- [ ] * Franco * = Reorganizar los horarios para estar al dia con las tareas
+- [ ] * Equipo * = 
+

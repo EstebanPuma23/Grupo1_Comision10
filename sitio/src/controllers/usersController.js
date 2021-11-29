@@ -73,4 +73,9 @@ module.exports = {
         req.session.destroy()
         return res.redirect('/')
     },
+    profile : (req,res) =>{
+        res.render('profile',{
+            user : users.find(user => user.id === req.session.userLogin.id)
+        })
+    }
 }

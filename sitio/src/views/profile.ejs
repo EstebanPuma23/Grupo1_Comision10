@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head') %> 
+
+
+<body>
+    <%- include('partials/header') %> 
+
+    <main class="product-view">
+        <div class="contenedor-detalle">
+            <a href="/detail/<%= product.id %> "></a>
+
+            <div class="img-articulo">
+                <img src="/images/<%= product.image%>" alt="" />
+                <p class="product-precio"> $<%= product.price %> </p>
+            </div>
+            <div class="color-boton">
+                <!--
+                <div class="img-colores">
+                    <h3 class="color">Color</h3>
+                    <img src="/images/colores.png">
+                </div>
+            -->
+                <div class="buton-producto">
+                    <div class="boton-agregar">
+                        <button type="submit">Agregar al carrito</button>
+    
+                    </div>
+                    <div class="boton-comprar">
+                        <button type="submit">Seguir comprando </button>
+    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="descripcion">
+                <section>
+                    <h3>Descripcion</h3>
+                    <p> <%= product.name %></p>
+                    <div class="caracteristicas">
+                        <ol>
+                            <% features.forEach(descripcion => { %>
+
+                                <li><%= descripcion.name %> </li>
+
+                            <% }) %>
+                            
+                        </ol>
+                    </div>
+                </section>
+            </div>
+           
+        </div>
+    </main>
+    <%- include('partials/footer') %> 
+
+</body>
+
+</html>

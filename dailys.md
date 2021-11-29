@@ -58,34 +58,62 @@ Orden de daily:
 * Ernesto * = 
 
 4- Action Items
-- [ ] * Aixa * = Reorganizar horarios para dedicar mas tiempo al PI
-- [ ] * Franco * = 
-- [ ] * Equipo * = Agenda reuniones Martes y Jueves despues de las dailys
+- [X] * Aixa * = Reorganizar horarios para dedicar mas tiempo al PI
+- [] * Franco * = 
+- [] * Equipo * = Agenda reuniones Martes y Jueves despues de las dailys
 
 
-- Fecha: 
+- Fecha: 24/11/2021
 - Horario: 12:30hs
 
 
 1- ¿Que hiciste ayer?
-* Aixa * = 
-* Esteban * = 
-* Franco * = 
-* Ernesto * = 
+* Aixa * = Avanzó con la tarea de registro en CRUD de usuarios
+* Esteban * = No logró avanzar con las tareas (borrado de productos)
+* Franco * = No logró avanzar con las tareas (Está con parciales)
+* Ernesto * = No logró avanzar con el detalle de producto (repasó contenido)
 
 2- ¿Que vas a hacer hoy?
-* Aixa * = 
-* Esteban * = 
-* Franco * = 
-* Ernesto * = 
+* Aixa * = Terminar Crud de usuarios
+* Esteban * = Crear listado de productos (Vista y metodo)
+* Franco * = No puede avanzar con la tarea (está con parciales)
+* Ernesto * = Terminar con el crud de detalle de producto
 
 3- Bloqueadores
 * Aixa * = 
 * Esteban * = 
-* Franco * = 
-* Ernesto * = 
+* Franco * = Parciales
+* Ernesto * = Tiene asuntos que atender en su trabajo
 
 4- Action Items
 - [ ] * Aixa * = 
 - [ ] * Franco * = 
 - [ ] * Equipo * = 
+
+- Fecha: 29/11/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * =
+* Esteban * = No logró avanzar con las tareas
+* Franco * = No logró avanzar con las tareas(Repasando contenido)
+* Ernesto * = No logró avanzar con el detalle de producto 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = 
+* Esteban * = Empezar ocn el front-end de login
+* Franco * = Terminar con la vista de Perfil
+* Ernesto * = Ver js para avanzar con las validaciones
+
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = Falta de conocimientos para poder avanzar
+* Franco * = Falta de conocimientos para poder avanzar
+* Ernesto * = Falta de conocimientos para poder avanzar
+
+4- Action Items
+- [ ] * Aixa * = 
+- [ ] * Franco * = Reorganizar los horarios para estar al dia con las tareas
+- [ ] * Equipo * = 
+

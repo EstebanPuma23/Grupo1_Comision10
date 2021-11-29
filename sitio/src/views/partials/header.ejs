@@ -15,10 +15,12 @@
     <nav class="bloque-nav">
         <a class="img-logo" href="/"><img src="/images/Logo1.png" alt="" /></a>
         <div class="buscador">
-            <div class="btn-buscar">
-                <input class="h4" type="search" placeholder="Buscar">
-            </div>
-            <a  href=""><i class="fas fa-search"></i></a>
+            <form action="/products/search" method="GET">
+                <div class="btn-buscar">
+                    <input class="form-control" type="text" name="keyword" placeholder="Buscar" >
+                </div>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
         <ul class="nav-bar-header">
             <li>
@@ -88,7 +90,7 @@
     <nav class="nav-social">
         <ul class="prod-of">
            <a href="/"><li>Inicio</li></a>
-            <li>Categorías</li>
+            <li><a href="/products/product-list">Todos los productos</a></li>
             <li>Ofertas</li>
            
         </ul>

@@ -6,6 +6,8 @@
     <!-- Header -->
     <%- include('partials/header') %>
     <main>
+
+        <h3 class="destacado">Todos los productos</h3>
         <div class = "target-container">
             <% products.forEach(product => { %>
                 <div class="target">
@@ -13,11 +15,10 @@
                         <article class="prod">
                             <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>"
                                     alt="" /></a>
-                            <div class="botones">
-                                <a href=""><i class="fas fa-plus-circle"></i></a>
-                                <p>1</p>
-                                <a class="agregar" href="/store">Agregar</a>
-                             </div>
+                                    <div class="botones">
+                                        <input class="cant-prod" type="number" value="1">
+                                        <a class="agregar" href="/store">Agregar</a>
+                                     </div>
                             <div class="detalles-producto">
                                 <p><%= product.name %></p>
                                 <p>$ <%= product.price %></p>

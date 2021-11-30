@@ -1,38 +1,92 @@
- .list main .target-container{
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     margin: 3em 0;
- }
+
+.list .destacado {
+    text-align: center;
+    margin: 30px 0;
+}
 
 
- .list .target {
-     width: 25%;
-     justify-content: center;
-     }
+.list main .target-container {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3em 0;
+}
 
-     .list .art {
-         width: 80%;
-         margin: auto;
-     }
+.list .target {
+  width: 90%;
+  margin: auto;
+}
 
-     .list .prod{
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-        text-align: center;
-        line-height: 30px;
-        background-color: var(--blanco);
-        margin:0 auto;
-        margin-bottom: 15px;
-        border-radius: 10px;
-    }
+.list .art {
+  width: 80%;
+  margin: auto;
+}
 
-     .list .prod img{
-        width: 100%;
-        border: solid 1px var(--grisOscuro); 
-       margin-bottom:0 ;
-       border-radius:10px 10px 0 0 ;
-     }
+.list .prod {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: center;
+  line-height: 30px;
+  background-color: var(--blanco);
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.list .prod img {
+  width: 100%;
+  border: solid 1px var(--grisOscuro);
+  margin-bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
 
 
+
+@media (min-width: 568px) {
+  .list main .target-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .list .target {
+    width: 45%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .list .art {
+    width: 80%;
+    margin: auto;
+  }
+  .list .prod {
+    width: 75%;
+  }
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .list main .target-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .list .target {
+    width: 25%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .list .art {
+    width: 80%;
+    margin: auto;
+  }
+  .list .prod {
+    width: 70%;
+  }
+}

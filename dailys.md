@@ -146,3 +146,31 @@ Orden de daily:
 - [ ] * Ernesto * =
 - [ ] * Equipo * = 
 
+- Fecha: 2/12/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = Validaciones de registro
+* Esteban * = 
+* Franco * = vista y controlador del perfil
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Repazar contenido para el sprint 7
+* Esteban * = 
+* Franco * = CRUD de editar y perfil EMPEZAR
+* Ernesto * =
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = Problema con multer
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = 
+- [ ] * Esteban * = 
+- [ ] * Franco * = Solucionar multer en perfil
+- [ ] * Ernesto * =
+- [ ] * Equipo * = 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title: 'Perfil de usuario' }) %>
+
+
+    <body>
+        <%- include('partials/header') %>
+
+            <main class="perfil-usuario">
+
+                <div class="cont-perfil">
+                    <div class="titulo">
+                        <h4>Perfil de usuario</h4>
+                    </div>
+
+                    <div class="cont-perfil-img">
+                        <div class="perfil-img">
+                            <img class="img-perfil" src="/images/<%= user.profile_picture %>" alt="">
+
+                        </div>
+                    </div>
+
+                    <form action="" method="POST" enctype="multipart/form-data">
+
+                        <div class="cont-nombre">
+                            <div class="nombre-perfil">
+                                <label for="name">Nombre</label>
+                                <input type="text"
+                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                    id="name" placeholder="Nombre " name="name" value="<%= user.name %>">
+                                
+                            </div>
+                            <span class="error">
+                                <%= locals.errors && errors.name ? errors.name.msg : null%>
+                            </span>
+                        </div>
+                        <div class="cont-email">
+                            <div class="email-perfil">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="Email" name="email"
+                                    value="<%= user.email %>" disabled>
+                                
+                            </div>
+                        </div>
+                        <div class="cont-password">
+                            <div class="perfil-password">
+                                <label for="email">Cambiar contraseña</label>
+                                <input type="password" class="form-control" id="password" placeholder="Contraseña"
+                                    name="password">
+                                
+                            </div>
+                            <span class="error">
+                                <%= locals.errors && errors.password ? errors.password.msg : null%>
+                            </span>
+
+                        </div>
+                        <div class="subir-imagen">
+                            <label for="profile_picture" class="subir-img">Subir imagen de perfil</label>
+                            <input hidden class="" type="file" id="profile_picture" name="profile_picture">
+                        </div>
+                        <div class="boton-perfil">
+                            <button type="submit" class="">Guardar cambios</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </main>
+            <%- include('partials/footer') %>
+
+    </body>
+
+</html>

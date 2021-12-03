@@ -38,5 +38,13 @@
       "password": "$2a$10$mif6g2RCs3ehmlzcUXGjJu.fmrY4Q0nOP8NgUXj/HAGUV8FSM7R0C",
       "profile_picture": "foto-defult.jpg",
       "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "prueba",
+      "email": "prueba@123.com",
+      "password": "$2a$10$wNg2Z8xiC4K42rSLa6sGBeQR3RQTh7jO9A1VSDUeIhEnYHue5CWUC",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "user"
    }
 ]

@@ -1,5 +1,25 @@
 .cont-perfil{
-    width: 70%;
+    width: 50%;
     margin: 10px auto;
+    background-color: var(--gris-claro);
 }
 
+.cont-perfil div.titulo h4{
+    text-align: center;
+    padding: 10px 0;
+    color: var(--verde-claro);
+}
+.cont-perfil .cont-img-datos{
+    display: flex;
+    justify-content: center;
+}
+.cont-perfil .cont-img-datos .perfil-img{
+    width: 40%;
+    margin: 7px;
+}
+.cont-perfil .cont-img-datos .subir-imagen{
+    margin-top: 7px;
+}
+ .datos-perfil .boton-perfil{
+    margin-top: 7px;
+ }

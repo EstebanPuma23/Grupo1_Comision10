@@ -42,7 +42,7 @@
                 <a class="user-log"><i class="fas fa-user-circle"></i></a>
                 <ul class="submenu-user">
                     <% if (locals.userLogin) { %>
-                        <li><i class="fas fa-user"></i><a><%= locals.userLogin.name %> </a></li>
+                        <li><i class="fas fa-user" ></i><a href="/users/profile"><%= locals.userLogin.name %> </a></li>
                         <% if (locals.userLogin.rol === 'admin') { %>
                             <li>
                                 <a href="/admin">Administrador <i class="fas fa-cog"></i></a>
@@ -66,10 +66,12 @@
         <ul class="nav-bar-escritorio">
             <li>
                 <a class="user" href="">Mi cuenta</a><i class="fas fa-user-circle"></i>
-                <ul class="submenu-user">
+                
+               
 
+                <ul class="submenu-user">
                     <% if (locals.userLogin) { %>
-                        <li><i class="fas fa-user"></i><a><%= locals.userLogin.name %> </a></li>
+                        <li><i class="fas fa-user"></i><a href="/users/profile"><%= locals.userLogin.name %> </a></li>
                         <% if (locals.userLogin.rol === 'admin') { %>
                             <li>
                                 <a href="/admin">Administrador <i class="fas fa-cog"></i></a>

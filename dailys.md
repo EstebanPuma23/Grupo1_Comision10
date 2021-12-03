@@ -95,25 +95,54 @@ Orden de daily:
 
 
 1- ¿Que hiciste ayer?
-* Aixa * =
+* Aixa * = No logro avanzar con las tareas
 * Esteban * = No logró avanzar con las tareas
 * Franco * = No logró avanzar con las tareas(Repasando contenido)
 * Ernesto * = No logró avanzar con el detalle de producto 
 
 2- ¿Que vas a hacer hoy?
-* Aixa * = 
+* Aixa * = avanzar con el login de usuarios
 * Esteban * = Empezar ocn el front-end de login
 * Franco * = Terminar con la vista de Perfil
 * Ernesto * = Ver js para avanzar con las validaciones
 
 3- Bloqueadores
-* Aixa * = 
+* Aixa * = Falta de tiempo por problemas familiares
 * Esteban * = Falta de conocimientos para poder avanzar
 * Franco * = Falta de conocimientos para poder avanzar
 * Ernesto * = Falta de conocimientos para poder avanzar
 
 4- Action Items
 - [ ] * Aixa * = 
-- [ ] * Franco * = Reorganizar los horarios para estar al dia con las tareas
+- [X] * Franco * = Reorganizar los horarios para estar al dia con las tareas
+- [ ] * Equipo * = 
+- [ ]
+- Fecha: 30/11/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = No logro avanzar con las tareas
+* Esteban * = No logro avanzar con la tarea por falta de conexion de internet
+* Franco * = Validacion de registro de usuario (TERMINADA) y vista del perfil (COMENZO)
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = login de usuarios CRUD
+* Esteban * = Avanzar con las validaciones front del login de usuarios
+* Franco * = Terminar la vista del perfil de usuario
+* Ernesto * =
+* 
+3- Bloqueadores
+* Aixa * = Falta de tiempo para avanzar
+* Esteban * = Falta de internet
+* Franco * = 
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = Reorganizar horarios para completar la tarea pendiente.
+- [ ] * Esteban * = 
+- [ ] * Franco * = 
+- [ ] * Ernesto * =
 - [ ] * Equipo * = 
 

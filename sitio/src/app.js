@@ -30,7 +30,9 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "LibreriaInnovarte"
+  secret : "LibreriaInnovarte",
+  resave : false,
+  saveUninitialized : true
 }))
 
 app.use(cookieCheck);

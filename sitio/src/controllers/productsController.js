@@ -139,12 +139,21 @@ module.exports = {
     },
 
     destroy : (req, res) => {
-            db.Product.destroy({
+        
+        let features = db.Feature.destroy({
+            where : {
+                productId : req.params.id
+            }
+        })
+        
+        let product = db.Product.destroy({
                 where : {
                     id : req.params.id,
                 }
             })
-            .then( ()=> {
+
+            Promise.all([features, product])
+            .then(([features, product])=> {
                 return res.redirect('/admin')
             })
             .catch(error => console.log(error))

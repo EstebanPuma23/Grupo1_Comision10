@@ -26,7 +26,7 @@ module.exports = [
             max : 12
         }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
     
-    body('password2')
+    body('repeatpass')
         .custom((value,{req}) => {
             if(value !== req.body.password){
                 return false

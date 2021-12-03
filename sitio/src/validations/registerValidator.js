@@ -1,5 +1,5 @@
 const {body,check} = require('express-validator');
-const users = require('../data/users.json');
+const db = require('../database/models');
 
 module.exports = [
 
@@ -11,13 +11,24 @@ module.exports = [
         .isEmail().withMessage('Email inválido'),
 
     body('email')
-        .custom(value  => {
-            let user = users.find(user => user.email === value);
-            if(user){
-                return false
-            }else{
-                return true
-            }
+        .custom( async (value)  => {
+            try{
+                let userExist = await db.User.findOne({
+                    where: {
+                        email: value
+                    }
+                })
+                  if(userExist){
+                    return false;
+                }else{
+                    return true;
+                }
+            
+             }catch(error){
+                  console.log(error)
+             }
+
+           
         }).withMessage('el email ya se encuentra registrado'),
 
     check('password')
@@ -26,16 +37,17 @@ module.exports = [
             max : 12
         }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
     
-    body('password2')
+    body('repeatpass')
         .custom((value,{req}) => {
-            if(value !== req.body.password){
+           
+            if(value != req.body.password){
                 return false
             }else{
                 return true
             }
         }).withMessage('Las contraseñas no coinciden'),
 
-    check('terms')
+    check('terminos')
         .isString('on').withMessage('Debes aceptar los términos y condiciones')
     
 ]

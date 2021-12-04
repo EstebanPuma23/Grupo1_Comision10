@@ -52,14 +52,19 @@ inputPassword.addEventListener('blur', function() {
     if (!this.value) {
         errorPass.innerText = 'La contraseña es obligatoria'
         this.classList.add('is-invalid')
+    } else {
+        errorPass.innerText = null
+        this.classList.remove('is-invalid')
     }
 })
 
 /* button block */
 
 button.addEventListener('click', function(e) {
-    if ((errorPass || errorEmail) != '') {
+    if ((errorPass || errorEmail) == '') {
         $('error-button').innerText = 'Ingresa tus datos'
         e.preventDefault()
+    } else {
+        $('error-button').innerText = null
     }
 })

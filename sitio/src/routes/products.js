@@ -4,7 +4,7 @@ const adminUserCheck = require('../middlewares/adminUserCheck')
 const multer = require('multer')
 const path = require('path')
 
-const {detail, add, store, edit, update, destroy} = require('../controllers/productsController');
+const {detail, add, store, edit, update,list, destroy, search} = require('../controllers/productsController');
 
 /*storage multer*/
 var storage = multer.diskStorage({
@@ -19,11 +19,15 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 /*Rutas products*/
-router.get('/detail/:id', detail);
-router.get('/add',adminUserCheck,add);
-router.post('/add',upload.single('image'),store);
-router.get('/edit/:id',adminUserCheck, edit);
-router.put('/update/:id',upload.single('image'),update)
-router.delete('/destroy/:id', destroy)
+router
+  .get('/detail/:id', detail)
+  .get('/add',adminUserCheck,add)
+  .post('/add',upload.single('image'),store)
+  .get('/edit/:id',adminUserCheck, edit)
+  .put('/update/:id',upload.single('image'),update)
+  .delete('/destroy/:id', destroy)
+  .get('/product-list', list)
+  .get('/search', search)
+
 
 module.exports = router;

@@ -25,7 +25,7 @@
                     </div>
                     <div class="contraseña">
                         <label for="pass">Contraseña</label>
-                        <input type="password" name="password" id="pass">
+                        <input type="password" name="password" id="password">
                         <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
 
                     </div>
@@ -36,7 +36,7 @@
 
                     </div>
                     <div class="condicion-registro">
-                        <input type="checkbox" name="terminos">
+                        <input type="checkbox" name="terms" id="terms">
                         <label for="terminos">Acepta los terminos y condiciones</label>
                     </div>
                     <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>

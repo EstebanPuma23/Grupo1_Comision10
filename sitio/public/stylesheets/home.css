@@ -16,7 +16,7 @@ main .banner a img{
 .carousel-control-prev,
 .carousel-control-next{
     display: none;
-    margin: 18% 0;
+    /* margin: 18% 0; */
     width: 10%;
     background-color: var(--negro-header);
     border-radius: 20px;
@@ -116,13 +116,13 @@ main  .botones .agregar{
     color: var(--negro);
 }
 
-main  .botones p{
+main  .botones input{
     display: block;
     border: solid 1px;
-    border-radius: 3px;
-    width: 15%;
-    padding:3px 0;
-    
+    border-radius: 9px;
+    width: 20%;
+    padding: 3px 0;
+    text-align: center;
 }
 
 main  .botones a{
@@ -140,12 +140,15 @@ main .carg-productos{
     padding-bottom: 20px;
 }
 
-main .carg-productos button{
+main .carg-productos a{
     width: 70%;
     max-width: 70%;
     padding: 6px;
     border-radius: 6px;
-    border: solid 1px var(--grisOscuro)
+    border: solid 1px var(--grisOscuro);
+    background-color: silver;
+    color: #000;
+    text-align: center;
 }
 
 
@@ -177,7 +180,13 @@ main .carg-productos button{
         width: 33%;
     }
 
-    
+    main .glider-contain .prod{
+        width: 80%;
+    } 
+
+    main .ofertas .art .prod{
+        width: 70%;
+    }
 
     main .botones p{
         width: 25%;
@@ -188,19 +197,19 @@ main .carg-productos button{
         margin: 0 8px;
         
     }
-    main .carg-productos button{
+    main .carg-productos a{
         width: 50%;
     }
     }
 
     @media(min-width:1024px){
 
-        .carousel-control-prev,
+         .carousel-control-prev,
         .carousel-control-next{
-            margin: 20% 30px;
+            background-color: #0000;
             width: 5%;
-        }
-        main .carg-productos button{
+        } 
+        main .carg-productos a{
             width: 30%;
         }
         main .glider-contain{

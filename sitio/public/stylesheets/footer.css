@@ -2,6 +2,7 @@ footer{
     background-color: var(--negro);
     color: var(--blanco);
 }
+
 a{
     color: var(--blanco);
 }
@@ -57,6 +58,8 @@ footer div.container-footer-down{
 }
 footer div.container-footer-down section.footer-copy p{
     font-size: 10px;
+    margin: 0;
+    padding-bottom: 1em;
 }
 @media (min-width:768px){
     footer .container-footer-top{

@@ -30,5 +30,13 @@
       "password": "$2a$10$FlWJu2jQ7mk5yAdNKWvxp.nQvgiSS1NX74a0Kvq9Ofi4wyp.C7L2u",
       "profile_picture": "foto-defult.jpg",
       "rol": "admin"
+   },
+   {
+      "id": 5,
+      "name": "damian",
+      "email": "damian@prueba.com",
+      "password": "$2a$10$mif6g2RCs3ehmlzcUXGjJu.fmrY4Q0nOP8NgUXj/HAGUV8FSM7R0C",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "user"
    }
 ]

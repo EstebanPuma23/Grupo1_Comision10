@@ -146,3 +146,58 @@ Orden de daily:
 - [ ] * Ernesto * =
 - [ ] * Equipo * = 
 
+- Fecha: 2/12/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = Validaciones de registro
+* Esteban * = 
+* Franco * = vista y controlador del perfil
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Repazar contenido para el sprint 7
+* Esteban * = 
+* Franco * = CRUD de editar y perfil EMPEZAR
+* Ernesto * =
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = Problema con multer
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = 
+- [ ] * Esteban * = 
+- [X] * Franco * = Solucionar multer en perfil
+- [ ] * Ernesto * =
+- [ ] * Equipo * = 
+
+- Fecha: 3/12/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = Termino CRUD
+* Esteban * = Avanzo con validacion de Login en Front
+* Franco * = Termino Vista de Perfil de usuario
+* Ernesto * = Visualice contenido para comenzar con Validaciones Back de Productos
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Visualiza contenido para comenzar con el back de validacion del Sprint 7
+* Esteban * = Terminar validacion de Login en Front
+* Franco * = Comienza con CRUD de Edicion y Perfil de usuario
+* Ernesto * = Comienza codigo de Back de validacion de productos
+* 
+3- Bloqueadores
+* Aixa * = Aparece error que no se sabe como resolver
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = Pide ayuda a profesores para resolver error
+
+

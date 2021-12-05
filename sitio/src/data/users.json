@@ -46,5 +46,13 @@
       "password": "$2a$10$wNg2Z8xiC4K42rSLa6sGBeQR3RQTh7jO9A1VSDUeIhEnYHue5CWUC",
       "profile_picture": "foto-defult.jpg",
       "rol": "user"
+   },
+   {
+      "id": 7,
+      "name": "lucas",
+      "email": "lucas@123.com",
+      "password": "$2a$10$sFrFsbTRKna5hvyF2l8TgOzO3gyZhynhm.nyevF3s/V29wqC1KJoq",
+      "profile_picture": "foto-defult.jpg",
+      "rol": "user"
    }
 ]

@@ -186,7 +186,7 @@ Orden de daily:
 * Ernesto * = Visualice contenido para comenzar con Validaciones Back de Productos
 
 2- ¿Que vas a hacer hoy?
-* Aixa * = Visualiza contenido para comenzar con el back de validacion del Sprint 7
+* Aixa * = Visualiza contenido para comenzar con el back de validacion del Sprint 7.Termina el login y register (validaciones de sprint 6)
 * Esteban * = Terminar validacion de Login en Front
 * Franco * = Comienza con CRUD de Edicion y Perfil de usuario
 * Ernesto * = Comienza codigo de Back de validacion de productos
@@ -198,6 +198,52 @@ Orden de daily:
 * Ernesto * = 
 
 4- Action Items
-- [ ] * Aixa * = Pide ayuda a profesores para resolver error
+- [x] * Aixa * = Pide ayuda a profesores para resolver error
 
 
+- Fecha: 6/12/2021
+- Horario: 12:30hs
+
+
+1- ¿Que hiciste ayer?
+* Aixa * = No logro avanzar con las tareas.
+* Esteban * = Avanzo con la tarea de validacion front.
+* Franco * = Avanzo con la tarea de edicion de perfil, y vio contenido para validacion.
+* Ernesto * = Repaso contenido para validaciones del back.
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Visualiza contenido para comenzar con el back de validacion del Sprint 7 (registro)
+* Esteban * = Realizar observacion de edicion de imagen (crud de productos)
+* Franco * = Realizar validacion de front (edicion de perfil)
+* Ernesto * = Terminar validaciones back y comenzar validaciones front (creacion y edicion de productos)
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Aixa * = 
+
+
+- Fecha: 7/12/2021
+- Horario: 12:30hs
+
+1- ¿Que hiciste ayer?
+* Aixa * = Repasó contenido para avanzar con tarea ( validacion back de formulario de registro )
+* Esteban * = corrigió edicion de imagen en crud de producto
+* Franco * = 
+* Ernesto * = Visualizo material para terminar Validaciones Back del metodo store y update de productos
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Avanza con tarea (validacion back de formulario registro)
+* Esteban * = Avanza con tarea (validacion back de formulario login)
+* Franco * =   
+* Ernesto * = Terminar validaciones back del metodo store y update de productos
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 

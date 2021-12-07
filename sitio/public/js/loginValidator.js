@@ -61,7 +61,7 @@ inputPassword.addEventListener('blur', function() {
 /* button block */
 
 button.addEventListener('click', function(e) {
-    if ((errorPass || errorEmail) == '') {
+    if ((errorPass || errorEmail) != null) {
         $('error-button').innerText = 'Ingresa tus datos'
         e.preventDefault()
     } else {

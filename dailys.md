@@ -234,13 +234,13 @@ Orden de daily:
 * Aixa * = Repasó contenido para avanzar con tarea ( validacion back de formulario de registro )
 * Esteban * = corrigió edicion de imagen en crud de producto
 * Franco * = 
-* Ernesto * = 
+* Ernesto * = Visualizo material para terminar Validaciones Back del metodo store y update de productos
 
 2- ¿Que vas a hacer hoy?
 * Aixa * = Avanza con tarea (validacion back de formulario registro)
 * Esteban * = Avanza con tarea (validacion back de formulario login)
 * Franco * =   
-* Ernesto * =   
+* Ernesto * = Terminar validaciones back del metodo store y update de productos
 * 
 3- Bloqueadores
 * Aixa * = 

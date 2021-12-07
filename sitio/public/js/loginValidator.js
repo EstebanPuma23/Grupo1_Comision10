@@ -59,7 +59,7 @@ inputPassword.addEventListener('blur', function() {
 })
 
 /* button block */
-
+/* 
 button.addEventListener('click', function(e) {
     if ((errorPass || errorEmail) != null) {
         $('error-button').innerText = 'Ingresa tus datos'
@@ -67,4 +67,4 @@ button.addEventListener('click', function(e) {
     } else {
         $('error-button').innerText = null
     }
-})
+}) */

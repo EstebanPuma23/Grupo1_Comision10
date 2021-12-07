@@ -20,7 +20,8 @@
                     <div class="mail">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
-                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> 
+                       </span>
                     </div>
                     <div class="contraseña">
                         <label for="pass">Contraseña</label>
@@ -31,7 +32,7 @@
                     <div class="repetircontra">
                         <label for="repeatpass">Repetir contraseña</label>
                         <input type="password" name="repeatpass" id="repeatpass">
-                        <span class="error"><%= locals.errores && errores.password2 ? errores.password2.msg : null %> </span>
+                        <span class="error"><%= locals.errores && errores.repeatpass ? errores.repeatpass.msg : null %> </span>
 
                     </div>
                     <div class="condicion-registro">
@@ -55,10 +56,3 @@
 
 </body>
 
-</html>
-
-    <%- include('partials/footer') %> 
-
-</body>
-
-</html>

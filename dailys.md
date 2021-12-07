@@ -225,3 +225,25 @@ Orden de daily:
 
 4- Action Items
 - [ ] * Aixa * = 
+
+
+- Fecha: 7/12/2021
+- Horario: 12:30hs
+
+1- ¿Que hiciste ayer?
+* Aixa * = Repasó contenido para avanzar con tarea ( validacion back de formulario de registro )
+* Esteban * = corrigió edicion de imagen en crud de producto
+* Franco * = 
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = Avanza con tarea (validacion back de formulario registro)
+* Esteban * = Avanza con tarea (validacion back de formulario login)
+* Franco * =   
+* Ernesto * =   
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 

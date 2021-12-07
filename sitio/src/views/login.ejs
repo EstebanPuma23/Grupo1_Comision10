@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('partials/head',{title: 'Login'}) %> 
+<%- include('partials/head',{title: 'Login'}) %>
 
-<body class="login">
-    <%- include('partials/header') %> 
+    <body class="login">
+        <%- include('partials/header') %>
 
-    <main>
-      <div class="form-login">
-          <div class="titulo-logo">
-            <h2>Inicio de Sesión</h2>
-            <img src="/images/Logo1.png" alt="">
-          </div>
-          <div class="formulario">
-              <form action="" method="POST">
-                <div class="email">
-                    <label for="">Email</label>
-                    <input type="email" name="email" id="email">
-                </div>
-                <div class="password">
-                    <label for="">Contraseña</label>
-                    <input type="password" name="password" id="pass">
-                </div>
-                <div class="box-error">
-                    <span><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
-                </div>
-                <div class="box-check">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Recordame</label>
-                </div>
-                <div class="boton-login">
-                    <button type="submit">Entrar</button>
-                </div>
-              </form>
-              <div class="link-registro">
-                  <p>¿No tienes cuenta? </p><a class="btn-registro" href="/users/register">Registrate aquí</a>
-              </div>
-              
-          </div>
-      </div>
-    </main>
-    <%- include('partials/footer') %> 
+            <main>
+                <div class="form-login">
+                    <div class="titulo-logo">
+                        <h2>Inicio de Sesión</h2>
+                        <img src="/images/Logo1.png" alt="">
+                    </div>
+                    <div class="formulario">
+                        <form action="" method="POST" autocomplete="off">
+                            <div class="email">
+                                <label for="">Email</label>
+                                <input type="email" name="email" id="email">
+                                <span class="small text-info" id="info-email"></span>
+                                <span id="error-email" class="small text-danger"></span>
+                            </div>
+                            <div class="password">
+                                <label for="">Contraseña</label>
+                                <input type="password" name="password" id="pass">
+                                <span class="small text-info" id="info-password"></span>
+                                <span id="error-password" class="small text-danger"></span>
+                            </div>
+                            <div class="box-error">
+                                <span class="text-danger"><%= locals.errores && errores.email ? errores.email.msg : null %> </span>
+                            </div>
+                            <div class="box-check">
+                                <input type="checkbox" id="remember" name="remember">
+                                <label for="remember">Recordame</label>
+                            </div>
+                            <div class="boton-login">
+                                <span class="small text-danger" id="error-button"></span>
+                                <button id="button" type="submit">Entrar</button>
+                            </div>
+                        </form>
+                        <div class="link-registro">
+                            <p>¿No tienes cuenta? </p><a class="btn-registro" href="/users/register">Registrate aquí</a>
+                        </div>
 
-</body>
+                    </div>
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+                <script src="/js/loginValidator.js"></script>
+    </body>
+
 </html>

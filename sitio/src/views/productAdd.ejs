@@ -17,21 +17,21 @@
                         <form class="row" method="POST" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : 'is-valid' %>" id="name" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : null %>">
                                         <label for="name">Nombre del producto</label>
                                       </div>
                                       <span id="nameError" class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %>" placeholder="Descripción del producto" id="floatingTextarea" name="description"><%= locals.old && old.description ? old.description : null %></textarea>
+                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : 'is-valid' %>" placeholder="Descripción del producto" id="floatingTextarea" name="description"><%= locals.old && old.description ? old.description : null %></textarea>
                                         <label for="floatingTextarea">Descripción</label>
                                       </div>
                                       <span id="descriptionError" class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.feactures ? 'is-invalid' : null %>" placeholder="Características del producto" id="floatingTextarea" name="feactures"><%= locals.old && old.feactures ? old.feactures : null %></textarea>
+                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.feactures ? 'is-invalid' : 'is-valid' %>" placeholder="Ejemplo: Es practico - Es comodo, etc." id="floatingTextarea" name="feactures"><%= locals.old && old.feactures ? old.feactures : null %></textarea>
                                         <label for="floatingTextarea">Características</label>
                                       </div>
                                       <span id="feacturesError" class="text-danger small ms-2"><%= locals.errors && errors.feactures ? errors.feactures.msg : null%> </span>
@@ -49,7 +49,7 @@
                                 </div>
                                <div class="col-12 col-md-6">
                                 <div class="form-floating mb-3">
-                                    <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" id="price" name="price" value=<%= locals.old && old.price ? old.price : null %>>
+                                    <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : 'is-valid' %>" id="price" name="price" value=<%= locals.old && old.price ? old.price : null %>>
                                     <label for="price">Precio</label>
                                   </div>
                                   <span id="priceError" class="text-danger small ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>

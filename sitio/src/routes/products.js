@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const multer = require('multer');
-const path = require('path');
+
 
 /*Validaciones*/
 const adminUserCheck = require('../middlewares/adminUserCheck');
@@ -10,17 +9,8 @@ const productValidator = require('../validations/productValidator');
 /*Controlador*/
 const {detail, add, store, edit, update, list, destroy, search} = require('../controllers/productsController');
 
-/*storage multer*/
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './public/images')
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'img-product-' + Date.now() + path.extname(file.originalname))
-    }
-  })
-  
-var upload = multer({ storage: storage })
+/*storage multer*/  
+var upload = require('../middlewares/multerImagesProduct')
 
 /*Rutas products*/
 router

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult} = require("express-validator")
+const { validationResult} = require('express-validator')
 /* const  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')) */
 
 /* BASE DE DATOS */
@@ -57,6 +57,26 @@ module.exports = {
                     res.redirect('/admin')
                 })
                 .catch(errors => console.log(errors))
+        } else {
+            errors = errors.mapped()
+            if (req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image: {
+                        msg: req.fileValidationError,
+                    },
+                };
+            }
+            db.Category.findAll()
+            .then(categories => {
+                return res.render('productAdd', {
+                    categories,
+                    errors,
+                    title: "Agregar producto",
+                    old: req.body
+                })
+            })
+            .catch(error => console.log(error))
         }
     },
     edit : (req,res) => {

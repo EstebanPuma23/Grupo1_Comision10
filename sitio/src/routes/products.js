@@ -1,10 +1,14 @@
 var express = require('express');
 var router = express.Router();
-const adminUserCheck = require('../middlewares/adminUserCheck')
-const multer = require('multer')
-const path = require('path')
+const multer = require('multer');
+const path = require('path');
 
-const {detail, add, store, edit, update,list, destroy, search} = require('../controllers/productsController');
+/*Validaciones*/
+const adminUserCheck = require('../middlewares/adminUserCheck');
+const productValidator = require('../validations/productValidator');
+
+/*Controlador*/
+const {detail, add, store, edit, update, list, destroy, search} = require('../controllers/productsController');
 
 /*storage multer*/
 var storage = multer.diskStorage({
@@ -22,9 +26,9 @@ var upload = multer({ storage: storage })
 router
   .get('/detail/:id', detail)
   .get('/add',adminUserCheck,add)
-  .post('/add',upload.single('image'),store)
+  .post('/add',upload.single('image'),productValidator,store)
   .get('/edit/:id',adminUserCheck, edit)
-  .put('/update/:id',upload.single('image'),update)
+  .put('/update/:id',upload.single('image'),productValidator,update)
   .delete('/destroy/:id', destroy)
   .get('/product-list', list)
   .get('/search', search)

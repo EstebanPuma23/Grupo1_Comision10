@@ -247,3 +247,26 @@ Orden de daily:
 * Esteban * = 
 * Franco * = 
 * Ernesto * = 
+
+
+- Fecha: 9/12/2021
+- Horario: 12:30hs
+
+1- ¿Que hiciste ayer?
+* Aixa * = comence validaciones (nombre y apellido) del back y front
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = continuo con las validaciones de nombre y apellido back y front
+* Esteban * = 
+* Franco * =   
+* Ernesto * = 
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+

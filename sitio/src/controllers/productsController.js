@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const { validationResult } = require('express-validator')
-/* const  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')) */
+const { validationResult } = require("express-validator")
+    /* const  products = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','products.json'),'utf-8')) */
 
 /* BASE DE DATOS */
 const db = require('../database/models');
@@ -19,13 +19,13 @@ module.exports = {
 
         Promise.all([product, features])
 
-            .then(([product, features]) => {
-                return res.render('product-view', {
-                    product,
-                    features,
-                    title: 'detalle de producto'
-                })
+        .then(([product, features]) => {
+            return res.render('product-view', {
+                product,
+                features,
+                title: 'detalle de producto'
             })
+        })
     },
     add: (req, res) => {
 
@@ -45,12 +45,13 @@ module.exports = {
             const { name, description, price, feactures, category } = req.body;
 
             db.Product.create({
-                name: name.trim(),
-                description: description.trim(),
-                price: price,
-                categoryId: category,
-                image: req.file ? req.file.filename : "default-product.jpg"
-            })
+                    name: name.trim(),
+                    description: description.trim(),
+                    price: price,
+                    categoryId: category,
+                    feactures: feactures.trim(),
+                    image: req.file ? req.file.filename : "default-product.jpg"
+                })
                 .then(product => {
                     let features = req.body.feactures.split("-")
                     let arrayFeatures = features.map(feature => {
@@ -98,6 +99,13 @@ module.exports = {
             include: [{ all: true }]
         })
         let categories = db.Category.findAll()
+        let features = db.Feature.findAll({
+            where: {
+                productId: {
+                    [Op.substring]: req.params.id
+                }
+            }
+        })
 
 
         Promise.all([product, categories])
@@ -184,8 +192,7 @@ module.exports = {
                 name: {
                     [Op.substring]: req.query.keyword
                 }
-            }
-        })
+            })
             .then(products => {
                 return res.render('product-list', {
                     products,

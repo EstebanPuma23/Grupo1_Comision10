@@ -34,6 +34,7 @@ module.exports = {
     admin : (req,res) => {
 
         let products = db.Product.findAll({
+            include: [{all:true}]
         })
         let categories = db.Category.findAll()
         Promise.all([products,categories])
@@ -43,6 +44,7 @@ module.exports = {
                     products,
                     categories
                 })
+
             })
             .catch(error => console.log(error))
 

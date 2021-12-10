@@ -114,6 +114,10 @@ module.exports = {
         req.session.destroy()
         return res.redirect('/')
     },
+    
+    profile: (req,res) => {
+    
+    }
 
 
 }

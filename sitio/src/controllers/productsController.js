@@ -39,7 +39,6 @@ module.exports = {
             .catch(error => console.log(error))
     },
     store: (req, res) => {
-
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
@@ -54,14 +53,51 @@ module.exports = {
                     image: req.file ? req.file.filename : "default-product.jpg"
                 })
                 .then(product => {
-                    res.redirect('/admin')
+                    let features = req.body.feactures.split("-")
+                    let arrayFeatures = features.map(feature => {
+                        let item = {
+                            name: feature,
+                            productId: product.id
+                        }
+                        return item
+                    })
+                    console.log(arrayFeatures)
+                    db.Feature.bulkCreate(
+                        arrayFeatures
+                    )
+                        .then(feactures => {
+                            res.redirect('/admin')
+                        })
+                        .catch(errors => console.log(errors))
                 })
                 .catch(errors => console.log(errors))
+        } else {
+            errors = errors.mapped()
+            if (req.fileValidationError) {
+                errors = {
+                    ...errors,
+                    image: {
+                        msg: req.fileValidationError,
+                    },
+                };
+            }
+            db.Category.findAll()
+                .then(categories => {
+                    return res.render('productAdd', {
+                        categories,
+                        errors,
+                        title: "Agregar producto",
+                        old: req.body
+                    })
+                })
+                .catch(error => console.log(error))
         }
     },
     edit: (req, res) => {
 
-        let product = db.Product.findByPk(req.params.id)
+        let product = db.Product.findByPk(req.params.id, {
+            include: [{ all: true }]
+        })
         let categories = db.Category.findAll()
         let features = db.Feature.findAll({
             where: {
@@ -71,12 +107,12 @@ module.exports = {
             }
         })
 
-        Promise.all([product, categories, features])
 
-        .then(([product, categories, features]) => {
+        Promise.all([product, categories])
+
+            .then(([product, categories]) => {
                 return res.render('productEdit', {
                     categories,
-                    features,
                     product,
                     title: "Editar producto"
                 })
@@ -85,33 +121,65 @@ module.exports = {
 
     },
     update: (req, res) => {
-        /*return res.send(req.file)*/
         let errors = validationResult(req);
-        if (errors.isEmpty()) {
-            const { name, description, price } = req.body;
 
-            db.Product.update({
+        if (errors.isEmpty()) {
+            const { name, description, price, category } = req.body;
+            db.Product.update(
+                {
                     name: name.trim(),
                     description: description.trim(),
                     price,
-                    image: req.file ? req.file.filename : db.Product.image
-                }, {
+                    categoryId: category,
+                },
+                {
                     where: {
                         id: req.params.id
                     }
-                })
+                }
+            )
                 .then(() => {
-                    return res.redirect('/admin')
+                    db.Feature.destroy({
+                        where: {
+                            productId: req.params.id
+                        }
+                    })
+                        .then(product => {
+                            let features = req.body.feactures.split("-")
+                            let arrayFeatures = features.map(feature => {
+                                let item = {
+                                    name: feature,
+                                    productId: req.params.id
+                                }
+                                return item
+                            })
+                            console.log(arrayFeatures)
+                            db.Feature.bulkCreate(
+                                arrayFeatures
+                            )
+                                .then(feactures => {
+                                    res.redirect('/admin')
+                                })
+                                .catch(errors => console.log(errors))
+                        })
+                        .catch(errors => console.log(errors))
                 })
+                .catch(errors => console.log(errors))
 
         } else {
-            let product = db.Product.findByPk(req.params.id)
+            console.log(errors)
+            let product = db.Product.findByPk(req.params.id, {
+                include: [{ all: true }]
+            })
             let categories = db.Category.findAll()
+
             Promise.all([product, categories])
                 .then(([product, categories]) => {
                     return res.render('productEdit', {
                         categories,
                         product,
+                        title: "Editar producto",
+                        old: req.body,
                         errors: errors.mapped(),
                     })
                 })

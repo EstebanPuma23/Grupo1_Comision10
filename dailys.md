@@ -247,3 +247,47 @@ Orden de daily:
 * Esteban * = 
 * Franco * = 
 * Ernesto * = 
+- Fecha: 9/12/2021
+- Horario: 12:30hs
+
+1- ¿Que hiciste ayer?
+* Aixa * = comence validaciones (nombre y apellido) del back y front
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = continuo con las validaciones de nombre y apellido back y front
+* Esteban * = 
+* Franco * =   
+* Ernesto * = 
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = 
+* Franco * = 
+* Ernesto * = 
+
+- Fecha: 10/12/2021
+- Horario: 12:30hs
+
+1- ¿Que hiciste ayer?
+* Aixa * = validacion de front y back(contra y email, del registro)
+* Esteban * = avanza con las validaciones del back(login)
+* Franco * = no avanza con la tarea
+* Ernesto * = terminacion de la validacion del back(producto)
+
+2- ¿Que vas a hacer hoy?
+* Aixa * = terminar con las validaciones del registro
+* Esteban * = temrina con las validaciones del back(login)
+* Franco * =   terminar validacion del perfil
+* Ernesto * = empezar validaciones del front(producto)
+* 
+3- Bloqueadores
+* Aixa * = 
+* Esteban * = falta de conocimientos para avanzar con la tarea
+* Franco * = 
+* Ernesto * = 
+
+4- Action Items
+- [ ] * Estaban * = Consultar con profesores o compañeros.

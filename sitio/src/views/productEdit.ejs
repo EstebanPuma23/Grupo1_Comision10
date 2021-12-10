@@ -31,13 +31,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-<<<<<<< HEAD
                                         <textarea name="feactures" style="resize: none; height: 100px;" class="form-control" placeholder="Caracteristicas del producto" id="floatingTextarea"><%= product.features.length === 1 ? product.features[0].name : product.features.reduce((acum, feature, i) => `${i === 1 ? acum.name : acum} - ${feature.name}`)%></textarea>
-=======
-                                        <textarea name="feactures" style="resize: none; height: 100px;" class="form-control" placeholder="Caracteristicas del producto" id="floatingTextarea"><% features.forEach(element => { %>
-                                          <%=element.name%>
-                                        <% }) %></textarea>
->>>>>>> b2f1ebbb9c43d8459a431f6816e8f2d45a351998
                                         <label for="floatingTextarea">Características</label>
                                       </div>
                                       <span id="feacturesError" class="text-danger small ms-2"><%= locals.errors && errors.feactures ? errors.feactures.msg : null%> </span>

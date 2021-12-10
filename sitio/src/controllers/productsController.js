@@ -188,9 +188,10 @@ module.exports = {
     },
     search: (req, res) => {
         let products = db.Product.findAll({
-            where: {
-                name: {
-                    [Op.substring]: req.query.keyword
+                where: {
+                    name: {
+                        [Op.substring]: req.query.keyword
+                    }
                 }
             })
             .then(products => {

@@ -194,9 +194,12 @@ module.exports = {
                     }
                 }
             })
-            .then(products => {
+            let categories = db.Category.findAll();
+            Promise.all([products, categories])
+            .then(([products, categories]) => {
                 return res.render('product-list', {
                     products,
+                    categories,
                     title: 'Resultado de la búsqueda'
                 })
             })

@@ -18,12 +18,12 @@ const regExEmail = /^(([^<>()\[\]\,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\
 
 
 inputEmail.addEventListener('focus', function() {
-    infoEmail.innerText = 'Solo se permiten letras'
-    this.classList.remove('is-invalid')
+    infoEmail.innerText = 'Ejemplo: nombre@email.com'
+    
 })
 
 inputEmail.addEventListener('keydown', function() {
-    infoEmail.innerText = null
+    infoEmail.innerText = 'Ejemplo: nombre@email.com'
     errorEmail.innerText = null
 })
 
@@ -31,15 +31,15 @@ inputEmail.addEventListener('blur', function() {
     switch (true) {
         case !this.value:
             errorEmail.innerText = 'El email es obligatorio';
-            this.classList.add('is-invalid')
+            infoEmail.innerText = null
             break;
         case !regExEmail.test(this.value):
             errorEmail.innerText = '¡Email invalido!';
-            this.classList.add('is-invalid');
+            infoEmail.innerText = 'Ejemplo: nombre@email.com'
             break;
         default:
             errorEmail.innerText = null
-            this.classList.remove('is-invalid')
+            infoEmail.innerText = null
             this.classList.add('is-valid')
             break;
     }
@@ -51,20 +51,34 @@ inputEmail.addEventListener('blur', function() {
 inputPassword.addEventListener('blur', function() {
     if (!this.value) {
         errorPass.innerText = 'La contraseña es obligatoria'
-        this.classList.add('is-invalid')
     } else {
         errorPass.innerText = null
-        this.classList.remove('is-invalid')
+        
     }
 })
 
 /* button block */
-/* 
-button.addEventListener('click', function(e) {
-    if ((errorPass || errorEmail) != null) {
-        $('error-button').innerText = 'Ingresa tus datos'
-        e.preventDefault()
-    } else {
-        $('error-button').innerText = null
+
+const formulario = $('form-login');
+
+formulario.addEventListener('submit', e => {
+    
+    e.preventDefault();
+    
+    let error = false;
+    const elementos = formulario.elements;
+    
+    for (let i = 0; i < elementos.length - 2; i++) {
+        
+        if(!elementos[i].value){
+            $('error-button').innerText = "Ingresá tus datos";
+            error = true;
+        }
+        
     }
-}) */
+
+    if(!error){
+        formulario.submit()
+    }
+
+})

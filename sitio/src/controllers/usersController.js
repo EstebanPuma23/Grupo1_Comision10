@@ -73,13 +73,11 @@ module.exports = {
     },
     processLogin: async (req, res) => {
         let errors = validationResult(req);
-
          if(!errors.isEmpty()){
             console.log(errors.mapped())
               return res.render('login', {
                 errores: errors.mapped()
               })
-             
           }
         let { email, password, remember } = req.body;
         try {
@@ -116,6 +114,10 @@ module.exports = {
         req.session.destroy()
         return res.redirect('/')
     },
+    
+    profile: (req,res) => {
+    
+    }
 
 
 }

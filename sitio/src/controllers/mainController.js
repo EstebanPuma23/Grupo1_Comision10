@@ -26,14 +26,18 @@ module.exports = {
         .catch(error => console.log(error))
     },
     store : (req,res) => {
-        return res.render('store', { 
-            products,
-            title : "Cesta de compras"
+        db.Product.findAll()
+        .then(products =>{
+            return res.render('store', { 
+                products,
+                title : "Cesta de compras"
+            })
         })
     },
     admin : (req,res) => {
 
         let products = db.Product.findAll({
+            include: [{all:true}]
         })
         let categories = db.Category.findAll()
         Promise.all([products,categories])
@@ -43,6 +47,7 @@ module.exports = {
                     products,
                     categories
                 })
+
             })
             .catch(error => console.log(error))
 

@@ -14,24 +14,24 @@
                         <h4>Editar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
+                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data" id= "form-add-product">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto" value="<%= product.name %>">
+                                        <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : product.name %>" id="name" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : product.name%>">
                                         <label for="name">Nombre del producto</label>
                                       </div>
                                       <span id="nameError" class="text-danger small ms-2"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <textarea name="description" style="resize: none; height: 100px;" class="form-control" placeholder="Descripción del producto" id="floatingTextarea"><%= product.description %></textarea>
+                                        <textarea style="resize: none; height: 100px;" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : product.description %>" placeholder="Descripción del producto" id="floatingTextarea" name="description"><%= locals.old && old.description ? old.description : product.description %></textarea>
                                         <label for="floatingTextarea">Descripción</label>
                                       </div>
                                         <span id="descriptionError" class="text-danger small ms-2"><%= locals.errors && errors.description ? errors.description.msg : null%> </span>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
-                                        <textarea name="feactures" style="resize: none; height: 100px;" class="form-control" placeholder="Caracteristicas del producto" id="floatingTextarea"><%= product.features.length === 1 ? product.features[0].name : product.features.reduce((acum, feature, i) => `${i === 1 ? acum.name : acum} - ${feature.name}`)%></textarea>
+                                        <textarea name="feactures" style="resize: none; height: 100px;" class="form-control" placeholder="Caracteristicas del producto" id="floatingTextarea"><%= product.features.length === 1 ? product.features[0].name : product.features.reduce((acum, feature, i) => `${i === 1 ? acum.name : acum} - ${feature.name}`)%> </textarea>
                                         <label for="floatingTextarea">Características</label>
                                       </div>
                                       <span id="feacturesError" class="text-danger small ms-2"><%= locals.errors && errors.feactures ? errors.feactures.msg : null%> </span>
@@ -47,7 +47,7 @@
                                 </div>
                                <div class="col-12 col-md-6">
                                 <div class="form-floating mb-3">
-                                    <input name="price" type="number" class="form-control" id="price" value=<%= product.price %>>
+                                    <input type="number" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : product.price %>" id="price" name="price" value=<%= locals.old && old.price ? old.price : product.price %>>
                                     <label for="price">Precio</label>
                                   </div>
                                   <span id="priceError" class="text-danger small ms-2"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
@@ -59,6 +59,9 @@
                                     <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
                                   </div>
                                </div>
+                               <span id = "errorEmpty" class = "text-danger">
+
+                            </span>
                                 <div class="col-12 mt-5">
                                     <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
 
@@ -75,4 +78,5 @@
 </body>
  <!-- Footer -->
  <%- include('partials/footer') %> 
+ <script src="/js/productValidator.js"></script>
 </html>

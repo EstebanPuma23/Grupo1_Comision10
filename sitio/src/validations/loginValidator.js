@@ -11,7 +11,7 @@ module.exports = [
                     email: value
                 }
             })
-            if (userExist && bcrypt.compareSync(value, userExist.password)) {
+            if (userExist && bcrypt.compareSync(req.body.password, userExist.password)) {
                 return true;
             } else {
                 return false;

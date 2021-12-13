@@ -1,22 +1,13 @@
 var express = require('express');
 var router = express.Router();
 const adminUserCheck = require('../middlewares/adminUserCheck')
-const multer = require('multer')
-const path = require('path')
+
 
 const {detail, add, store, edit, update,list, destroy, search} = require('../controllers/productsController');
 
-/*storage multer*/
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, './public/images')
-    },
-    filename: function (req, file, cb) {
-      cb(null, 'img-product-' + Date.now() + path.extname(file.originalname))
-    }
-  })
+
   
-var upload = multer({ storage: storage })
+var upload = require('../middlewares/multerImageUser')
 
 /*Rutas products*/
 router

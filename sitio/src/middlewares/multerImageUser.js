@@ -1,18 +1,23 @@
-const path = require('path');
 const multer = require('multer');
+const path = require('path');
 
-/* configuración de multer */
 const storage = multer.diskStorage({
-    destination : (req,file,callaback) => {
-        callaback(null,'./public/images/')
+    destination: function (req, file, cb) {
+      cb(null, './public/images')
     },
-    filename : (req,file,callaback) => {
-        callaback(null,'profile_picture-' + Date.now() + path.extname(file.originalname))
+    filename: function (req, file, cb) {
+      cb(null, 'img-' + Date.now() + path.extname(file.originalname))
     }
-})
+  })
 
-const upload = multer({
-    storage
-})
+  const fileFilter = function(req, file,callback) {
+    if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)){
+        req.fileValidationError = "Solo se permite imágenes con extensión jpg, jpeg, png, gif, webp";
+        return callback(null,false,req.fileValidationError);
+    }
+    callback(null,true);
+}
+  
+var upload = multer({ storage: storage, fileFilter })
 
-module.exports = upload;
+module.exports = upload

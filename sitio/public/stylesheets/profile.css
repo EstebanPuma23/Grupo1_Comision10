@@ -1,6 +1,6 @@
 .cont-perfil{
     width: 50%;
-    margin: 10px auto;
+    margin: 20px auto;
     background-color: var(--gris-claro);
 }
 
@@ -12,6 +12,7 @@
 .cont-perfil .cont-img-datos{
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
 }
 .cont-perfil .cont-img-datos .perfil-img{
     width: 40%;

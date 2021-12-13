@@ -13,7 +13,7 @@
             <div class="form">
                 <form action="" method="POST">
                     <div class="usuario">
-                        <label for="user">Nombre</label>
+                        <label for="user">Nombre y Apellido</label>
                         <input type="text" name="name" id="user" value="<%= locals.old && old.name ? old.name : null %>">
                         <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
                     </div>
@@ -36,7 +36,7 @@
 
                     </div>
                     <div class="condicion-registro">
-                        <input type="checkbox" name="terms" id="terms">
+                        <input type="checkbox" name="terminos" id="terminos">
                         <label for="terminos">Acepta los terminos y condiciones</label>
                     </div>
                     <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>

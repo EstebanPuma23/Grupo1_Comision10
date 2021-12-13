@@ -18,12 +18,12 @@ const regExEmail = /^(([^<>()\[\]\,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\
 
 
 inputEmail.addEventListener('focus', function() {
-    infoEmail.innerText = 'Solo se permiten letras'
+    infoEmail.innerText = 'Ejemplo: nombre@email.com'
     this.classList.remove('is-invalid')
 })
 
 inputEmail.addEventListener('keydown', function() {
-    infoEmail.innerText = null
+    infoEmail.innerText = 'Ejemplo: nombre@email.com'
     errorEmail.innerText = null
 })
 
@@ -31,14 +31,17 @@ inputEmail.addEventListener('blur', function() {
     switch (true) {
         case !this.value:
             errorEmail.innerText = 'El email es obligatorio';
+            infoEmail.innerText = null
             this.classList.add('is-invalid')
             break;
         case !regExEmail.test(this.value):
             errorEmail.innerText = '¡Email invalido!';
+            infoEmail.innerText = 'Ejemplo: nombre@email.com'
             this.classList.add('is-invalid');
             break;
         default:
             errorEmail.innerText = null
+            infoEmail.innerText = null
             this.classList.remove('is-invalid')
             this.classList.add('is-valid')
             break;

@@ -7,7 +7,7 @@ const adminUserCheck = require('../middlewares/adminUserCheck');
 const productValidator = require('../validations/productValidator');
 
 /*Controlador*/
-const {detail, add, store, edit, update, list, destroy, search} = require('../controllers/productsController');
+const {detail, add, store, edit, update, list, destroy, search, filter} = require('../controllers/productsController');
 
 /*storage multer*/  
 var upload = require('../middlewares/multerImagesProduct')
@@ -22,6 +22,7 @@ router
   .delete('/destroy/:id', destroy)
   .get('/product-list', list)
   .get('/search', search)
+  .get('/filter',filter);
 
 
 module.exports = router;

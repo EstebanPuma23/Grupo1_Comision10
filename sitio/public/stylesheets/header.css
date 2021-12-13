@@ -87,9 +87,9 @@ header .bloque-nav{
     align-items: center;
     width: auto;
     border: solid 1px #666;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: var(--verde-oscuro) ;
-    padding: 0;
+    padding: 7px 0;
     
 }
 
@@ -148,7 +148,7 @@ header .nav-bar-tablet{
 
 header .nav-bar-escritorio{
     display: none;
-    width: 25%;
+    width: 18%;
     justify-content: space-around;
     padding: 0;
 }
@@ -260,6 +260,10 @@ nav-social
     header .bloque-sesion{
         display: none;
     }
+    
+    header .bloque-nav {
+        justify-content: space-between;
+    }
 
     header .bloque-nav .img-logo{
         width: 30%;
@@ -307,6 +311,9 @@ nav-social
 
 
 @media(min-width:1024px){
+    header .bloque-nav {
+        justify-content: space-evenly;
+    }
     header .bloque-nav .buscador{
         display: flex;
     }

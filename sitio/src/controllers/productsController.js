@@ -194,19 +194,49 @@ module.exports = {
                     }
                 }
             })
-            .then(products => {
+            let categories = db.Category.findAll();
+            Promise.all([products, categories])
+            .then(([products, categories]) => {
                 return res.render('product-list', {
                     products,
+                    categories,
                     title: 'Resultado de la búsqueda'
                 })
             })
     },
+       filter: (req, res) =>  {
+        let category = db.Category.findByPk(req.query.category,{
+           
+            include: [
+                {
+                    association : 'products',
+                }
+
+            ]
+        })
+        let categories = db.Category.findAll();
+
+        Promise.all([category, categories])
+
+        .then(([category,categories]) => {
+            return res.render('product-list', {
+                title: 'Categoría: ' + req.query.category,
+                categories,
+                products : category.products
+            })
+        })
+        .catch(error => console.log(error))
+    },
 
     list: (req, res) => {
+        let categories = db.Category.findAll()
         let products = db.Product.findAll()
-            .then(products => {
+
+        Promise.all([products,categories])
+            .then(([products, categories]) => {
                 return res.render('product-list', {
                     products,
+                    categories,
                     title: "Listado de productos"
                 })
             })

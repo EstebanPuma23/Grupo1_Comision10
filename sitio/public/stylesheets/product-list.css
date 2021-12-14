@@ -7,6 +7,8 @@
 .list main {
   display: flex;
 }
+/* ASIDE - Filtrado por categorias */
+
 
 .list .aside-list{
   display: flex;
@@ -62,6 +64,9 @@
   background-color: var(--verde-oscuro);
   color: white;
 }
+
+/*  ASIDE - Filtrado por categorias  */
+
 
 .list main .target-container {
   display: block;

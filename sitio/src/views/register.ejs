@@ -11,38 +11,48 @@
         <div class="formulario-register">
             <h2>Crear cuenta</h2>
             <div class="form">
-                <form action="" method="POST">
+                <form action="" method="POST" id="formulario-register">
                     <div class="usuario">
-                        <label for="user">Nombre</label>
-                        <input type="text" name="name" id="user" value="<%= locals.old && old.name ? old.name : null %>">
-                        <span class="error"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
+                        <label for="user">Nombre y Apellido</label>
+                        <input class="form-control" type="text" placeholder="Ej: Mario Nuñez" name="name" id="user" value="<%= locals.old && old.name ? old.name : null %>">
+                        <span id="errorUser" class="error"><%= locals.errores && errores.name ? errores.name.msg : null %> </span>
+                        <span id="info-user" class="text-info" ></span>
                     </div>
                     <div class="mail">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                        <span class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> 
+                        <input class="form-control" type="email" placeholder="Ej: nombre@email.com" name="email" id="email">
+                        <span id="errorEmail" class="error"><%= locals.errores && errores.email ? errores.email.msg : null %> 
                        </span>
+                       <span id="info-email" class="text-info" ></span>
                     </div>
-                    <div class="contraseña">
+                    <div class="contraseña" >
                         <label for="pass">Contraseña</label>
-                        <input type="password" name="password" id="password">
-                        <span class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
-
+                        <div class="d-flex">
+                            <input class="form-control flex-grow-1" type="password" name="password" id="password">
+                            <button class="btn btn-outline-dark flex-grow-1 mr-1 ojito" type="button" id="watch">
+                                <i class="fa fa-eye"></i>
+                             </button>
+                        </div>
+                       
+                        <span id="errorPassw" class="error"><%= locals.errores && errores.password ? errores.password.msg : null %> </span>
+                        <span id="info-passw" class="small text-info" ></span>
+                       
                     </div>
                     <div class="repetircontra">
                         <label for="repeatpass">Repetir contraseña</label>
-                        <input type="password" name="repeatpass" id="repeatpass">
-                        <span class="error"><%= locals.errores && errores.repeatpass ? errores.repeatpass.msg : null %> </span>
-
+                        <input class="form-control" type="password" name="repeatpass" id="repeatpass">
+                        <span id="errorPassw2" class="error"><%= locals.errores && errores.repeatpass ? errores.repeatpass.msg : null %> </span>
+                        <span id="info-passw2" class="text-info" ></span>
                     </div>
                     <div class="condicion-registro">
-                        <input type="checkbox" name="terms" id="terms">
-                        <label for="terminos">Acepta los terminos y condiciones</label>
+                        <input class="form-control" type="checkbox" name="terms" id="terms">
+                        <label for="terminos">Acepto terminos y condiciones</label>
                     </div>
-                    <span class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>
+                    <span id="error-terms" class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>
 
                     <div class="boton-registro">
-                        <button type="submit">Registrarse</button>
+                        <button type="submit">Registrarme</button>
+                    
                     </div>
                 </form>
             </div>
@@ -53,6 +63,6 @@
     </main>
 
     <%- include('partials/footer') %> 
-
+    <script src="/js/registerValidator.js"></script>
 </body>
 

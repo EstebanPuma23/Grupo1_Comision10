@@ -14,7 +14,7 @@
                         <h4>Editar producto</h4>
                     </div>
                     <div class="card-body">
-                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data" id= "form-add-product">
+                        <form action="/products/update/<%= product.id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : product.name %>" id="name" placeholder="Nombre del producto" name="name" value="<%= locals.old && old.name ? old.name : product.name%>">
@@ -59,9 +59,9 @@
                                     <span id="imageError" class="text-danger small ms-2"><%= locals.errors && errors.image ? errors.image.msg : null%> </span>
                                   </div>
                                </div>
-                               <span id = "errorEmpty" class = "text-danger">
+                                     <span id = "errorEmpty" class = "text-danger">
 
-                            </span>
+                               </span>
                                 <div class="col-12 mt-5">
                                     <button type="submit" class="btn btn-outline-dark w-100">Guardar</button>
 
@@ -78,5 +78,4 @@
 </body>
  <!-- Footer -->
  <%- include('partials/footer') %> 
- <script src="/js/productValidator.js"></script>
 </html>

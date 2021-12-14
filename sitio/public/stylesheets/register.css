@@ -21,15 +21,17 @@
     justify-content: center;
 }
 .form .condicion-registro input{
- width: 10px;
- margin: 0;
- padding: 0;
+ width: auto;
+ margin: auto;
+ padding: auto;
+ 
 }
 .form .condicion-registro label{
     font-size: 13px;
     display: flex;
     align-items: center;  
     padding-left: 3px;
+  
 }
 .form input {
     
@@ -68,4 +70,11 @@
 
 .formulario-register .link-login a{
     color: var(--verde-oscuro);
+}
+
+/* boton ojito */
+.formulario-register .ojito{
+    padding: 2px;
+    height: 100%;
+    margin-top: 8px
 }

@@ -73,14 +73,12 @@ module.exports = {
     },
     processLogin: async (req, res) => {
         let errors = validationResult(req);
-
-        if (!errors.isEmpty()) {
+         if(!errors.isEmpty()){
             console.log(errors.mapped())
             return res.render('login', {
                 errores: errors.mapped()
-            })
-
-        }
+              })
+          }
         let { email, password, remember } = req.body;
         try {
             let user = await db.User.findOne({
@@ -116,8 +114,6 @@ module.exports = {
         req.session.destroy()
         return res.redirect('/')
     },
-
-
     profile: (req, res) => {
         /* let user = db.User.find(user => db.User.id === req.session.userLogin.id);
        return res.send(user)  */

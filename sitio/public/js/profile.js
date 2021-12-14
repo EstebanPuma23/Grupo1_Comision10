@@ -3,7 +3,7 @@ console.log('profile success');
 const $ = id => document.getElementById(id);
 
 const inputName = $('name');
-const imgPerfil = $('img-perfil');
+const imgPerfil = $('profile_picture');
 const inputPasswordOrigin = $('password-origin');
 const inputPassword = $('password');
 const inputPassword2 = $('repeatpass');
@@ -112,60 +112,24 @@ inputName.addEventListener('focus', function () {
 
 //Imagen de Perfil
 
-/* imgPerfil.addEventListener('change', function () {
+ imgPerfil.addEventListener('change', function (e) {
+     console.log('probando evento');
     switch (true) {
         case !regExExt.exec(this.value):
-            imageError.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif"
+            console.log(imgPerfil);
+            $('imageError').innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif"
             this.classList.add('is-invalid')
-            preview.innerHTML = null;
             break;
         default:
+            console.log(imgPerfil);
+
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
-            $('btnImagen').classList.add('btn-outline-secondary');
-            $('btnImagen').classList.remove('btn-outline-danger');
-            imageError.innerHTML = null;
-            btnImagen.innerText = "Cambiar imágenes"
-            break;
-    }
-}) */
-
-/* imgPerfil.addEventListener('change', function (e) {
-    switch (true) {
-        case !regExExt.exec(this.value):
-            imageError.innerHTML = "Solo imágenes con extensión jpg, jpeg, png, gif"
-            this.classList.add('is-invalid')
-            preview.innerHTML = null;
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            this.classList.add('is-valid');
-            $('btnImagen').classList.add('btn-outline-secondary');
-            $('btnImagen').classList.remove('btn-outline-danger');
-            imageError.innerHTML = null;
-            btnImagen.innerText = "Cambiar imágenes"
-            if (this.files) {
-                [].forEach.call(this.files, readAndPreview);
-            }
-
-            function readAndPreview(file) {
-
-                var reader = new FileReader();
-                preview.innerHTML = null;
-                reader.addEventListener("load", function () {
-                    var image = new Image();
-                    image.height = 150;
-                    image.title = file.name;
-                    image.src = this.result;
-                    preview.appendChild(image);
-                });
-                reader.readAsDataURL(file);
-
-            }
+            $('imageError').innerHTML = null;
             break;
     }
 })
- */
+
 //password original
 inputPasswordOrigin.addEventListener('keyup', function () {
     switch (true) {
@@ -279,7 +243,8 @@ formPerfil.addEventListener('submit', function(e){
     if(!inputName.classList.contains('is-invalid')&&
         !inputPasswordOrigin.classList.contains('is-invalid')&&
         !inputPassword.classList.contains('is-invalid')&&
-        !inputPassword2.classList.contains('is-invalid')){
+        !inputPassword2.classList.contains('is-invalid') &&
+        !imgPerfil.classList.contains('is-invalid')){
         
             formPerfil.submit()
             swal("Cambios subidos");

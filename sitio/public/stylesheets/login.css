@@ -23,7 +23,7 @@
 
 .login .titulo-logo img {
     display: none;
-    width: 80%;
+    width: 35%;
     height: max-content;
 }
 
@@ -42,6 +42,8 @@
     border-style: solid;
     border-radius: 5px;
     font-size: 16px;
+    line-height: 40px;
+    padding-inline-start: 15px;
 }
 
 .login .boton-login {
@@ -96,19 +98,29 @@
     }
     .login .formulario {
         width: 60%;
+        margin: auto;
     }
 }
 
 @media(min-width:1024px) {
     .login .form-login {
         width: 60%;
-        flex-direction: row-reverse;
+        flex-direction: column;
         flex-wrap: nowrap;
     }
     .login .titulo-logo {
-        width: 70%;
+        width: 100%;
     }
     .login .titulo-logo img {
         display: block;
     }
+    .login .email input,
+.password input{
+    font-size: 18px;
+}
+.login .boton-login button{
+    width: 150px;
+    padding: 9px;
+    font-size: 19px;
+}
 }

@@ -13,7 +13,7 @@
         </ul>
     </div>
     <nav class="bloque-nav">
-        <a class="img-logo" href="/"><img src="/images/Logo1.png" alt="" /></a>
+        <a class="img-logo" href="/"><img src="/images/logo.png" alt="" /></a>
         <div class="buscador">
             <form action="/products/search" method="GET">
                 <div class="btn-buscar">
@@ -42,8 +42,8 @@
                 <a class="user-log"><i class="fas fa-user-circle"></i></a>
                 <ul class="submenu-user">
                     <% if (locals.userLogin) { %>
-                        <li><i class="fas fa-user" ></i><a href="/users/profile"><%= locals.userLogin.name %> </a></li>
-                        <% if (locals.userLogin.rol === 'admin') { %>
+                        <li><i class="fas fa-user"></i><a><%= locals.userLogin.name %> </a></li>
+                        <% if (locals.userLogin.rol === 2) { %>
                             <li>
                                 <a href="/admin">Administrador <i class="fas fa-cog"></i></a>
                             </li>                      
@@ -70,7 +70,7 @@
                 <ul class="submenu-user">
                     <% if (locals.userLogin) { %>
                         <li><i class="fas fa-user"></i><a href="/users/profile"><%= locals.userLogin.name %> </a></li>
-                        <% if (locals.userLogin.rol === 'admin') { %>
+                        <% if (locals.userLogin.rol === 2) { %>
                             <li>
                                 <a href="/admin">Administrador <i class="fas fa-cog"></i></a>
                             </li>                      

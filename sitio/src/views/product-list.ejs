@@ -5,8 +5,25 @@
   <body class="list">
     <!-- Header -->
     <%- include('partials/header') %>
-    <main>
-
+    <main class="list">
+        <aside class="aside-list">
+            <section class="filter">
+                <h4>Filtrar por categoria:</h4>
+            <div style="width: 100%; ">
+                <form class="row" action="/products/filter" method="GET">
+                    <div class="col-9">
+                        <select name="category" class="form-select" size="<%= categories.length %> ">
+<option value="" selected hidden>Filtrar por...</option>
+<% categories.forEach(category => { %>
+<option value="<%= category.id %>"><%= category.name %></option>
+<% }) %>
+</select>
+                    </div>
+                    <button class="col-3 btn btn-outline-primary" type="submit">Filtrar</button>
+                </form>
+            </div></section>
+        </aside>
+        <section class="list-body" style="display: block;">
         <h3 class="destacado">Todos los productos</h3>
         <div class = "target-container">
             <% products.forEach(product => { %>
@@ -16,7 +33,7 @@
                             <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>"
                                     alt="" /></a>
                                     <div class="botones">
-                                        <input class="cant-prod" type="number" value="1">
+                                        <input class="cant-prod" type="number" value="1" min="1">
                                         <a class="agregar" href="/store">Agregar</a>
                                      </div>
                             <div class="detalles-producto">
@@ -28,6 +45,7 @@
                 </div>
          <% }) %>
 </div>
+</section>
 
     </main>
 

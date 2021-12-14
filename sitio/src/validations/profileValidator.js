@@ -10,8 +10,6 @@ module.exports = [
     body('passwordOrigin')
     
         .custom(async (value, { req }) => {
-            console.log('-------Probando--------');
-           console.log(req.body);
             try {
                 let user = await db.User.findOne({
                     where: {
@@ -19,18 +17,14 @@ module.exports = [
                     }
                 })
                 
-                if (user && bcrypt.compareSync(value, user.password)) {
-                    return Promise.reject()
-                   
-                } else {
+                if (!(user && bcrypt.compareSync(value, user.password))) {
+                    //return Promise.reject()
                     return Promise.reject('back--La contraseña no es correcta!')
-                    
-                }
-                
+                } 
             } catch (error) {
                 console.log(error)
             }
 
-        }).withMessage('back-La contraseña no es correcta'),
+        })
 
 ]

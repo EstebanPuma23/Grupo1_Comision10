@@ -20,7 +20,7 @@ module.exports = [
                 if (!(user && bcrypt.compareSync(value, user.password))) {
                     //return Promise.reject()
                     return Promise.reject('back--La contraseña no es correcta!')
-                } 
+                }
             } catch (error) {
                 console.log(error)
             }

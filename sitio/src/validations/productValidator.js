@@ -5,7 +5,7 @@ module.exports = [
     .notEmpty().withMessage('El nombre del producto es obligatorio').bail()
     .isLength({
         min : 5
-    }).withMessage('El nombre debe tener un minimo de 5 caracteres'),
+    }).withMessage('El nombre debe tener un mínimo de 5 caracteres'),
 
     check('description')
     .notEmpty().withMessage('La descripción es obligatoria').bail()
@@ -14,7 +14,7 @@ module.exports = [
     }).withMessage('La descripción debe tener un mímino de 20 caracteres'),
 
     check('feactures')
-    .notEmpty().withMessage('Las característcias son obligatorias').bail()
+    .notEmpty().withMessage('Las características son obligatorias').bail()
     .isLength({
         min : 15
     }).withMessage('Las características deben tener un mímino de 15 caracteres'),

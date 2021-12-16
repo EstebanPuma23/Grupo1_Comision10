@@ -131,7 +131,7 @@ module.exports = {
                     description: description.trim(),
                     price,
                     categoryId: category,
-                    image: req.file.filename
+                    image: req.file ? req.file.filename : image
                 },
                 {
                     where: {

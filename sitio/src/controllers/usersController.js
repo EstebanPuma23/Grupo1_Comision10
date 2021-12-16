@@ -73,12 +73,12 @@ module.exports = {
     },
     processLogin: async (req, res) => {
         let errors = validationResult(req);
-         if(!errors.isEmpty()){
+        if (!errors.isEmpty()) {
             console.log(errors.mapped())
             return res.render('login', {
                 errores: errors.mapped()
-              })
-          }
+            })
+        }
         let { email, password, remember } = req.body;
         try {
             let user = await db.User.findOne({
@@ -133,12 +133,12 @@ module.exports = {
 
     update: (req, res) => {
         let errors = validationResult(req);
-        
+
         /* console.log('-----probando(errors.isEmpty() ----------');
 
         console.log(errors.isEmpty()); */
         //return res.send(errors)
-        
+
         if (errors.isEmpty() && !req.fileValidationError) {
 
             db.User.findByPk(req.session.userLogin.id)
@@ -209,5 +209,9 @@ module.exports = {
 
             }).catch(error => console.log(error))
         }
+    },
+
+    favorite: (req, res) => {
+        return res.render('favoritas')
     }
 }

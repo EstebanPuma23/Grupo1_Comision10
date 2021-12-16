@@ -4,8 +4,8 @@ const db = require('../database/models');
 module.exports = [
 
     check('name')
-        .notEmpty().withMessage('El nombre es requerido'),
-
+        .notEmpty().withMessage('El nombre y el apellido deben tener un min de 3 caracteres'),
+       
     check('email')
         .notEmpty().withMessage('Debes ingresar tu email').bail()
         .isEmail().withMessage('Email inválido'),
@@ -33,9 +33,9 @@ module.exports = [
 
     check('password')
         .isLength({
-            min : 6,
+            min : 8,
             max : 12
-        }).withMessage('La contraseña debe tener un mínimo de 6 y un máximo de 12 caracteres'),
+        }).withMessage('Campo obligatorio'),
     
     body('repeatpass')
         .custom((value,{req}) => {

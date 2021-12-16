@@ -163,9 +163,10 @@ inputPasswordOrigin.addEventListener('focusout', function () {
 inputPassword.addEventListener('keyup', function () {
 
     switch (true) {
-        case !this.value && inputPasswordOrigin.value.trim().length > 0:
-            $('error-password').innerText = "No debe estar vacio, es necesaria para guardar los cambios";
-            this.classList.add('is-invalid')
+        case !this.value:
+            $('error-password').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
             break;
         case !regExPassword.test(this.value):
             $('error-password').innerText = "Mayúscula, minúscula, caracter especial y número, 6 a 16 caracteres";
@@ -181,9 +182,10 @@ inputPassword.addEventListener('keyup', function () {
 
 inputPassword.addEventListener('blur', function () {
     switch (true) {
-        case !this.value && inputPasswordOrigin.value.trim().length > 0:
-            $('error-password').innerText = "La contraseña es requerida, es necesaria para guardar los cambios";
-            this.classList.add('is-invalid')
+        case !this.value:
+            $('error-password').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
             break;
         case !regExPassword.test(this.value):
             $('error-password').innerText = "Mayúscula, minúscula, caracter especial y número, 6 a 16 caracteres";
@@ -201,6 +203,11 @@ inputPassword.addEventListener('blur', function () {
 /* confirmar password */
 inputPassword2.addEventListener('keyup', function () {
     switch (true) {
+        case !this.value && inputPassword.value.trim().length == 0:
+            $('error-password').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
         case !this.value && inputPasswordOrigin.value.trim().length > 0:
             $('error-password').innerText = "Debe confirmar su contraseña";
             this.classList.add('is-invalid')
@@ -220,10 +227,14 @@ inputPassword2.addEventListener('keyup', function () {
 inputPassword2.addEventListener('blur', function () {
     
     switch (true) {
+        case !this.value && inputPassword.value.trim().length == 0:
+            $('error-password').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
         case !this.value && inputPasswordOrigin.value.trim().length > 0:
             $('error-password').innerText = "Debe confirmar su contraseña";
             this.classList.add('is-invalid')
-            
             break;
         case this.value !== inputPassword.value:
             $('error-password').innerText = "Las contraseñas no coinciden";

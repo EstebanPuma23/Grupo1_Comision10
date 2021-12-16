@@ -12,7 +12,7 @@ const profileValidator = require('../validations/profileValidator');
 
 const upload = require('../middlewares/multerImageUser');
 
-const {register, processRegister, login, processLogin, logout, profile, update} = require('../controllers/usersController');
+const {register, processRegister, login, processLogin, logout, profile, update, favorite} = require('../controllers/usersController');
 
 /* GET home page. */
 router
@@ -23,5 +23,6 @@ router
     .get('/logout',logout)
     .get('/profile',userLoginCheck,  profile)
     .post('/profile',upload.single('profile_picture'),profileValidator, update)
+    .get('/favoritas', favorite)
 
 module.exports = router;

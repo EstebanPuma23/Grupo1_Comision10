@@ -72,7 +72,7 @@ main .productos .prod{
     background-color: var(--blanco);
     margin:0 auto;
     margin-bottom: 15px;
-    border-radius: 10px;
+    border-radius: 19px;
 }
 
 main .ofertas-dskp{
@@ -81,9 +81,9 @@ main .ofertas-dskp{
 
 main .productos .prod img{
     width: 100%;
-     border: solid 1px var(--grisOscuro); 
+     border: solid 1px rgb(160, 159, 159); 
     margin-bottom:0 ;
-    border-radius:10px 10px 0 0 ;
+    border-radius:19px 19px 0 0 ;
 }
 
 main .main-section p{
@@ -97,9 +97,9 @@ main  .botones{
     display: flex;
     margin-bottom: 5px;
     align-items: center;
-    border-left: solid var(--grisOscuro) 1px;
-    border-right:  solid var(--grisOscuro) 1px;
-    border-bottom:  solid var(--grisOscuro) 1px;
+    border-left: solid rgb(160, 159, 159) 1px;
+    border-right:  solid rgb(160, 159, 159) 1px;
+    border-bottom:  solid rgb(160, 159, 159) 1px;
     width: 100%;
     justify-content: space-around;
     padding: 3px 0;
@@ -145,7 +145,7 @@ main .carg-productos a{
     max-width: 70%;
     padding: 6px;
     border-radius: 6px;
-    border: solid 1px var(--grisOscuro);
+    border: solid 1px rgb(160, 159, 159);
     background-color: silver;
     color: #000;
     text-align: center;

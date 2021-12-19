@@ -150,7 +150,7 @@ checkTerms.addEventListener('click', function(e) {
   this.classList.toggle('is-valid');
   this.classList.remove('is-invalid')
   $('error-terms').innerText = null;
-  console.log(e.target.checked);
+  console.log(this.checked);
 })
 
 formulario.addEventListener('submit', e => {
@@ -167,8 +167,8 @@ formulario.addEventListener('submit', e => {
         }
     } 
 
-    if(!terminos.checked){
-        terminos.classList.add('is-invalid')
+    if(!terms.checked){
+        terms.classList.add('is-invalid')
         $('error-terms').innerText = "Debes aceptar los terminos y condiciones";
         error= true
     }

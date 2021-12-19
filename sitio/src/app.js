@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 
+
 const methodOverride = require('method-override');
 const session = require('express-session');
 
@@ -42,7 +43,7 @@ app.use(localUserCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-
+app.use('/api',require('./routes/api'))
 
 app.listen(console.log(`Servidor corriendo en http://localhost:3000`))
 // catch 404 and forward to error handler

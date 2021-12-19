@@ -11,25 +11,17 @@ module.exports = [
         .isEmail().withMessage('Email inválido'),
 
     body('email')
-        .custom( async (value)  => {
-            try{
-                let userExist = await db.User.findOne({
-                    where: {
-                        email: value
-                    }
-                })
-                  if(userExist){
-                    return false;
-                }else{
-                    return true;
+        .custom(value  => {
+            return db.User.findOne({
+                where : { 
+                    email : value
+                  }
+            }).then( user => {
+                if(user){
+                    return Promise.reject('El email ya se encuentra registrado')
                 }
-            
-             }catch(error){
-                  console.log(error)
-             }
-
-           
-        }).withMessage('el email ya se encuentra registrado'),
+            })
+          }),
 
     check('password')
         .isLength({

@@ -124,13 +124,14 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, description, price, category } = req.body;
+            const { name, description, price, category, image } = req.body;
             db.Product.update(
                 {
                     name: name.trim(),
                     description: description.trim(),
                     price,
                     categoryId: category,
+                    image: req.file ? req.file.filename : image
                 },
                 {
                     where: {

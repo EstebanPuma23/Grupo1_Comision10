@@ -227,12 +227,12 @@ terminos.addEventListener('click', function(e) {
 formulario.addEventListener('submit', e => {
     e.preventDefault();
     let error = false;
-    const elementos = formulario.elements;
+    const elementos = [inputName, inputEmail, inputPassword, inputPassword2 ]
 
-    for(let i = 0; i < elementos.length -1; i++) {
+    for(let i = 0; i < elementos.length; i++) {
         if(!elementos[i].value){
             elementos[i].classList.add('is-invalid');
-           //$('error-empty').innerText = "Los campos señalados son obligatorios";
+          // $('error-empty').innerText = "Los campos señalados son obligatorios";
             error = true;
 
         }
@@ -240,7 +240,8 @@ formulario.addEventListener('submit', e => {
 
     if(!terminos.checked){
         terminos.classList.add('is-invalid');
-        $('error-terms').innerText = "Debes aceptar terminos y condiciones"
+        $('error-terms').innerText = "Debes aceptar terminos y condiciones";
+        error = true;
     }
 
     if(!error){

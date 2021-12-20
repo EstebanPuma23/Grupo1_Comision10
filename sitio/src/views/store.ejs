@@ -20,57 +20,27 @@
                         <li>Precio</li>
                     </ol>
                 </div>
-                <section class="filas">
-                    <% products.forEach(product => { %>
-                        <article class="articulos">
-                            <div class="articulo-comprar">
-                                <img src="/images/<%= product.image%>" alt="" />
-                            </div>
-                            <div class="nombre-articulo">
-                                <p><%= product.name %> </p>
-                            </div>
-                            <div class="cantidad-articulo">
-                                <p>cantidad</p>
-                            </div>
-                            <div class="precio-articulo">
-                                <p>$ <%=product.price %> </p>
-                            </div>
-                            <div class="eliminar-articulo">
-                                <a class="eliminar-boton" href=""><i class="fas fa-times-circle"></i></a>
-                                <a class="eliminar" href=""><span>eliminar</span></a>
-                            </div>
-                        </article>
-                    <% }) %>
-                    
-                    
-
-
+                <section class="filas" id="tablaCarts">
+    
                 </section>
             </div>
             <div class="total-button">
                 <div class="container-total">
                     <section>
-                        <div class="boton-costo">
-                            <button type="submit">Calcular costo de envio</button>
-                        </div>
+                        
                         <div class="envio-total">
-                            <div class="envio">
-                                <p>Envio:</p> <p>$0.00</p>
-                            </div>
-                            
                             <div class="total">
-                                <p>Total:</p> <p>$0.00</p>
+                                <p>Precio Total:</p> <p id="price">$0.00</p>
                             </div>
  
                         </div>
 
                     </section>
                 </div>
-
                 <div class="container-button">
                     <section>
                         <div class="boton-continuar">
-                            <button type="submit">Seguir comprando</button>
+                            <a href="/products/product-list" class="btn btn-primary" style="color: white;">Seguir comprando</a>
                         </div>
                         <div class="boton-pagar">
                             <button type="submit">Finalizar compra</button>
@@ -86,5 +56,5 @@
     <%- include('partials/footer') %> 
 
 </body>
-<script src="/js/cart.js"></script>
+<script src="/js/viewCart.js"></script>
 </html>

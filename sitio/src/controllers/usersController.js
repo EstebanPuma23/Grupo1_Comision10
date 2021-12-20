@@ -50,7 +50,7 @@ module.exports = {
 
             })
             console.log('Se creo el usuario')
-
+           
             req.session.userLogin = {
                 id: user.id,
                 name: user.name,
@@ -58,7 +58,7 @@ module.exports = {
                 profile_picture: user.profile,
                 rol: user.rolId
             }
-
+            req.session.carrito = [];
             console.log(req.session.userLogin)
             return res.redirect('/')
 
@@ -95,6 +95,7 @@ module.exports = {
                 profile_picture: user.profile,
                 rol: user.rolId
             }
+            req.session.carrito = [];
             if (remember) {
                 res.cookie('InnovArte', req.session.userLogin, { maxAge: 15000 * 60 })
             }

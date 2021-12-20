@@ -10,6 +10,8 @@ let btnCartEmpty = document.getElementById('btn-delete-cart'); //boton para vaci
 let btnNextBuy = document.getElementById('btn-next-buy'); //boton para continuar con la compra
 
 
+
+
 const mostrarCantidad = changuito => {
 
     var cantidad = 0;
@@ -24,6 +26,7 @@ const mostrarCantidad = changuito => {
     if(spanCantidad){
         spanCantidad.innerHTML = cantidad
         spanTotal.innerHTML = `<span>$</span> <span class="float-end">${total}</span>`
+       
     }
 
     if(cantidad == 0){
@@ -48,7 +51,7 @@ const cargarTabla = carrito => {
     carrito.forEach(producto => {
         let item = `
             <td class="col-2">
-            <img class="w-100" src="/images/products/${producto.image}" id="imgProduct"> 
+            <img class="w-100" src="/images/${producto.image}" id="imgProduct"> 
             </td>
             <td class="text-center col-3 align-middle">
             <a class="text-danger h5" onClick="removeItem(event,${producto.id})"><i class="fas fa-minus-square"></i></a>
@@ -78,6 +81,7 @@ const getCarrito = async () => {
         if(result.data.length > 0) {
             mostrarCantidad(result.data)
             cargarTabla(result.data)
+            loadTable(result.data)
 
         }else{
             mostrarCantidad(result.data)
@@ -95,6 +99,7 @@ const addItem = async (e,id) => {
         let result = await response.json()
         mostrarCantidad(result.data);
         cargarTabla(result.data);
+        loadTable(result.data)
 
     } catch (error) {
         console.log(error)
@@ -108,6 +113,7 @@ const removeItem = async (e,id) => {
         let result = await response.json()
         mostrarCantidad(result.data);
         cargarTabla(result.data);
+        loadTable(result.data)
 
     } catch (error) {
         console.log(error)
@@ -119,6 +125,7 @@ const emptyCart = async () => {
         let response = await fetch('/api/carts/empty')
         let result = await response.json()
         changuito.innerHTML = ""
+        loadTable(result.data)
         mostrarCantidad(result.data)
     } catch (error) {
         console.log(error)

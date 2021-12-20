@@ -1,8 +1,43 @@
 const db = require('../database/models');
 const getURL = req => `${req.protocol}://${req.get('host')}${req.originalUrl}`;
 
+const productVerify = (carrito, id) => {
+
+    
+    let index = -1;
+    for (let i = 0; i < carrito.length; i++) {
+
+        if (carrito[i].id == id) {
+            index = i;
+            break
+        }
+    }
+    return index
+}
+
 module.exports ={
     show: async(req,res) =>{
+        /* req.session.carrito = [
+            {
+                "id": 2,
+                "nombre": "Cuaderno AVON universitario",
+                "image": "cuaderno-avon-universitario.jpg",
+                "precio": 240,
+                "categoria": "oficina",
+                "cantidad": 1,
+                "total": 240
+              },
+              {
+                "id": 5,
+                "nombre": "Pincel escolar chato N°1",
+                "image": "pincel.jpg",
+                "precio": 250,
+                "categoria": "oficina",
+                "cantidad": 1,
+                "total": 250
+              }
+        ]; */
+
         let response = {
             meta: {
                 link: getURL(req)
@@ -13,42 +48,49 @@ module.exports ={
     },
     add: async(req,res) =>{
         try {
+           /*  req.session.carrito = [
+                {
+                    "id": 2,
+                    "nombre": "Cuaderno AVON universitario",
+                    "image": "cuaderno-avon-universitario.jpg",
+                    "precio": 240,
+                    "categoria": "oficina",
+                    "cantidad": 1,
+                    "total": 240
+                  }
+            ];
+
+            req.session.userLogin = {
+                id: 1,
+                name: "admin",
+                surname: "innovarte",
+                email: "admin@innovarte.com",
+                profile_picture: "foto-default.jpg",
+                rol: 2
+            } */
+
 
             let product = await db.Product.findByPk(req.params.id, {
-                include: ['category', 'images']
+                include: ['Category']
             });
 
+            
+          //  return res.status(200).json(req.session.carrito)
+            
             let item = {
                 id: product.id,
                 nombre: product.name,
-                image: product.images[0].file,
+                image: product.image,
                 precio: +product.price,
-                categoria: product.category.name,
+                categoria: product.Category.name,
                 cantidad: 1,
                 total: +product.price,
             }
-
+            //return res.status(200).json(item)
             //ORDER QUE HIZO EL PROFESOR
             
             if (req.session.carrito.length == 0) {
 
-                let order = await db.Order.findOne({
-                    where: {
-                        userId: req.session.userLogin.id,
-                        status: 'pending'
-                    }
-                })
-                if (!order) {
-                    order = await db.Order.create({
-                        userId: req.session.userLogin.id,
-                        status: "pending"
-                    })
-                }
-
-                item = {
-                    ...item,
-                    orderId: order.id
-                }
                 req.session.carrito.push(item)
 
                 /* guarda los productos en la tabla carrito */
@@ -61,23 +103,13 @@ module.exports ={
 
                 let index = productVerify(req.session.carrito, req.params.id)
 
-                let order = await db.Order.findOne({
-                    where: {
-                        userId: req.session.userLogin.id,
-                        status: 'pending'
-                    }
-                })
-
                 if (index === -1) {
-                    item = {
-                        ...item,
-                        orderId: order.id
-                    }
+                  
                     req.session.carrito.push(item)
 
                     /* guarda los productos en la tabla carrito */
                     await db.Cart.create({
-                        userId: order.userId,
+                        userId: req.session.userLogin.id,
                         productId: item.id,
                         quantity: 1
                     })
@@ -106,6 +138,7 @@ module.exports ={
                     )
                 }
             }
+//console.log(req.session.Cart);
 
             let response = {
                 meta: {
@@ -116,11 +149,41 @@ module.exports ={
             return res.status(200).json(response)
 
         } catch (error) {
-
+            console.log(error);
         }
     },
     remove: async(req,res) =>{
         try {
+           /*  req.session.carrito = [
+                {
+                    "id": 2,
+                    "nombre": "Cuaderno AVON universitario",
+                    "image": "cuaderno-avon-universitario.jpg",
+                    "precio": 240,
+                    "categoria": "oficina",
+                    "cantidad": 1,
+                    "total": 240
+                  },
+                  {
+                    "id": 5,
+                    "nombre": "Pincel escolar chato N°1",
+                    "image": "pincel.jpg",
+                    "precio": 250,
+                    "categoria": "oficina",
+                    "cantidad": 1,
+                    "total": 250
+                  }
+            ]; */
+
+           /*  req.session.userLogin = {
+                id: 1,
+                name: "admin",
+                surname: "innovarte",
+                email: "admin@innovarte.com",
+                profile_picture: "foto-default.jpg",
+                rol: 2
+            } */
+
             let index = productVerify(req.session.carrito,req.params.id)
 
             let product = req.session.carrito[index]
@@ -173,10 +236,39 @@ module.exports ={
     empty: async(req,res) =>{
 
         try {
-            await db.Order.destroy({
+            /* req.session.userLogin = {
+                id: 1,
+                name: "admin",
+                surname: "innovarte",
+                email: "admin@innovarte.com",
+                profile_picture: "foto-default.jpg",
+                rol: 2
+            }
+
+            req.session.carrito = [
+                {
+                    "id": 2,
+                    "nombre": "Cuaderno AVON universitario",
+                    "image": "cuaderno-avon-universitario.jpg",
+                    "precio": 240,
+                    "categoria": "oficina",
+                    "cantidad": 1,
+                    "total": 240
+                  },
+                  {
+                    "id": 5,
+                    "nombre": "Pincel escolar chato N°1",
+                    "image": "pincel.jpg",
+                    "precio": 250,
+                    "categoria": "oficina",
+                    "cantidad": 1,
+                    "total": 250
+                  }
+            ]; */
+
+            await db.Cart.destroy({
                 where : { 
-                    userId : req.session.userLogin.id,
-                    status : 'pending'
+                    userId : req.session.userLogin.id
                 }
             })
 

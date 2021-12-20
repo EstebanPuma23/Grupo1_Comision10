@@ -17,7 +17,7 @@ module.exports = {
         Promise.all([ofertas,products])
 
         .then(([ofertas,products])=>{
-            req.session.carrito = [];
+           
             return res.render('home', {
                 ofertas,
                 products,

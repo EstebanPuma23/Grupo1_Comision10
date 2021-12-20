@@ -160,6 +160,8 @@ main .carg-productos a{
     .carousel-control-prev,
 .carousel-control-next{
     display: flex;
+    height: 30%;
+    margin: auto;
 }
     
     main .productos, .destacados, .ofertas{

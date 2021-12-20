@@ -46,6 +46,17 @@
     padding-inline-start: 15px;
 }
 
+.login .password input{
+    width: 87%;
+}
+
+.login .contraseña button{
+    background:none;
+    border: none;
+    color: black;
+    width: 13%;
+}
+
 .login .boton-login {
     display: flex;
     flex-direction: column;

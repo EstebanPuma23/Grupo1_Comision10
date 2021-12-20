@@ -6,6 +6,14 @@ const formulario = $("formulario-register");
 
 
 const inputName = $("user");
+console.log('registerValidator Success');
+const $ = id => document.getElementById(id);
+
+
+const formulario = $("formulario-register");
+
+
+const inputName = $("user");
 const inputEmail = $("email")
 const inputPassword = $("password");
 const inputPassword2 = $("repeatpass")

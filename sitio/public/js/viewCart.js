@@ -1,6 +1,7 @@
 console.log('viewCart.js success');
 
 let tablaVistaCarrito = document.getElementById('tablaCarts'); //cantidad de productos en el icono del carrito
+let botonFinalizar = document.getElementById('boton-finalizar'); 
 
 let priceTotal = document.getElementById('price');
 

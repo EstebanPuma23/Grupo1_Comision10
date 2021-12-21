@@ -125,8 +125,8 @@ const emptyCart = async () => {
         let response = await fetch('/api/carts/empty')
         let result = await response.json()
         changuito.innerHTML = ""
-        loadTable(result.data)
         mostrarCantidad(result.data)
+        loadTable(result.data)
     } catch (error) {
         console.log(error)
     }

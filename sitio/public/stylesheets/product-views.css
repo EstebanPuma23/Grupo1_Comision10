@@ -75,6 +75,17 @@
     background: var(--verde-oscuro);
     color: var(--blanco);
 }
+
+.container .back-div{
+    padding: 10px 0;
+    width: 15%;
+}
+.container .back-btn{
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(33,37,41);
+}
 @media (min-width:768px) {
     .product-view .contenedor-detalle .descripcion{
         margin-top: 40px;

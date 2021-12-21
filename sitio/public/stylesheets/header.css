@@ -294,6 +294,7 @@ nav-social
     header .nav-bar-tablet li:hover .submenu-user{
         display: block;
         position: absolute;
+        z-index: 100;
     }
     header .nav-bar-tablet li:hover .submenu-user i{
        font-size: 10px;
@@ -343,6 +344,7 @@ nav-social
     }
     header .nav-bar-escritorio .submenu-user{
         display: none;
+        z-index: 100;
     background: var(--verde-claro);
     border-radius: 0 0 5px 5px;
     padding: 0;

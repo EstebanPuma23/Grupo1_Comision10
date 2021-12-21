@@ -21,7 +21,10 @@
                             </div>
                             <div class="password">
                                 <label for="">Contraseña</label>
-                                <input type="password" name="password" id="pass">
+                                <div class="contraseña" style="display: flex;">
+                                    <input type="password" name="password" id="pass">
+                                    <button type="button" onclick="mostrarContrasena()" ><i class="far fa-eye"></i></button>
+                                </div>
                                 <span class="small text-info" id="info-password"></span>
                                 <span id="error-password" class="small text-danger"></span>
                             </div>
@@ -46,6 +49,16 @@
             </main>
             <%- include('partials/footer') %>
                 <script src="/js/loginValidator.js"></script>
+                <script>
+                    function mostrarContrasena(){
+                        var tipo = document.getElementById("pass");
+                        if(tipo.type == "password"){
+                            tipo.type = "text";
+                        }else{
+                            tipo.type = "password";
+                        }
+                    }
+                  </script>
     </body>
 
 </html>

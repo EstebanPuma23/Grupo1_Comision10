@@ -11,12 +11,13 @@
 }
 .cont-perfil .cont-img-datos{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-bottom: 10px;
 }
 .cont-perfil .cont-img-datos .perfil-img{
     width: 40%;
     margin: 7px;
+    text-align: center;
 }
 .cont-perfil .cont-img-datos .subir-imagen{
     margin-top: 7px;

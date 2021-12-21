@@ -64,11 +64,10 @@ const formulario = $('form-login');
 formulario.addEventListener('submit', e => {
     
     e.preventDefault();
-    
+     let elementos = [inputEmail, inputPassword]
     let error = false;
-    const elementos = formulario.elements;
     
-    for (let i = 0; i < elementos.length - 2; i++) {
+    for (let i = 0; i < elementos.length; i++) {
         
         if(!elementos[i].value){
             $('error-button').innerText = "Ingresá tus datos";

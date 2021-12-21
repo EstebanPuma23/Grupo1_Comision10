@@ -1,23 +1,26 @@
 console.log('registerValidator Success');
 const $ = id => document.getElementById(id);
 
-let formulario = $("formulario-register");
+
+const formulario = $("formulario-register");
+
 
 const inputName = $("user");
 const inputEmail = $("email")
 const inputPassword = $("password");
 const inputPassword2 = $("repeatpass")
-const checkTerms = $('terms');
+const checkTerms = $('terminos');
 const btnWatch = $('watch');
 
 /* expresiones regulares */
-const regExLetras = /^[_A-zA]*((-|\s)*[_A-zA-Z])*$/
+//const regExLetras = /^[_A-zA]*((-|\s)*[_A-zA-Z])*$/
+const regExLetras = /^[_A-zA-Z]*((-|\s)*[_A-zA-Z])*[:space:]*$/
 const regExEmail = /^(([^<>()\[\]\,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/
 const regExPassword =  /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,12}$/ 
 
 /* Name and Surname */
 inputName.addEventListener('focus', function()  {
-    $("info-user").innerText = "Solo letras"
+    $("errorUser").innerText = "Solo letras"
     $("errorUser").innerText = null;
     this.classList.remove('is-invalid');
 })
@@ -26,28 +29,94 @@ inputName.addEventListener('keydown', function() {
     $("info-user").innerText = null;
 })
 
-
-inputName.addEventListener('blur', function() {
+inputName.addEventListener('keyup', function () {
+    let [name, surname] =  inputName.value.split(' ')
     switch (true) {
-        case !this.value:
-            $("errorUser").innerText = "Campo Obligatorio";
+        case this.value.split(' ').length != 2:
+            $('errorUser').innerText = "El nombre y apellido es requerido";
             this.classList.add('is-invalid')
             break;
-        case !regExLetras.test(this.value) :
-            $("errorUser").innerText = "Solo se permiten letras";
+        case this.value.split(' ').length < 2:
+            $('errorUser').innerText = "Solo un nombre y apellido";
             this.classList.add('is-invalid')
+            break;
+        case name.length <= 2 || surname.length <= 2:
+            $('errorUser').innerText = "Minimo 3 caracteres por nombre";
+            this.classList.add('is-invalid')
+            break;
+        case !regExLetras.test(this.value.trim()):
+            $('errorUser').innerText = "Solo se permiten letras";
+            this.classList.add('is-invalid');
             break;
         default:
-            $("errorUser").innerText = null;
+            $('errorUser').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
+    }
+    
+})
+
+inputName.addEventListener('blur', function () {
+    let [name, surname] =  inputName.value.split(' ')
+    switch (true) {
+        case this.value.split(' ').length != 2:
+            $('errorUser').innerText = "El nombre y apellido es requerido";
+            this.classList.add('is-invalid')
+            break;
+        case this.value.split(' ').length < 2:
+            $('errorUser').innerText = "Solo un nombre y apellido";
+            this.classList.add('is-invalid')
+            break;
+        case name.length <= 2 || surname.length <= 2:
+            $('errorUser').innerText = "Minimo 3 caracteres por nombre";
+            this.classList.add('is-invalid')
+            break;
+        case !regExLetras.test(this.value.trim()):
+            $('errorUser').innerText = "Solo se permiten letras";
+            this.classList.add('is-invalid');
+            break;
+        default:
+            $('errorUser').innerText = null;
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
             break;
     }
 })
 
+inputName.addEventListener('focus', function () {
+    let [name, surname] =  inputName.value.split(' ')
+    switch (true) {
+        case this.value.split(' ').length != 2:
+            $('errorUser').innerText = "El nombre y apellido es requerido";
+            this.classList.add('is-invalid')
+            break;
+        case this.value.split(' ').length < 2:
+            $('errorUser').innerText = "Solo un nombre y apellido";
+            this.classList.add('is-invalid')
+            break;
+        case name.length <= 2 || surname.length <= 2:
+            $('errorUser').innerText = "Minimo 3 caracteres por nombre";
+            this.classList.add('is-invalid')
+            break;
+        case !regExLetras.test(this.value.trim()):
+            $('errorUser').innerText = "Solo se permiten letras";
+            this.classList.add('is-invalid');
+            break;
+        default:
+            $('errorUser').innerText = null;
+            this.classList.remove('is-invalid');
+            this.classList.add('is-valid');
+            break;
+    }
+    
+})
+
+
+
 /* Email */
 inputEmail.addEventListener('focus', function()  {
-    $("info-email").innerText = "Ingrese un email valido"
+    $("errorEmail").innerText = "Ingrese un email valido"
     $("errorEmail").innerText = null;
     this.classList.remove('is-invalid');
 })
@@ -76,7 +145,7 @@ inputEmail.addEventListener('blur', function() {
 
 /* Password */
 inputPassword.addEventListener('focus', function()  {
-    $("info-passw").innerText = "Debe contener una mayúscula, minuscula y al menos un número"
+    $("errorPassw").innerText = "Debe contener una mayúscula, minuscula y al menos un número"
     $("errorPassw").innerText = null;
     this.classList.remove('is-invalid');
 })
@@ -91,7 +160,7 @@ inputPassword.addEventListener('keydown', function() {
 inputPassword.addEventListener('blur', function() {
     switch (true) {
         case !this.value:
-            $("errorPassw").innerText = "Campo obligatorio, debe contener de 8 a 12 caracteres";
+            $("errorPassw").innerText = "Campo obligatorio";
             this.classList.add('is-invalid')
             break;
         case !regExPassword.test(this.value):
@@ -141,36 +210,38 @@ inputPassword2.addEventListener('blur', function() {
 })
 /* Ver contraseña */
 btnWatch.addEventListener('click', () =>{
-    inputPassword.type === "text" ? inputPassword.type = "password" : inputPassword = "text";
+    //inputPassword.type === "text" ? inputPassword.type = "password" : inputPassword = "text";
     console.log(inputPassword.type);
 })
 
 /* terminos */
-checkTerms.addEventListener('click', function(e) {
+terminos.addEventListener('click', function(e) {
   this.classList.toggle('is-valid');
   this.classList.remove('is-invalid')
   $('error-terms').innerText = null;
-  console.log(this.checked);
+  console.log(e.target.checked);
 })
+
+
 
 formulario.addEventListener('submit', e => {
     e.preventDefault();
     let error = false;
-    const elementos = formulario.elements;
+    const elementos = [inputName, inputEmail, inputPassword, inputPassword2 ]
 
-    for(let i=0; i < elementos.length -2; i++) {
+    for(let i = 0; i < elementos.length; i++) {
         if(!elementos[i].value){
             elementos[i].classList.add('is-invalid');
-            $('error-empty').innerText = "Los campos señalados son obligatorios";
+          // $('error-empty').innerText = "Los campos señalados son obligatorios";
             error = true;
 
         }
     } 
 
-    if(!terms.checked){
-        terms.classList.add('is-invalid')
-        $('error-terms').innerText = "Debes aceptar los terminos y condiciones";
-        error= true
+    if(!terminos.checked){
+        terminos.classList.add('is-invalid');
+        $('error-terms').innerText = "Debes aceptar terminos y condiciones";
+        error = true;
     }
 
     if(!error){

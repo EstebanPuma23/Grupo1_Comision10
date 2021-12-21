@@ -19,7 +19,7 @@
                             <img class="img-perfil"  style="width: 200px; height: 200px;"
                                 src="/images/<%= user.profile %>" alt="">
                             <div class="subir-imagen">
-                                <label for="profile_picture" class="btn btn-outline-secondary w-100 mt-2">Subir imagen
+                                <label for="profile_picture" id="imagen" class="btn btn-outline-secondary w-100 mt-2">Subir imagen
                                     de perfil</label>
                                     <span id="imageError" class="text-danger small ms-2"><%= (typeof errors != "undefined") && errors.image ? errors.image.msg : null%> </span>
 

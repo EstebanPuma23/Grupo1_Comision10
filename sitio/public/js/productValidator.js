@@ -11,7 +11,10 @@ formAddProduct.elements[0].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             nameError.innerHTML = "El nombre es requerido";
             break;
-
+        case this.value.length < 5:
+                this.classList.add('is-invalid');
+                nameError.innerHTML = "Se requiere por lo menos 5 caracteres";
+                break;
         default:
             this.classList.remove('is-invalid');
             this.classList.add('is-valid');
@@ -44,9 +47,9 @@ formAddProduct.elements[2].addEventListener('blur', function () {
             this.classList.add('is-invalid');
             feacturesError.innerHTML = "Las características son obligatorias";
             break;
-        case this.value.length < 20:
+        case this.value.length < 5:
             this.classList.add('is-invalid');
-            feacturesError.innerHTML = "Se requiere al menos 1 característica";
+            feacturesError.innerHTML = "Se requiere por lo menos 1 característica con 5 caracteres";
             break;
         default:
             this.classList.remove('is-invalid');
@@ -139,7 +142,7 @@ formAddProduct.elements[5].addEventListener('change', function (e) {
 formAddProduct.addEventListener('submit', function(e) {
     e.preventDefault();
     let error = false;
-    for (let i = 0; i < this.elements.length - 1; i++) {
+    for (let i = 0; i < this.elements.length - 2; i++) {
         if(this.elements[i].classList.contains('is-invalid') || !this.elements[i].value){
             error = true
             this.elements[i].classList.add('is-invalid');

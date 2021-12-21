@@ -289,6 +289,7 @@ nav-social
     background: var(--verde-claro);
     border-radius: 0 0 5px 5px;
     padding: 0;
+    transition: all 0.4s;
     }
     header .nav-bar-tablet li:hover .submenu-user{
         display: block;

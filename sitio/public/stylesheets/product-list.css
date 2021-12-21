@@ -9,11 +9,20 @@
 }
 /* ASIDE - Filtrado por categorias */
 
-
+.list aside{
+  background-color: white;
+}
 .list .aside-list{
   display: flex;
   flex-direction: column;
-  width:18%;
+  width:70%;
+  position: absolute;
+  left: -70%;
+  transition:left 0.6s;
+  z-index: 100;
+  height: 100%;
+  box-shadow: 0px /* eje x */ 0px /* eje y */ 20px /* desenfoque de sombra */ rgb(160, 159, 159) ;
+  border-radius: 0 10px 10px 0;
 }
 
 .list h4{
@@ -21,7 +30,7 @@
 }
 
 .list .aside-list .filter{
-  padding: 50px 15px;
+  padding: 70px 15px;
 }
 .list .aside-list .filter h3{
   font-size: 25px;
@@ -29,7 +38,9 @@
 }
 
 .list .list-body{
-  width: 80%;
+  width: 100%;
+  position: relative;
+  transition: left 1s;
 }
 
 .list .row{
@@ -65,6 +76,29 @@
   color: white;
 }
 
+.list .menu{
+  font-size: 2rem;
+  position: absolute;
+  top: 14.5%;
+  left: 5%;
+  text-align: center;
+  transition: left 0.6s;
+  z-index: 100;
+}
+
+.list .checkbox{
+  display: none;
+}
+
+.list .checkbox:checked ~ .menu {
+  left: 60%;
+  z-index: 110;
+}
+
+.list .checkbox:checked ~ .aside-list{
+  left: 0;
+}
+
 /*  ASIDE - Filtrado por categorias  */
 
 
@@ -94,20 +128,25 @@
   background-color: var(--blanco);
   margin: 0 auto;
   margin-bottom: 15px;
-  border-radius: 10px;
+  border-radius: 19px;
   align-items: center;
 }
 
 .list .prod img {
   width: 100%;
-  border: solid 1px var(--grisOscuro);
-  margin-bottom: 0;
-  border-radius: 10px 10px 0 0;
+     border: solid 1px rgb(160, 159, 159); 
+    margin-bottom:0 ;
+    border-radius:19px 19px 0 0 ;
 }
 
 
 
 @media (min-width: 568px) {
+  
+  .list .menu{
+    top: 18.5%;
+  }  
+  
   .list main .target-container {
     display: flex;
     flex-wrap: wrap;
@@ -133,6 +172,34 @@
 
 
 @media (min-width: 1024px) {
+
+  .list .aside-list{
+    width:18%;
+    border: none;
+    box-shadow:none;
+    border-radius: none;
+    height: auto;
+  }
+
+  .list .checkbox:checked ~ .list-body{
+    width: 80%;
+    left: 18%;
+  }
+  .list .checkbox:checked ~ .menu {
+    left: 18%;
+  }
+  .list .menu:hover{
+    cursor: pointer;
+  }
+  .list .menu{
+    top: 25%;
+  }
+  
+
+  
+.list .aside-list .filter{
+  padding: 50px 15px;
+}
   .list main .target-container {
     display: flex;
     flex-wrap: wrap;

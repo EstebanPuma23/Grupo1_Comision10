@@ -68,4 +68,5 @@ const loadTable = carrito => {
 }
 
 
+
 getInfoCart()

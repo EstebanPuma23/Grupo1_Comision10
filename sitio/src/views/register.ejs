@@ -27,10 +27,9 @@
                     </div>
                     <div class="contraseña" >
                         <label for="pass">Contraseña</label>
-                        <div class="d-flex">
-                            <input class="form-control flex-grow-1" type="password" name="password" id="password">
-                            <button class="btn btn-outline-dark flex-grow-1 mr-1 ojito" type="button" id="watch">
-                                <i class="fa fa-eye"></i>
+                        <div class="contraseña" style="display: flex;">
+                            <input  type="password" name="password" id="password">
+                            <button type="button" onclick="mostrarContrasena()" ><i class="fa fa-eye"></i>
                              </button>
                         </div>
                        
@@ -45,8 +44,11 @@
                         <span id="info-passw2" class="text-info" ></span>
                     </div>
                     <div class="condicion-registro">
-                        <input class="form-control" type="checkbox" name="terminos" id="terminos">
-                        <label for="terminos">Acepto terminos y condiciones</label>
+
+                        <input type="checkbox" name="terminos" id="terminos">
+                        <label for="terminos">Acepta los terminos y condiciones</label>
+
+       
                     </div>
                     <span id="error-terms" class="error"><%= locals.errores && errores.terms ? errores.terms.msg : null %> </span>
 
@@ -64,5 +66,16 @@
 
     <%- include('partials/footer') %> 
     <script src="/js/registerValidator.js"></script>
+    <script>
+        function mostrarContrasena(){
+            var tipo =  document.getElementById("password");
+            if(tipo.type == "password"){
+                            tipo.type = "text";
+                        }else{
+                            tipo.type = "password";
+                        }
+                    
+        }
+    </script>
 </body>
 

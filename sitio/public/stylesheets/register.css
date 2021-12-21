@@ -78,3 +78,10 @@
     height: 100%;
     margin-top: 8px
 }
+
+.formulario-register .contraseña button{
+    background:none;
+    border: none;
+    color: black;
+    width: 13%;
+}

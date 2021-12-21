@@ -209,10 +209,10 @@ inputPassword2.addEventListener('blur', function() {
     }
 })
 /* Ver contraseña */
-btnWatch.addEventListener('click', () =>{
+/*btnWatch.addEventListener('click', () =>{
     //inputPassword.type === "text" ? inputPassword.type = "password" : inputPassword = "text";
     console.log(inputPassword.type);
-})
+})*/
 
 /* terminos */
 terminos.addEventListener('click', function(e) {

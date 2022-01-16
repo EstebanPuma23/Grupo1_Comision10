@@ -36,11 +36,11 @@
                                     alt="" /></a>
                                     <div class="botones">
                                         
-                                        <a class="agregar"  href="#" onclick="addItem(event, '<%=product.id%>')">Agregar</a>
+                                        <a class="agregar"  href="#" onclick="addItem(event, '<%=product.id%>')"><i class="fas fa-cart-plus"></i></a>
                                      </div>
                             <div class="detalles-producto">
-                                <p><%= product.name %></p>
                                 <p>$ <%= product.price %></p>
+                                <p class="prod-name"><%= product.name %></p>
                             </div>
                         </article>
                     </section>

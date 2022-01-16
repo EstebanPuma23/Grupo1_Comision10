@@ -71,6 +71,7 @@ main .productos .prod{
     margin:0 auto;
     margin-bottom: 15px;
     border-radius: 19px;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 main .ofertas-dskp{
@@ -107,11 +108,15 @@ main  .botones .agregar{
     display: block;
     margin: 0 15px;
     justify-content: right;
-    border: solid 1px var(--negro);
     border-radius: 5px;
-    padding:0 4px;
-    background-color: var(--blanco);
-    color: var(--negro);
+    padding:0 15px;
+    color: var(--verde-oscuro);
+    transition: all 0.3s;
+    font-size: 20px;
+}
+main .botones .agregar:hover i{
+    transition: all 0.4s;
+    transform: scale(1.5);
 }
 
 main  .botones input{
@@ -129,6 +134,7 @@ main  .botones a{
 
 main .detalles-producto{
     font-size: 15px;
+    transition: all 0.5s;
 }
 
 main .carg-productos{
@@ -221,7 +227,15 @@ main .carg-productos a{
     
         main .art .prod:hover{
             box-shadow: 0px /* eje x */ 0px /* eje y */ 20px /* desenfoque de sombra */ rgb(160, 159, 159) ;
-            transform: scale(1.05);
+            
+        }
+
+        main .art .prod .prod-name{
+            color: white;
+        }
+
+        main .art .prod:hover .prod-name{
+            color: black;
         }
 
         main .ofertas .art {
